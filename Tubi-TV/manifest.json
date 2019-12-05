@@ -1,0 +1,23 @@
+{
+  "name": "Tubi TV",
+  "version": "0.1.0",
+  "description": "Transfer video stream to player on WebCast-Reloaded external website.",
+  "content_scripts": [{
+    "matches": [
+      "*://tubitv.com/*"
+    ],
+    "all_frames": true,
+    "run_at": "document_start",
+    "js": ["content.js"]
+  }],
+  "icons": {
+     "16": "img/icon16.png",
+     "48": "img/icon48.png",
+     "55": "img/icon55.png",
+     "64": "img/icon64.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "manifest_version": 2
+}
