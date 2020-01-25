@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tubi TV
 // @description  Transfer video stream to player on WebCast-Reloaded external website.
-// @version      0.1.0
+// @version      0.2.0
 // @match        *://tubitv.com/*
 // @icon         https://tubitv.com/favicon.ico
 // @run-at       document-idle
@@ -69,6 +69,9 @@ var payload = function(){
         if (text.indexOf(prefix) === 0) {
           try {
             text = text.substr(prefix.length)
+
+            // fix JSON
+            text = text.replace(/(":)undefined([,}\]])/g, '$1null$2')
 
             const data = JSON.parse(text)
             process_data(data)
