@@ -52,6 +52,9 @@ var payload = function(){
           try {
             text = text.substr(prefix.length)
 
+            // fix JSON
+            text = text.replace(/(":)undefined([,}\]])/g, '$1null$2')
+
             const data = JSON.parse(text)
             process_data(data)
           }

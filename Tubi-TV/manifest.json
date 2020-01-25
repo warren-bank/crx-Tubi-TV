@@ -1,6 +1,6 @@
 {
   "name": "Tubi TV",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Transfer video stream to player on WebCast-Reloaded external website.",
   "content_scripts": [{
     "matches": [
