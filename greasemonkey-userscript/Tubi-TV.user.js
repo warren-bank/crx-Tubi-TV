@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tubi TV
 // @description  Transfers video stream to alternate video players: WebCast-Reloaded, ExoAirPlayer.
-// @version      0.3.1
+// @version      0.3.2
 // @match        *://tubitv.com/*
 // @icon         https://tubitv.com/favicon.ico
 // @run-at       document-idle
@@ -73,11 +73,11 @@ var payload = function(){
     }
   }
 
-  const process_video_url = (hls_url) => {
+  const process_video_url = (hls_url, vtt_url) => {
     if (hls_url && window.redirect_to_webcast_reloaded) {
       // transfer video stream
 
-      redirect_to_url(get_webcast_reloaded_url(hls_url))
+      redirect_to_url(get_webcast_reloaded_url(hls_url, vtt_url))
     }
   }
 
@@ -94,9 +94,20 @@ var payload = function(){
       try {
         video = data.video.byId[key]
     
-        const url = video.url
-        if (url) {
-          process_video_url(url)
+        const hls_url = video.url
+        if (hls_url) {
+          const vtt_url = (video.subtitles && Array.isArray(video.subtitles) && video.subtitles.length)
+            ? (video.subtitles.length === 1)
+                ? video.subtitles[0].url
+                : (() => {
+                    const english = video.subtitles.filter(obj => (obj.url && (typeof obj.lang === 'string') && (obj.lang.toLowerCase() === 'english')))
+                    return (english.length)
+                      ? english[0].url
+                      : video.subtitles[0].url
+                  })()
+            : null
+
+          process_video_url(hls_url, vtt_url)
           break
         }
       }
