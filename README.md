@@ -1,11 +1,18 @@
-### [Tubi TV](https://github.com/warren-bank/crx-Tubi-TV)
+### [Tubi TV](https://github.com/warren-bank/crx-Tubi-TV/tree/master)
 
-Transfer video stream from [Tubi TV website](https://tubitv.com/) to player on [WebCast-Reloaded](https://github.com/warren-bank/crx-webcast-reloaded) [external website](https://warren-bank.github.io/crx-webcast-reloaded/external_website/index.html).
+Web browser extension for Chrome/Chromium having the purpose to:
+* transfer video streams to the top-level tool on the [Webcast-Reloaded](https://github.com/warren-bank/crx-webcast-reloaded) external [website](https://warren-bank.github.io/crx-webcast-reloaded/external_website/index.html)
+  - mainly for use with:
+    * _Google Chromecast_
+    * [_ExoAirPlayer_](https://github.com/warren-bank/Android-ExoPlayer-AirPlay-Receiver)
+    * [_HLS-Proxy_](https://github.com/warren-bank/HLS-Proxy)
 
-#### Summary:
+#### Stale Branch:
 
-Chromium browser extension:
-* works on pages that are hosted at: [`tubitv.com/*`](https://tubitv.com/)
+* this branch is no-longer maintained
+  - the [`webmonkey-userscript/es5`](https://github.com/warren-bank/crx-Tubi-TV/tree/webmonkey-userscript/es5) branch:
+    * includes a userscript that provides enhanced functionality
+    * supports older browsers (ex: Android 4.x WebView)
 
 #### Legal:
 
