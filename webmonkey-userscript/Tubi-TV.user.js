@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tubi TV
 // @description  Watch videos in external player.
-// @version      1.0.1
+// @version      1.0.2
 // @match        *://tubitv.com/*
 // @match        *://*.tubitv.com/*
 // @match        *://tubi.tv/*
@@ -20,6 +20,7 @@
 // ----------------------------------------------------------------------------- constants
 
 var user_options = {
+  "disable_modal_age_dialog":     true,
   "convert_carousel_to_grid":     true,
 
   "redirect_to_webcast_reloaded": true,
@@ -215,6 +216,23 @@ var inspect_scripts = function(tags) {
   }
 }
 
+// ----------------------------------------------------------------------------- change CSS for modal dialog that requires entering DOB
+
+var disable_modal_age_dialog = function() {
+  var modal_divs = unsafeWindow.document.querySelectorAll('[data-nosnippet="true"]')
+  for (var i=0; i < modal_divs.length; i++) {
+    modal_divs[i].style.display = 'none'
+  }
+  if (modal_divs.length) {
+    unsafeWindow.setTimeout(
+      function() {
+        unsafeWindow.document.body.style.overflow = 'visible'
+      },
+      1000
+    )
+  }
+}
+
 // ----------------------------------------------------------------------------- change CSS for carousel containing all episodes in a season for a series, which doesn't work in older browsers
 
 var convert_carousel_to_grid = function() {
@@ -264,6 +282,9 @@ var init = function() {
     process_data(unsafeWindow.__data)
   else
     inspect_scripts()
+
+  if (user_options.disable_modal_age_dialog)
+    disable_modal_age_dialog()
 
   if (user_options.convert_carousel_to_grid)
     convert_carousel_to_grid()
