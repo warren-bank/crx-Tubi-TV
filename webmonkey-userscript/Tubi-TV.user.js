@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tubi TV
 // @description  Watch videos in external player.
-// @version      1.0.0
+// @version      1.0.1
 // @match        *://tubitv.com/*
 // @match        *://*.tubitv.com/*
 // @match        *://tubi.tv/*
@@ -20,6 +20,8 @@
 // ----------------------------------------------------------------------------- constants
 
 var user_options = {
+  "convert_carousel_to_grid":     true,
+
   "redirect_to_webcast_reloaded": true,
   "force_http":                   true,
   "force_https":                  false
@@ -27,6 +29,17 @@ var user_options = {
 
 var constants = {
   "captions_preferred_language":  "english"
+}
+
+// ----------------------------------------------------------------------------- helpers
+
+var make_element = function(elementName, html) {
+  var el = unsafeWindow.document.createElement(elementName)
+
+  if (html)
+    el.innerHTML = html
+
+  return el
 }
 
 // ----------------------------------------------------------------------------- URL links to tools on Webcast Reloaded website
@@ -75,7 +88,7 @@ var redirect_to_url = function(url) {
       unsafeWindow.top.location = url
     }
     catch(e) {
-      unsafeWindow.location = url
+      unsafeWindow.window.location = url
     }
   }
 }
@@ -202,6 +215,26 @@ var inspect_scripts = function(tags) {
   }
 }
 
+// ----------------------------------------------------------------------------- change CSS for carousel containing all episodes in a season for a series, which doesn't work in older browsers
+
+var convert_carousel_to_grid = function() {
+  var css = [
+    '.Carousel__content,',
+    '.Carousel__content > .Row {',
+    '  display: block;',
+    '  height: auto;',
+    '}',
+
+    '.Carousel__content > .Row > .Col {',
+    '  display: inline-block;',
+    '}'
+  ]
+
+  unsafeWindow.document.getElementsByTagName('head')[0].appendChild(
+    make_element('style', css.join("\n"))
+  )
+}
+
 // ----------------------------------------------------------------------------- bootstrap
 
 var follow_all_links = function() {
@@ -223,9 +256,7 @@ var follow_all_links = function() {
 }
 
 var init = function() {
-  if (typeof GM_getUrl === 'function')
-    if (GM_getUrl() !== unsafeWindow.location.href)
-      return
+  if (('function' === (typeof GM_getUrl)) && (GM_getUrl() !== unsafeWindow.location.href)) return
 
   follow_all_links()
 
@@ -233,6 +264,9 @@ var init = function() {
     process_data(unsafeWindow.__data)
   else
     inspect_scripts()
+
+  if (user_options.convert_carousel_to_grid)
+    convert_carousel_to_grid()
 }
 
 init()
