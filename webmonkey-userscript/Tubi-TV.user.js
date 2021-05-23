@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tubi TV
 // @description  Watch videos in external player.
-// @version      2.0.0
+// @version      2.0.1
 // @match        *://tubitv.com/*
 // @match        *://*.tubitv.com/*
 // @match        *://tubi.tv/*
@@ -30,6 +30,7 @@ var user_options = {
 }
 
 var strings = {
+  "button_start_video":            "Start Video",
   "episode_labels": {
     "title":                       "title:",
     "summary":                     "summary:",
@@ -221,6 +222,41 @@ var insert_webcast_reloaded_div = function(block_element, video_url, vtt_url, re
     block_element.appendChild(webcast_reloaded_div)
 }
 
+// ----------------------------------------------------------------------------- DOM: dynamic elements - play video button
+
+var onclick_start_video_button = function(event) {
+  event.stopPropagation();event.stopImmediatePropagation();event.preventDefault();event.returnValue=true;
+
+  var button     = event.target
+  var video_url  = button.getAttribute('x-video-url')
+  var video_type = button.getAttribute('x-video-type')
+  var vtt_url    = button.getAttribute('x-vtt-url')
+
+  if (video_url)
+    process_video_url(video_url, video_type, vtt_url)
+}
+
+var make_start_video_button = function(video_url, video_type, vtt_url) {
+  var button = make_element('button')
+
+  button.setAttribute('x-video-url',  video_url)
+  button.setAttribute('x-video-type', video_type)
+  button.setAttribute('x-vtt-url',    vtt_url)
+  button.innerHTML = strings.button_start_video
+  button.addEventListener("click", onclick_start_video_button)
+
+  return button
+}
+
+var add_start_video_button = function(video_url, video_type, vtt_url, block_element, old_button) {
+  var new_button = make_start_video_button(video_url, video_type, vtt_url)
+
+  if (old_button)
+    old_button.parentNode.replaceChild(new_button, old_button)
+  else
+    block_element.appendChild(new_button)
+}
+
 // ----------------------------------------------------------------------------- DOM: dynamic elements - single video list item
 
 var convert_ms_to_mins = function(X) {
@@ -271,6 +307,7 @@ var make_video_listitem_element = function(video) {
 
   var li = make_element('li', html.join("\n"))
   insert_webcast_reloaded_div(li, video_data.video_url, video_data.vtt_url)
+  add_start_video_button(video_data.video_url, video_data.video_type, video_data.vtt_url, li)
   return li
 }
 
@@ -351,7 +388,8 @@ var reinitialize_dom = function(data) {
         'body {',
         '  margin: 0;',
         '  padding: 0;',
-        '  font-size: 14px;',
+        '  font-family: serif;',
+        '  font-size: 16px;',
         '  background-color: #fff !important;',
         '  overflow: auto !important;',
         '}',
@@ -371,7 +409,7 @@ var reinitialize_dom = function(data) {
 
         'body > div > div {',
         '  padding: 0.5em;',
-        '  font-size: 16px;',
+        '  font-size: 18px;',
         '}',
 
         // --------------------------------------------------- list of videos: episodes in series, or individual movie or episode
@@ -401,6 +439,10 @@ var reinitialize_dom = function(data) {
         '  background-color: #eee;',
         '  padding: 0.5em 1em;',
         '  margin: 0;',
+        '}',
+
+        'body > div > ul > li > button {',
+        '  margin: 0.75em 0;',
         '}',
 
         // --------------------------------------------------- links to tools on Webcast Reloaded website
@@ -471,12 +513,13 @@ var reinitialize_dom = function(data) {
 // ----------------------------------------------------------------------------- process video data
 
 var extract_video_data = function(video) {
-  var video_url, vtt_url
+  var video_url, video_type, vtt_url
 
   if (video && ('object' === (typeof video))) {
     video_url = video.url || null
     if (video_url) {
-      vtt_url = (video.subtitles && Array.isArray(video.subtitles) && video.subtitles.length)
+      video_type = 'application/x-mpegurl'
+      vtt_url    = (video.subtitles && Array.isArray(video.subtitles) && video.subtitles.length)
         ? (video.subtitles.length === 1)
             ? video.subtitles[0].url
             : (function() {
@@ -495,7 +538,7 @@ var extract_video_data = function(video) {
     }
   }
 
-  return {video_url: video_url, vtt_url: vtt_url}
+  return {video_url: video_url, video_type: video_type, vtt_url: vtt_url}
 }
 
 var process_data = function(data) {
@@ -516,7 +559,7 @@ var process_data = function(data) {
       video_data = extract_video_data(video)
 
       if (video_data.video_url) {
-        process_hls_url(video_data.video_url, video_data.vtt_url)
+        process_video_url(video_data.video_url, video_data.video_type, video_data.vtt_url)
         break
       }
     }
