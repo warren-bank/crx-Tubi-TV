@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tubi TV
 // @description  Watch videos in external player.
-// @version      2.0.1
+// @version      2.0.2
 // @match        *://tubitv.com/*
 // @match        *://*.tubitv.com/*
 // @match        *://tubi.tv/*
@@ -34,7 +34,8 @@ var strings = {
   "episode_labels": {
     "title":                       "title:",
     "summary":                     "summary:",
-    "time_duration":               "duration:"
+    "time_duration":               "duration:",
+    "drm":                         "drm:"
   },
   "episode_units": {
     "duration_hour":               "hour",
@@ -82,16 +83,17 @@ var add_style_element = function(css) {
 
 // ----------------------------------------------------------------------------- URL links to tools on Webcast Reloaded website
 
-var get_webcast_reloaded_url = function(video_url, vtt_url, referer_url, force_http, force_https) {
+var get_webcast_reloaded_url = function(video_url, vtt_url, referer_url, drm_scheme, drm_server, force_http, force_https) {
   force_http  = (typeof force_http  === 'boolean') ? force_http  : user_options.force_http
   force_https = (typeof force_https === 'boolean') ? force_https : user_options.force_https
 
-  var encoded_video_url, encoded_vtt_url, encoded_referer_url, webcast_reloaded_base, webcast_reloaded_url
+  var encoded_video_url, encoded_vtt_url, encoded_referer_url, encoded_drm_url, webcast_reloaded_base, webcast_reloaded_url
 
   encoded_video_url     = encodeURIComponent(encodeURIComponent(btoa(video_url)))
   encoded_vtt_url       = vtt_url ? encodeURIComponent(encodeURIComponent(btoa(vtt_url))) : null
   referer_url           = referer_url ? referer_url : unsafeWindow.location.href
   encoded_referer_url   = encodeURIComponent(encodeURIComponent(btoa(referer_url)))
+  encoded_drm_url       = (drm_scheme && drm_server) ? encodeURIComponent(encodeURIComponent(btoa(drm_scheme + '|' + drm_server))) : null
 
   webcast_reloaded_base = {
     "https": "https://warren-bank.github.io/crx-webcast-reloaded/external_website/index.html",
@@ -106,20 +108,24 @@ var get_webcast_reloaded_url = function(video_url, vtt_url, referer_url, force_h
                                   ? webcast_reloaded_base.http
                                   : webcast_reloaded_base.https
 
-  webcast_reloaded_url  = webcast_reloaded_base + '#/watch/' + encoded_video_url + (encoded_vtt_url ? ('/subtitle/' + encoded_vtt_url) : '') + '/referer/' + encoded_referer_url
+  webcast_reloaded_url  = webcast_reloaded_base    + '#/watch/'    + encoded_video_url
+                            + (encoded_vtt_url     ? ('/subtitle/' + encoded_vtt_url) : '')
+                            + (encoded_referer_url ? ('/referer/'  + encoded_referer_url) : '')
+                            + (encoded_drm_url     ? ('/drm/'      + encoded_drm_url) : '')
+
   return webcast_reloaded_url
 }
 
-var get_webcast_reloaded_url_chromecast_sender = function(video_url, vtt_url, referer_url) {
-  return get_webcast_reloaded_url(video_url, vtt_url, referer_url, /* force_http= */ null, /* force_https= */ null).replace('/index.html', '/chromecast_sender.html')
+var get_webcast_reloaded_url_chromecast_sender = function(video_url, vtt_url, referer_url, drm_scheme, drm_server) {
+  return get_webcast_reloaded_url(video_url, vtt_url, referer_url, drm_scheme, drm_server, /* force_http= */ null, /* force_https= */ null).replace('/index.html', '/chromecast_sender.html')
 }
 
-var get_webcast_reloaded_url_airplay_sender = function(video_url, vtt_url, referer_url) {
-  return get_webcast_reloaded_url(video_url, vtt_url, referer_url, /* force_http= */ true, /* force_https= */ false).replace('/index.html', '/airplay_sender.es5.html')
+var get_webcast_reloaded_url_airplay_sender = function(video_url, vtt_url, referer_url, drm_scheme, drm_server) {
+  return get_webcast_reloaded_url(video_url, vtt_url, referer_url, drm_scheme, drm_server, /* force_http= */ true, /* force_https= */ false).replace('/index.html', '/airplay_sender.es5.html')
 }
 
-var get_webcast_reloaded_url_proxy = function(hls_url, vtt_url, referer_url) {
-  return get_webcast_reloaded_url(hls_url, vtt_url, referer_url, /* force_http= */ true, /* force_https= */ false).replace('/index.html', '/proxy.html')
+var get_webcast_reloaded_url_proxy = function(hls_url, vtt_url, referer_url, drm_scheme, drm_server) {
+  return get_webcast_reloaded_url(hls_url, vtt_url, referer_url, drm_scheme, drm_server, /* force_http= */ true, /* force_https= */ false).replace('/index.html', '/proxy.html')
 }
 
 // ----------------------------------------------------------------------------- URL redirect
@@ -143,7 +149,7 @@ var redirect_to_url = function(url) {
   }
 }
 
-var process_video_url = function(video_url, video_type, vtt_url, referer_url) {
+var process_video_url = function(video_url, video_type, vtt_url, referer_url, drm_scheme, drm_server) {
   if (!referer_url)
     referer_url = unsafeWindow.location.href
 
@@ -165,6 +171,13 @@ var process_video_url = function(video_url, video_type, vtt_url, referer_url) {
       args.push('referUrl')
       args.push(referer_url)
     }
+    if (drm_scheme && drm_server) {
+      args.push('drmScheme')
+      args.push(drm_scheme)
+
+      args.push('drmUrl')
+      args.push(drm_server)
+    }
 
     GM_startIntent.apply(this, args)
     return true
@@ -172,7 +185,7 @@ var process_video_url = function(video_url, video_type, vtt_url, referer_url) {
   else if (user_options.redirect_to_webcast_reloaded) {
     // running in standard web browser: redirect URL to top-level tool on Webcast Reloaded website
 
-    redirect_to_url(get_webcast_reloaded_url(video_url, vtt_url, referer_url))
+    redirect_to_url(get_webcast_reloaded_url(video_url, vtt_url, referer_url, drm_scheme, drm_server))
     return true
   }
   else {
@@ -180,22 +193,22 @@ var process_video_url = function(video_url, video_type, vtt_url, referer_url) {
   }
 }
 
-var process_hls_url = function(hls_url, vtt_url, referer_url) {
-  process_video_url(/* video_url= */ hls_url, /* video_type= */ 'application/x-mpegurl', vtt_url, referer_url)
+var process_hls_url = function(hls_url, vtt_url, referer_url, drm_scheme, drm_server) {
+  process_video_url(/* video_url= */ hls_url, /* video_type= */ 'application/x-mpegurl', vtt_url, referer_url, drm_scheme, drm_server)
 }
 
-var process_dash_url = function(dash_url, vtt_url, referer_url) {
-  process_video_url(/* video_url= */ dash_url, /* video_type= */ 'application/dash+xml', vtt_url, referer_url)
+var process_dash_url = function(dash_url, vtt_url, referer_url, drm_scheme, drm_server) {
+  process_video_url(/* video_url= */ dash_url, /* video_type= */ 'application/dash+xml', vtt_url, referer_url, drm_scheme, drm_server)
 }
 
 // ----------------------------------------------------------------------------- DOM: dynamic elements - URL links to tools on Webcast Reloaded website
 
-var make_webcast_reloaded_div = function(video_url, vtt_url, referer_url) {
+var make_webcast_reloaded_div = function(video_url, vtt_url, referer_url, drm_scheme, drm_server) {
   var webcast_reloaded_urls = {
-//  "index":             get_webcast_reloaded_url(                  video_url, vtt_url, referer_url),
-    "chromecast_sender": get_webcast_reloaded_url_chromecast_sender(video_url, vtt_url, referer_url),
-    "airplay_sender":    get_webcast_reloaded_url_airplay_sender(   video_url, vtt_url, referer_url),
-    "proxy":             get_webcast_reloaded_url_proxy(            video_url, vtt_url, referer_url)
+//  "index":             get_webcast_reloaded_url(                  video_url, vtt_url, referer_url, drm_scheme, drm_server),
+    "chromecast_sender": get_webcast_reloaded_url_chromecast_sender(video_url, vtt_url, referer_url, drm_scheme, drm_server),
+    "airplay_sender":    get_webcast_reloaded_url_airplay_sender(   video_url, vtt_url, referer_url, drm_scheme, drm_server),
+    "proxy":             get_webcast_reloaded_url_proxy(            video_url, vtt_url, referer_url, drm_scheme, drm_server)
   }
 
   var div = make_element('div')
@@ -213,8 +226,8 @@ var make_webcast_reloaded_div = function(video_url, vtt_url, referer_url) {
   return div
 }
 
-var insert_webcast_reloaded_div = function(block_element, video_url, vtt_url, referer_url) {
-  var webcast_reloaded_div = make_webcast_reloaded_div(video_url, vtt_url, referer_url)
+var insert_webcast_reloaded_div = function(block_element, video_url, vtt_url, referer_url, drm_scheme, drm_server) {
+  var webcast_reloaded_div = make_webcast_reloaded_div(video_url, vtt_url, referer_url, drm_scheme, drm_server)
 
   if (block_element.childNodes.length)
     block_element.insertBefore(webcast_reloaded_div, block_element.childNodes[0])
@@ -227,29 +240,36 @@ var insert_webcast_reloaded_div = function(block_element, video_url, vtt_url, re
 var onclick_start_video_button = function(event) {
   event.stopPropagation();event.stopImmediatePropagation();event.preventDefault();event.returnValue=true;
 
-  var button     = event.target
-  var video_url  = button.getAttribute('x-video-url')
-  var video_type = button.getAttribute('x-video-type')
-  var vtt_url    = button.getAttribute('x-vtt-url')
+  var button      = event.target
+  var video_url   = button.getAttribute('x-video-url')
+  var video_type  = button.getAttribute('x-video-type')
+  var vtt_url     = button.getAttribute('x-vtt-url')
+  var referer_url = button.getAttribute('x-referer-url')
+  var drm_scheme  = button.getAttribute('x-drm-scheme')
+  var drm_server  = button.getAttribute('x-drm-server')
 
   if (video_url)
-    process_video_url(video_url, video_type, vtt_url)
+    process_video_url(video_url, video_type, vtt_url, referer_url, drm_scheme, drm_server)
 }
 
-var make_start_video_button = function(video_url, video_type, vtt_url) {
+var make_start_video_button = function(video_url, video_type, vtt_url, referer_url, drm_scheme, drm_server) {
   var button = make_element('button')
 
-  button.setAttribute('x-video-url',  video_url)
-  button.setAttribute('x-video-type', video_type)
-  button.setAttribute('x-vtt-url',    vtt_url)
+  button.setAttribute('x-video-url',   video_url   || '')
+  button.setAttribute('x-video-type',  video_type  || '')
+  button.setAttribute('x-vtt-url',     vtt_url     || '')
+  button.setAttribute('x-referer-url', referer_url || '')
+  button.setAttribute('x-drm-scheme',  drm_scheme  || '')
+  button.setAttribute('x-drm-server',  drm_server  || '')
+
   button.innerHTML = strings.button_start_video
   button.addEventListener("click", onclick_start_video_button)
 
   return button
 }
 
-var add_start_video_button = function(video_url, video_type, vtt_url, block_element, old_button) {
-  var new_button = make_start_video_button(video_url, video_type, vtt_url)
+var add_start_video_button = function(block_element, old_button, video_url, video_type, vtt_url, referer_url, drm_scheme, drm_server) {
+  var new_button = make_start_video_button(video_url, video_type, vtt_url, referer_url, drm_scheme, drm_server)
 
   if (old_button)
     old_button.parentNode.replaceChild(new_button, old_button)
@@ -279,10 +299,11 @@ var get_ms_duration_time_string = function(ms) {
 }
 
 var make_video_listitem_element = function(video) {
-  var video_data = extract_video_data(video)
-  if (!video_data.video_url) return ''
+  var li, tr, html
+  var drm_item, drm_info, td_button, td_icons, div_icons, a_icons, a_icon
+  var video_data = extract_video_data(video, /* add_drm_data= */ true)
 
-  var tr = []
+  if (!video_data.video_url && !video_data.drm_data.length) return li
 
   var append_tr = function(td, colspan) {
     if (Array.isArray(td))
@@ -293,6 +314,7 @@ var make_video_listitem_element = function(video) {
       tr.push('<tr><td>' + td + '</td></tr>')
   }
 
+  tr = []
   if (video.title)
     append_tr([strings.episode_labels.title, video.title])
   if (video.duration)
@@ -300,14 +322,83 @@ var make_video_listitem_element = function(video) {
   if (video.description)
     append_tr(strings.episode_labels.summary, 2)
 
-  var html = [
+  html = [
     '<table>' + tr.join("\n") + '</table>',
     '<blockquote>' + video.description + '</blockquote>'
   ]
 
-  var li = make_element('li', html.join("\n"))
-  insert_webcast_reloaded_div(li, video_data.video_url, video_data.vtt_url)
-  add_start_video_button(video_data.video_url, video_data.video_type, video_data.vtt_url, li)
+  if (!video_data.video_url && video_data.drm_data.length) {
+    tr = []
+    append_tr([strings.episode_labels.drm, '<!-- drm_scheme (raw_type, drm_dhcp) -->', '<!-- button -->', '<!-- icons -->'])
+
+    for (var i=0; i < video_data.drm_data.length; i++) {
+      drm_item = video_data.drm_data[i]
+
+      drm_info  = drm_item.drm_scheme
+      drm_info += '<div><ul>'
+      drm_info += '  <li>' + drm_item.raw_type + '</li>'
+      drm_info += '  <li>' + drm_item.drm_dhcp + '</li>'
+      drm_info += '</ul></div>'
+
+      append_tr(['', drm_info, '', ''])
+    }
+
+    html.push(
+      '<table>' + tr.join("\n") + '</table>'
+    )
+
+    li = make_element('li', html.join("\n"))
+    tr = li.querySelectorAll(':scope > table:last-child tr')
+
+    for (var i=1; i < tr.length; i++) {
+      td_icons  = tr[i].querySelector(':scope > td:last-child')
+      td_button = td_icons.previousElementSibling
+
+      drm_item  = video_data.drm_data[i-1]
+      div_icons = make_webcast_reloaded_div(drm_item.video_url, video_data.vtt_url, /* referer_url= */ null, drm_item.drm_scheme, drm_item.drm_server)
+
+      a_icons = {
+        real:    {},  // order: chromecast, airplay, [proxy], video-link
+        ordered: []
+      }
+
+      a_icons.real.airplay    = div_icons.querySelector('a.airplay')
+      a_icons.real.direct_hls = div_icons.querySelector('a.video-link')
+
+      a_icon = a_icons.real.direct_hls.cloneNode(/* deep= */ true)
+      a_icon.className = 'chromecast'
+      a_icons.ordered.push(a_icon)
+
+      a_icon = a_icons.real.direct_hls.cloneNode(/* deep= */ true)
+      a_icon.className = 'airplay'
+      a_icon.setAttribute('href',  drm_item.drm_server)
+      a_icon.setAttribute('title', 'direct link to ' + drm_item.drm_scheme + ' drm server')
+      a_icons.ordered.push(a_icon)
+
+      a_icon = a_icons.real.airplay.cloneNode(/* deep= */ true)
+      a_icon.className = 'video-link'
+      a_icons.ordered.push(a_icon)
+
+      while (div_icons.childNodes.length)
+        div_icons.removeChild(div_icons.childNodes[0])
+
+      for (var j=0; j < a_icons.ordered.length; j++) {
+        a_icon = a_icons.ordered[j]
+
+        div_icons.appendChild(a_icon)
+      }
+      a_icons = null
+
+      td_icons.appendChild(div_icons)
+      add_start_video_button(/* block_element= */ td_button, /* old_button= */ null, drm_item.video_url, drm_item.video_type, video_data.vtt_url, /* referer_url= */ null, drm_item.drm_scheme, drm_item.drm_server)
+    }
+  }
+  else {
+    li = make_element('li', html.join("\n"))
+    insert_webcast_reloaded_div(/* block_element= */ li, video_data.video_url, video_data.vtt_url)
+    add_start_video_button(     /* block_element= */ li, /* old_button= */ null, video_data.video_url, video_data.video_type, video_data.vtt_url)
+  }
+
   return li
 }
 
@@ -335,7 +426,7 @@ var reinitialize_dom = function(data) {
     ul  = make_element('ul')
     div.appendChild(ul)
 
-    if (video.url) {
+    if (video.url || (Array.isArray(video.video_resources) && video.video_resources.length)) {
       li = make_video_listitem_element(video)
       if (li)
         ul.appendChild(li)
@@ -366,11 +457,15 @@ var reinitialize_dom = function(data) {
             episode_key   = episode_keys[i2]
             episode_video = data.video.byId[episode_key]
 
-            if (!episode_video || ('object' !== (typeof episode_video))) continue
-
-            li = make_video_listitem_element(episode_video)
-            if (li)
-              ul.appendChild(li)
+            if (
+                 ('object' === (typeof episode_video))
+              && (null     !== episode_video)
+              && (episode_video.url || (Array.isArray(episode_video.video_resources) && episode_video.video_resources.length))
+            ){
+              li = make_video_listitem_element(episode_video)
+              if (li)
+                ul.appendChild(li)
+            }
           }
         }
       }
@@ -445,9 +540,49 @@ var reinitialize_dom = function(data) {
         '  margin: 0.75em 0;',
         '}',
 
+        // --------------------------------------------------- drm
+
+        'body > div > ul > li > blockquote + table {',
+        '  width: 100%;',
+        '  border-collapse: collapse;',
+        '}',
+
+        'body > div > ul > li > blockquote + table tr > td:first-child + td {',
+        '  width: 100%;',
+        '}',
+
+        'body > div > ul > li > blockquote + table tr > td {',
+        '  border-top: 1px solid #999;',
+        '  padding: 0.5em 0;',
+        '}',
+
+        'body > div > ul > li > blockquote + table tr:first-child > td {',
+        '  border-top-style: none;',
+        '}',
+
+        'body > div > ul > li > blockquote + table tr > td:first-child {',
+        '  border-top-style: none;',
+        '}',
+
+        'body > div > ul > li > blockquote + table tr > td > div > ul {',
+        '  padding-left: 2em;',
+        '  padding-top: 0.5em;',
+        '}',
+
+        'body > div > ul > li > blockquote + table tr > td > div > ul > li {',
+        '  font-size: 0.85em;',
+        '}',
+
+        'body > div > ul > li > blockquote + table button {',
+        '  white-space: nowrap;',
+        '}',
+
+        'body > div > ul > li > blockquote + table tr > td:last-child > div.icons-container {',
+        '}',
+
         // --------------------------------------------------- links to tools on Webcast Reloaded website
 
-        'body > div > ul > li > div.icons-container {',
+        'body > div > ul > li div.icons-container {',
         '  display: block;',
         '  position: relative;',
         '  z-index: 1;',
@@ -462,46 +597,46 @@ var reinitialize_dom = function(data) {
         '  border-radius: 14px;',
         '}',
 
-        'body > div > ul > li > div.icons-container > a.chromecast,',
-        'body > div > ul > li > div.icons-container > a.chromecast > img,',
-        'body > div > ul > li > div.icons-container > a.airplay,',
-        'body > div > ul > li > div.icons-container > a.airplay > img,',
-        'body > div > ul > li > div.icons-container > a.proxy,',
-        'body > div > ul > li > div.icons-container > a.proxy > img,',
-        'body > div > ul > li > div.icons-container > a.video-link,',
-        'body > div > ul > li > div.icons-container > a.video-link > img {',
+        'body > div > ul > li div.icons-container > a.chromecast,',
+        'body > div > ul > li div.icons-container > a.chromecast > img,',
+        'body > div > ul > li div.icons-container > a.airplay,',
+        'body > div > ul > li div.icons-container > a.airplay > img,',
+        'body > div > ul > li div.icons-container > a.proxy,',
+        'body > div > ul > li div.icons-container > a.proxy > img,',
+        'body > div > ul > li div.icons-container > a.video-link,',
+        'body > div > ul > li div.icons-container > a.video-link > img {',
         '  display: block;',
         '  width: 25px;',
         '  height: 25px;',
         '}',
 
-        'body > div > ul > li > div.icons-container > a.chromecast,',
-        'body > div > ul > li > div.icons-container > a.airplay,',
-        'body > div > ul > li > div.icons-container > a.proxy,',
-        'body > div > ul > li > div.icons-container > a.video-link {',
+        'body > div > ul > li div.icons-container > a.chromecast,',
+        'body > div > ul > li div.icons-container > a.airplay,',
+        'body > div > ul > li div.icons-container > a.proxy,',
+        'body > div > ul > li div.icons-container > a.video-link {',
         '  position: absolute;',
         '  z-index: 1;',
         '  text-decoration: none;',
         '}',
 
-        'body > div > ul > li > div.icons-container > a.chromecast,',
-        'body > div > ul > li > div.icons-container > a.airplay {',
+        'body > div > ul > li div.icons-container > a.chromecast,',
+        'body > div > ul > li div.icons-container > a.airplay {',
         '  top: 0;',
         '}',
-        'body > div > ul > li > div.icons-container > a.proxy,',
-        'body > div > ul > li > div.icons-container > a.video-link {',
+        'body > div > ul > li div.icons-container > a.proxy,',
+        'body > div > ul > li div.icons-container > a.video-link {',
         '  bottom: 0;',
         '}',
 
-        'body > div > ul > li > div.icons-container > a.chromecast,',
-        'body > div > ul > li > div.icons-container > a.proxy {',
+        'body > div > ul > li div.icons-container > a.chromecast,',
+        'body > div > ul > li div.icons-container > a.proxy {',
         '  left: 0;',
         '}',
-        'body > div > ul > li > div.icons-container > a.airplay,',
-        'body > div > ul > li > div.icons-container > a.video-link {',
+        'body > div > ul > li div.icons-container > a.airplay,',
+        'body > div > ul > li div.icons-container > a.video-link {',
         '  right: 0;',
         '}',
-        'body > div > ul > li > div.icons-container > a.airplay + a.video-link {',
+        'body > div > ul > li div.icons-container > a.airplay + a.video-link {',
         '  right: 17px; /* (60 - 25)/2 to center when there is no proxy icon */',
         '}'
       ]
@@ -512,33 +647,78 @@ var reinitialize_dom = function(data) {
 
 // ----------------------------------------------------------------------------- process video data
 
-var extract_video_data = function(video) {
+var extract_video_data = function(video, add_drm_data) {
   var video_url, video_type, vtt_url
+  var drm_data = []
 
   if (video && ('object' === (typeof video))) {
-    video_url = video.url || null
-    if (video_url) {
+    vtt_url   = (video.subtitles && Array.isArray(video.subtitles) && video.subtitles.length)
+      ? (video.subtitles.length === 1)
+          ? video.subtitles[0].url
+          : (function() {
+              var preferred_lang, preferred_subtitles
+              preferred_lang = (typeof constants.captions_preferred_language === 'string')
+                ? constants.captions_preferred_language.toLowerCase()
+                : null
+              preferred_subtitles = (preferred_lang)
+                ? video.subtitles.filter(function(obj) { return (obj.url && (typeof obj.lang === 'string') && (obj.lang.toLowerCase().indexOf(preferred_lang) >= 0)) })
+                : []
+              return (preferred_subtitles.length)
+                ? preferred_subtitles[0].url
+                : video.subtitles[0].url
+            })()
+      : null
+
+    if (video.url) {
+      video_url  = video.url
       video_type = 'application/x-mpegurl'
-      vtt_url    = (video.subtitles && Array.isArray(video.subtitles) && video.subtitles.length)
-        ? (video.subtitles.length === 1)
-            ? video.subtitles[0].url
-            : (function() {
-                var preferred_lang, preferred_subtitles
-                preferred_lang = (typeof constants.captions_preferred_language === 'string')
-                  ? constants.captions_preferred_language.toLowerCase()
-                  : null
-                preferred_subtitles = (preferred_lang)
-                  ? video.subtitles.filter(function(obj) { return (obj.url && (typeof obj.lang === 'string') && (obj.lang.toLowerCase().indexOf(preferred_lang) >= 0)) })
-                  : []
-                return (preferred_subtitles.length)
-                  ? preferred_subtitles[0].url
-                  : video.subtitles[0].url
-              })()
-        : null
+    }
+    else if (add_drm_data && Array.isArray(video.video_resources) && video.video_resources.length) {
+      drm_data = video.video_resources.map(function(video_resource){
+        var drm_item = {
+          video_url:  null,
+          video_type: null,
+          raw_type:   null,
+          drm_scheme: null,
+          drm_server: null,
+          drm_dhcp:   null
+        }
+
+        var schemes = ['widevine', 'clearkey', 'playready', 'fairplay']
+        var scheme
+
+        try {
+          drm_item.video_url  = video_resource.manifest.url
+          drm_item.video_type = 'application/x-mpegurl'
+          drm_item.raw_type   = video_resource.type
+
+          if (video_resource.type.indexOf('dash') >= 0)
+            drm_item.video_type = 'application/dash+xml'
+
+          for (var i=0; i < schemes.length; i++) {
+            scheme = schemes[i]
+
+            if (video_resource.type.indexOf(scheme) >= 0) {
+              drm_item.drm_scheme = scheme
+              break
+            }
+          }
+
+          drm_item.drm_server = video_resource.license_server.url
+          drm_item.drm_dhcp   = video_resource.license_server.hdcp_version
+        }
+        catch(e){}
+
+        return drm_item
+      })
+
+      drm_data = drm_data.filter(function(drm_item){
+        return (drm_item.video_url && drm_item.drm_scheme && drm_item.drm_server)
+      })
     }
   }
 
-  return {video_url: video_url, video_type: video_type, vtt_url: vtt_url}
+  return {video_url: video_url, video_type: video_type, vtt_url: vtt_url, drm_data: drm_data}
 }
 
 var process_data = function(data) {
