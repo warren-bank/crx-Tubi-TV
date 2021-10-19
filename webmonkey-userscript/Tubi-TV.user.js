@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tubi TV
 // @description  Watch videos in external player.
-// @version      2.0.2
+// @version      2.0.3
 // @match        *://tubitv.com/*
 // @match        *://*.tubitv.com/*
 // @match        *://tubi.tv/*
@@ -20,13 +20,19 @@
 // ----------------------------------------------------------------------------- constants
 
 var user_options = {
-  "disable_modal_age_dialog":      true,
-  "convert_carousel_to_grid":      false,
-  "rewrite_page_dom":              true,
-
-  "redirect_to_webcast_reloaded":  true,
-  "force_http":                    true,
-  "force_https":                   false
+  "common": {
+    "disable_modal_age_dialog":      true,
+    "convert_carousel_to_grid":      false,
+    "rewrite_page_dom":              true
+  },
+  "webmonkey": {
+    "post_intent_redirect_to_url":  "about:blank"
+  },
+  "greasemonkey": {
+    "redirect_to_webcast_reloaded": true,
+    "force_http":                   true,
+    "force_https":                  false
+  }
 }
 
 var strings = {
@@ -84,8 +90,8 @@ var add_style_element = function(css) {
 // ----------------------------------------------------------------------------- URL links to tools on Webcast Reloaded website
 
 var get_webcast_reloaded_url = function(video_url, vtt_url, referer_url, drm_scheme, drm_server, force_http, force_https) {
-  force_http  = (typeof force_http  === 'boolean') ? force_http  : user_options.force_http
-  force_https = (typeof force_https === 'boolean') ? force_https : user_options.force_https
+  force_http  = (typeof force_http  === 'boolean') ? force_http  : user_options.greasemonkey.force_http
+  force_https = (typeof force_https === 'boolean') ? force_https : user_options.greasemonkey.force_https
 
   var encoded_video_url, encoded_vtt_url, encoded_referer_url, encoded_drm_url, webcast_reloaded_base, webcast_reloaded_url
 
@@ -134,10 +140,10 @@ var redirect_to_url = function(url) {
   if (!url) return
 
   if (typeof GM_loadUrl === 'function') {
-    if ((url[0] === '/') && (typeof GM_resolveUrl === 'function'))
-      url = GM_resolveUrl(url, unsafeWindow.location.href)
-    if (url.indexOf('http') === 0)
-      GM_loadUrl(url, 'Referer', unsafeWindow.location.href)
+    if (typeof GM_resolveUrl === 'function')
+      url = GM_resolveUrl(url, unsafeWindow.location.href) || url
+
+    GM_loadUrl(url, 'Referer', unsafeWindow.location.href)
   }
   else {
     try {
@@ -147,6 +153,19 @@ var redirect_to_url = function(url) {
       unsafeWindow.window.location = url
     }
   }
+}
+
+var process_webmonkey_post_intent_redirect_to_url = function() {
+  var url = null
+
+  if (typeof user_options.webmonkey.post_intent_redirect_to_url === 'string')
+    url = user_options.webmonkey.post_intent_redirect_to_url
+
+  if (typeof user_options.webmonkey.post_intent_redirect_to_url === 'function')
+    url = user_options.webmonkey.post_intent_redirect_to_url()
+
+  if (typeof url === 'string')
+    redirect_to_url(url)
 }
 
 var process_video_url = function(video_url, video_type, vtt_url, referer_url, drm_scheme, drm_server) {
@@ -180,9 +199,10 @@ var process_video_url = function(video_url, video_type, vtt_url, referer_url, dr
     }
 
     GM_startIntent.apply(this, args)
+    process_webmonkey_post_intent_redirect_to_url()
     return true
   }
-  else if (user_options.redirect_to_webcast_reloaded) {
+  else if (user_options.greasemonkey.redirect_to_webcast_reloaded) {
     // running in standard web browser: redirect URL to top-level tool on Webcast Reloaded website
 
     redirect_to_url(get_webcast_reloaded_url(video_url, vtt_url, referer_url, drm_scheme, drm_server))
@@ -746,7 +766,7 @@ var process_data = function(data) {
     catch(e) {}
   }
 
-  if (user_options.rewrite_page_dom || !unsafeWindow.document.querySelector('#content > #app'))
+  if (user_options.common.rewrite_page_dom || !unsafeWindow.document.querySelector('#content > #app'))
     reinitialize_dom(data)
 }
 
@@ -849,12 +869,12 @@ var init = function() {
   else
     inspect_scripts()
 
-  if (user_options.disable_modal_age_dialog) {
+  if (user_options.common.disable_modal_age_dialog) {
     disable_modal_age_dialog()
     unsafeWindow.setTimeout(disable_modal_age_dialog, 1000)
   }
 
-  if (user_options.convert_carousel_to_grid)
+  if (user_options.common.convert_carousel_to_grid)
     convert_carousel_to_grid()
 }
 
