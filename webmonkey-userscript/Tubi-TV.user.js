@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tubi TV
 // @description  Watch videos in external player.
-// @version      2.0.3
+// @version      2.0.4
 // @match        *://tubitv.com/*
 // @match        *://*.tubitv.com/*
 // @match        *://tubi.tv/*
@@ -749,7 +749,7 @@ var process_data = function(data) {
   ) return
 
   var keys = Object.keys(data.video.statusById)
-  var key, video, video_data
+  var key, video, video_data, found_video_url
 
   for (var i=0; i < keys.length; i++) {
     key = keys[i]
@@ -759,12 +759,18 @@ var process_data = function(data) {
       video_data = extract_video_data(video)
 
       if (video_data.video_url) {
+        found_video_url = true
         process_video_url(video_data.video_url, video_data.video_type, video_data.vtt_url)
         break
       }
     }
     catch(e) {}
   }
+
+  // Only apply WebMonkey redirect on pages that deep link to a single video.
+  // On pages for a series, after the DOM is rewritten to display a list of all available episodes.. don't redirect away.
+  if (!found_video_url)
+    user_options.webmonkey.post_intent_redirect_to_url = null
 
   if (user_options.common.rewrite_page_dom || !unsafeWindow.document.querySelector('#content > #app'))
     reinitialize_dom(data)
