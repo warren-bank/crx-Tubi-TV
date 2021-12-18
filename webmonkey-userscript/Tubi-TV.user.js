@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tubi TV
 // @description  Watch videos in external player.
-// @version      2.0.4
+// @version      2.0.5
 // @match        *://tubitv.com/*
 // @match        *://*.tubitv.com/*
 // @match        *://tubi.tv/*
@@ -777,7 +777,7 @@ var process_data = function(data) {
 }
 
 var inspect_scripts = function() {
-  var tags    = unsafeWindow.document.querySelectorAll('script[charset]')
+  var tags    = unsafeWindow.document.querySelectorAll('script:not([src])')
   var prefix  = 'window.__data='
   var postfix = /;$/
   var tag, text, data
@@ -797,14 +797,19 @@ var inspect_scripts = function() {
 
           // fix JSON
           text = text.replace(/(":)undefined([,}\]])/g, '$1null$2')
+          text = text.replace(/new Date\([^\)]*\)/g, 'null')
 
           data = JSON.parse(text)
           process_data(data)
         }
-        catch(e) {break}
+        catch(e2) {
+          //console.log('JSON Parser Error:', e2.message, e2)
+          //console.log(text)
+        }
+        break
       }
     }
-    catch(e) {}
+    catch(e1) {}
   }
 }
 
