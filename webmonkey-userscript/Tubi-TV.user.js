@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tubi TV
 // @description  Watch videos in external player.
-// @version      2.0.5
+// @version      2.0.6
 // @match        *://tubitv.com/*
 // @match        *://*.tubitv.com/*
 // @match        *://tubi.tv/*
@@ -85,6 +85,10 @@ var add_style_element = function(css) {
   head.appendChild(
     make_element('style', css)
   )
+}
+
+var cancel_event = function(event) {
+  event.stopPropagation();event.stopImmediatePropagation();event.preventDefault();event.returnValue=false;
 }
 
 // ----------------------------------------------------------------------------- URL links to tools on Webcast Reloaded website
@@ -258,7 +262,7 @@ var insert_webcast_reloaded_div = function(block_element, video_url, vtt_url, re
 // ----------------------------------------------------------------------------- DOM: dynamic elements - play video button
 
 var onclick_start_video_button = function(event) {
-  event.stopPropagation();event.stopImmediatePropagation();event.preventDefault();event.returnValue=true;
+  cancel_event(event)
 
   var button      = event.target
   var video_url   = button.getAttribute('x-video-url')
@@ -848,9 +852,15 @@ var convert_carousel_to_grid = function() {
   })
 }
 
-// ----------------------------------------------------------------------------- bootstrap
+// ----------------------------------------------------------------------------- redirect page URL when navigation links are followed
 
 var follow_all_links = function() {
+  follow_anchor_elements()
+  follow_content_tiles()
+  intercept_history_state_updates()
+}
+
+var follow_anchor_elements = function() {
   unsafeWindow.document.addEventListener('click', function(event){
     var anchor = event.target
     var depth  = 5
@@ -865,13 +875,51 @@ var follow_all_links = function() {
         redirect_to_url(
           anchor.getAttribute('href')
         )
+        cancel_event(event)
       }
     }
   })
 }
 
+var follow_content_tiles = function() {
+  var tiles = unsafeWindow.document.querySelectorAll('div.web-content-tile')
+
+  if (tiles && tiles.length) {
+    for (var i=0; i < tiles.length; i++) {
+      tiles[i].addEventListener('click', follow_content_tile_onclick)
+    }
+  }
+}
+
+var follow_content_tile_onclick = function(event) {
+  var anchor = event.target.querySelector(':scope a.web-content-tile__title[href]')
+
+  if (anchor) {
+    redirect_to_url(
+      anchor.getAttribute('href')
+    )
+    cancel_event(event)
+  }
+}
+
+var intercept_history_state_updates = function() {
+  unsafeWindow.history.pushState    = history_state_onupdate
+  unsafeWindow.history.replaceState = history_state_onupdate
+}
+
+var history_state_onupdate = function(stateObj, unused, url) {
+  if (url) {
+    redirect_to_url(url)
+  }
+}
+
+// ----------------------------------------------------------------------------- bootstrap
+
 var init = function() {
-  if (('function' === (typeof GM_getUrl)) && (GM_getUrl() !== unsafeWindow.location.href)) return
+  if (('function' === (typeof GM_getUrl)) && (GM_getUrl() !== unsafeWindow.location.href)) {
+    redirect_to_url(unsafeWindow.location.href)
+    return
+  }
 
   follow_all_links()
 
