@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tubi TV
 // @description  Watch videos in external player.
-// @version      2.0.6
+// @version      2.0.7
 // @match        *://tubitv.com/*
 // @match        *://*.tubitv.com/*
 // @match        *://tubi.tv/*
@@ -474,8 +474,8 @@ var reinitialize_dom = function(data) {
       for (var i=0; i < video.seasons.length; i++) {
         season = video.seasons[i]
 
-        if (season && ('object' === (typeof season)) && Array.isArray(season.episodeIds) && season.episodeIds.length) {
-          episode_keys = season.episodeIds
+        if (season && ('object' === (typeof season)) && Array.isArray(season.episodes) && season.episodes.length) {
+          episode_keys = season.episodes.map(ep => ep.id)
 
           for (var i2=0; i2 < episode_keys.length; i2++) {
             episode_key   = episode_keys[i2]
