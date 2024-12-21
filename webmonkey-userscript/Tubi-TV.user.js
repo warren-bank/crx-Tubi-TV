@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tubi TV
 // @description  Watch videos in external player.
-// @version      2.0.7
+// @version      2.0.8
 // @match        *://tubitv.com/*
 // @match        *://*.tubitv.com/*
 // @match        *://tubi.tv/*
@@ -916,9 +916,13 @@ var history_state_onupdate = function(stateObj, unused, url) {
 // ----------------------------------------------------------------------------- bootstrap
 
 var init = function() {
-  if (('function' === (typeof GM_getUrl)) && (GM_getUrl() !== unsafeWindow.location.href)) {
-    redirect_to_url(unsafeWindow.location.href)
-    return
+  var gmUrl
+  if ('function' === (typeof GM_getUrl)) {
+    gmUrl = GM_getUrl()
+    if (gmUrl && (gmUrl !== unsafeWindow.location.href)) {
+      redirect_to_url(unsafeWindow.location.href)
+      return
+    }
   }
 
   follow_all_links()
