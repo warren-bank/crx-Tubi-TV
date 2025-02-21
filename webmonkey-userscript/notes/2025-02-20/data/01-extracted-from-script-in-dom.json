@@ -1,0 +1,1788 @@
+{
+  "auth": {
+    "loaded": false,
+    "ottActivationCodePending": false,
+    "userCredentials": null,
+    "userIP": "127.0.0.1",
+    "deviceId": "7783d58a-3039-4716-bdd8-39ea85b8efe8",
+    "firstSeen": "2025-02-19T05:29:45.736Z"
+  },
+  "userReactions": {
+    "content": {}
+  },
+  "userSettings": {
+    "birthday": "",
+    "loaded": false,
+    "deleteSuccess": false,
+    "deleteError": null,
+    "loadError": null,
+    "facebookId": null,
+    "email": "",
+    "first_name": "",
+    "gender": null,
+    "enabled": false,
+    "hasPassword": false,
+    "coppaState": "COMPLIANT",
+    "parentalRating": 3,
+    "notification_settings": {
+      "newsletter": false,
+      "content_leaving": false
+    }
+  },
+  "container": {
+    "containersList": [],
+    "containerIdMap": {},
+    "containerLoadIdMap": {},
+    "containerChildrenIdMap": {},
+    "containerContext": "",
+    "isFetching": false,
+    "error": null,
+    "nextContainerIndexToLoad": 0,
+    "sponsorship": {
+      "pixelsFired": {}
+    },
+    "containerMenuList": [],
+    "isContainerMenuListLoaded": false
+  },
+  "contentMode": {
+    "movie": {
+      "containersList": [],
+      "nextContainerIndexToLoad": 0,
+      "containerIdMap": {},
+      "containerLoadIdMap": {},
+      "containerChildrenIdMap": {},
+      "containerContext": "",
+      "containerMenuList": [],
+      "isContainerMenuListLoaded": false,
+      "sponsorship": {
+        "pixelsFired": {}
+      },
+      "isFetching": false,
+      "error": null
+    },
+    "tv": {
+      "containersList": [],
+      "nextContainerIndexToLoad": 0,
+      "containerIdMap": {},
+      "containerLoadIdMap": {},
+      "containerChildrenIdMap": {},
+      "containerContext": "",
+      "containerMenuList": [],
+      "isContainerMenuListLoaded": false,
+      "sponsorship": {
+        "pixelsFired": {}
+      },
+      "isFetching": false,
+      "error": null
+    },
+    "myStuff": {
+      "containersList": [],
+      "nextContainerIndexToLoad": 0,
+      "containerIdMap": {},
+      "containerLoadIdMap": {},
+      "containerChildrenIdMap": {},
+      "containerContext": "",
+      "containerMenuList": [],
+      "isContainerMenuListLoaded": false,
+      "sponsorship": {
+        "pixelsFired": {}
+      },
+      "isFetching": false,
+      "error": null
+    },
+    "linear": {
+      "containersList": [],
+      "nextContainerIndexToLoad": 0,
+      "containerIdMap": {},
+      "containerLoadIdMap": {},
+      "containerChildrenIdMap": {},
+      "containerContext": "",
+      "containerMenuList": [],
+      "isContainerMenuListLoaded": false,
+      "sponsorship": {
+        "pixelsFired": {}
+      },
+      "isFetching": false,
+      "error": null
+    },
+    "latino": {
+      "containersList": [],
+      "nextContainerIndexToLoad": 0,
+      "containerIdMap": {},
+      "containerLoadIdMap": {},
+      "containerChildrenIdMap": {},
+      "containerContext": "",
+      "containerMenuList": [],
+      "isContainerMenuListLoaded": false,
+      "sponsorship": {
+        "pixelsFired": {}
+      },
+      "isFetching": false,
+      "error": null
+    },
+    "browseWhileWatching": {
+      "containersList": [],
+      "nextContainerIndexToLoad": 0,
+      "containerIdMap": {},
+      "containerLoadIdMap": {},
+      "containerChildrenIdMap": {},
+      "containerContext": "",
+      "containerMenuList": [],
+      "isContainerMenuListLoaded": false,
+      "sponsorship": {
+        "pixelsFired": {}
+      },
+      "isFetching": false,
+      "error": null
+    }
+  },
+  "video": {
+    "byId": {
+      "200075948": {
+        "imdb_id": "tt2650122",
+        "video_resources": [
+          {
+            "type": "hlsv6",
+            "codec": "H265",
+            "manifest": {
+              "duration": 6497,
+              "url": "https://akamai2.tubi.video/81891f17-4166-4f83-a79e-4713dfdfc916/j5en7ky0f1.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZG5fcHJlZml4IjoiaHR0cHM6Ly9ha2FtYWkyLnR1YmkudmlkZW8iLCJleHAiOjE3NDA1NDk2MDAsIm1lZGlhX3NpZyI6ODgxMTAwN30.zXwamGwVZPyh-n9lhue-efMR3bl9u2T3yca3L3Opu2E"
+            },
+            "titan_version": "",
+            "resolution": "720P",
+            "ssai_version": "",
+            "generator_version": "zeus_3.0.4;zeus_3.0.6;zeus_3.0.2",
+            "audio_tracks": [
+              {
+                "type": "MAIN",
+                "display_name": "English",
+                "lang": "English"
+              }
+            ]
+          },
+          {
+            "type": "hlsv6",
+            "codec": "H264",
+            "manifest": {
+              "duration": 6497,
+              "url": "https://akamai2.tubi.video/81891f17-4166-4f83-a79e-4713dfdfc916/6yxswbtk5h.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZG5fcHJlZml4IjoiaHR0cHM6Ly9ha2FtYWkyLnR1YmkudmlkZW8iLCJleHAiOjE3NDA1NDk2MDAsIm1lZGlhX3NpZyI6ODgxMTAwN30.zXwamGwVZPyh-n9lhue-efMR3bl9u2T3yca3L3Opu2E"
+            },
+            "titan_version": "",
+            "resolution": "720P",
+            "ssai_version": "",
+            "generator_version": "zeus_3.0.4;zeus_3.0.6;zeus_3.0.2",
+            "audio_tracks": [
+              {
+                "type": "MAIN",
+                "display_name": "English",
+                "lang": "English"
+              }
+            ]
+          }
+        ],
+        "url": "https://akamai2.tubi.video/81891f17-4166-4f83-a79e-4713dfdfc916/j5en7ky0f1.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZG5fcHJlZml4IjoiaHR0cHM6Ly9ha2FtYWkyLnR1YmkudmlkZW8iLCJleHAiOjE3NDA1NDk2MDAsIm1lZGlhX3NpZyI6ODgxMTAwN30.zXwamGwVZPyh-n9lhue-efMR3bl9u2T3yca3L3Opu2E",
+        "publisher_id": "fce9d37fc5c71c2f4bd5e2847e766e55",
+        "availability_duration": 31536000,
+        "canonical_id": "",
+        "landscape_images": [
+          "//canvas-lb.tubitv.com/opts/vQ0hl3ParPDfQg==/f522bfcb-5734-4a12-8351-c2c9ca93bef0/CMADEPwBOgUxLjEuNg=="
+        ],
+        "credit_cuepoints": {
+          "postlude": 6377,
+          "prologue": 0,
+          "intro_start": 0,
+          "intro_end": 0,
+          "recap_start": 0,
+          "recap_end": 0,
+          "earlycredits_start": 0,
+          "earlycredits_end": 0,
+          "prelogue": 0
+        },
+        "is_cdc": false,
+        "awards": {
+          "items": []
+        },
+        "series_id": "300004464",
+        "monetization": {
+          "cue_points": [
+            0,
+            373,
+            767,
+            1047,
+            1292,
+            1613,
+            2035,
+            2324,
+            2563,
+            3393,
+            3701,
+            3982,
+            4429,
+            4728,
+            5353,
+            5847
+          ]
+        },
+        "partner_id": "F138881-S01E01-ENG-NAT-OV-01",
+        "description": "DCI Tennison inherits a murder case that proves more complex than it first appears.",
+        "has_trailer": false,
+        "year": 1991,
+        "version_id": "",
+        "video_metadata": [],
+        "player_type": "tubi",
+        "title": "S01:E01 - Price to Pay (Pt .1)",
+        "episode_number": "1",
+        "imdb_fields": null,
+        "country": "United Kingdom",
+        "gn_fields": null,
+        "tags": [
+          "Drama",
+          "Crime"
+        ],
+        "needs_login": false,
+        "availability_starts": "2024-01-01T00:00:00.000Z",
+        "video_renditions": [],
+        "import_id": "filmrise",
+        "thumbnails": [
+          "//canvas-lb.tubitv.com/opts/e_JwBReaVAaxzQ==/f522bfcb-5734-4a12-8351-c2c9ca93bef0/CIAFEOgCOgUxLjEuNg=="
+        ],
+        "actors": [
+          "Helen Mirren",
+          "John Benfield",
+          "Richard Hawley",
+          "Ralph Fiennes",
+          "Tom Wilkinson"
+        ],
+        "backgrounds": [
+          "//canvas-lb.tubitv.com/opts/xWiT-7uPSy4Cog==/f522bfcb-5734-4a12-8351-c2c9ca93bef0/CIAPELgIOgUxLjEuNg=="
+        ],
+        "images": {
+          "hero_422": [
+            "https://canvas-lb.tubitv.com/opts/o8-ajmB9jrl7ug==/f522bfcb-5734-4a12-8351-c2c9ca93bef0/CKYDEOgCOgUxLjEuNg=="
+          ],
+          "hero_feature": [
+            "https://canvas-lb.tubitv.com/opts/L8Nosi2270OtNg==/f522bfcb-5734-4a12-8351-c2c9ca93bef0/CPMCEN8COgUxLjEuNg=="
+          ],
+          "posterarts": [
+            "https://canvas-lb.tubitv.com/opts/Hx2lEX1FFjVS3w==/f522bfcb-5734-4a12-8351-c2c9ca93bef0/CJgDEMcEOgUxLjEuNg=="
+          ],
+          "title_art": []
+        },
+        "gracenote_id": "EP001510010067",
+        "login_reason": "",
+        "lang": "English",
+        "ratings": [
+          {
+            "code": "TV-14",
+            "system": "tvpg",
+            "value": "TV-14",
+            "descriptors": []
+          }
+        ],
+        "duration": 6497,
+        "version": 22,
+        "subtitles": [
+          {
+            "url": "http://s.adrise.tv/91617776-cdb6-4da4-a6f5-95bc37e7846c.srt",
+            "lang": "English",
+            "lang_alpha3": "eng",
+            "lang_translation": "English"
+          }
+        ],
+        "hero_images": [
+          "//canvas-lb.tubitv.com/opts/wnDE3hZK2aS98A==/f522bfcb-5734-4a12-8351-c2c9ca93bef0/CIAPEKQFOgUxLjEuNg=="
+        ],
+        "directors": [
+          "Christopher Menaul"
+        ],
+        "has_subtitle": true,
+        "detailed_type": "episode",
+        "posterarts": [
+          "//canvas-lb.tubitv.com/opts/Hx2lEX1FFjVS3w==/f522bfcb-5734-4a12-8351-c2c9ca93bef0/CJgDEMcEOgUxLjEuNg=="
+        ],
+        "air_datetime": null,
+        "video_previews": [],
+        "ad_languages": [],
+        "trailers": [],
+        "rt_fields": {
+          "reviews": []
+        },
+        "video_preview_url": "",
+        "type": "v",
+        "availability_ends": "2027-06-30T23:59:59.000Z",
+        "display_episode_number": "1",
+        "id": "200075948",
+        "updated_at": "2024-10-08T19:50:34.000Z",
+        "policy_match": true,
+        "ttl": 1739954249082
+      },
+      "200075949": {
+        "imdb_id": "tt2650124",
+        "video_resources": [
+          {
+            "type": "hlsv6",
+            "codec": "H265",
+            "manifest": {
+              "duration": 6283,
+              "url": "https://akamai2.tubi.video/3e154c68-df8a-46df-87e6-854cb6d7770c/51eiao5fvx.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZG5fcHJlZml4IjoiaHR0cHM6Ly9ha2FtYWkyLnR1YmkudmlkZW8iLCJleHAiOjE3NDA1NDk2MDAsIm1lZGlhX3NpZyI6NTM0MDYzMzR9.X4y8kdW_ud4w3zhuMgpMWTOpiW9Cijrx50jU7bGKM3c"
+            },
+            "titan_version": "",
+            "resolution": "720P",
+            "ssai_version": "",
+            "generator_version": "zeus_3.0.4;zeus_3.0.6;zeus_3.0.2",
+            "audio_tracks": [
+              {
+                "type": "MAIN",
+                "display_name": "English",
+                "lang": "English"
+              }
+            ]
+          },
+          {
+            "type": "hlsv6",
+            "codec": "H264",
+            "manifest": {
+              "duration": 6283,
+              "url": "https://akamai2.tubi.video/3e154c68-df8a-46df-87e6-854cb6d7770c/359orfchcy.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZG5fcHJlZml4IjoiaHR0cHM6Ly9ha2FtYWkyLnR1YmkudmlkZW8iLCJleHAiOjE3NDA1NDk2MDAsIm1lZGlhX3NpZyI6NTM0MDYzMzR9.X4y8kdW_ud4w3zhuMgpMWTOpiW9Cijrx50jU7bGKM3c"
+            },
+            "titan_version": "",
+            "resolution": "720P",
+            "ssai_version": "",
+            "generator_version": "zeus_3.0.4;zeus_3.0.6;zeus_3.0.2",
+            "audio_tracks": [
+              {
+                "type": "MAIN",
+                "display_name": "English",
+                "lang": "English"
+              }
+            ]
+          }
+        ],
+        "url": "https://akamai2.tubi.video/3e154c68-df8a-46df-87e6-854cb6d7770c/51eiao5fvx.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZG5fcHJlZml4IjoiaHR0cHM6Ly9ha2FtYWkyLnR1YmkudmlkZW8iLCJleHAiOjE3NDA1NDk2MDAsIm1lZGlhX3NpZyI6NTM0MDYzMzR9.X4y8kdW_ud4w3zhuMgpMWTOpiW9Cijrx50jU7bGKM3c",
+        "publisher_id": "fce9d37fc5c71c2f4bd5e2847e766e55",
+        "availability_duration": 31536000,
+        "canonical_id": "",
+        "landscape_images": [
+          "//canvas-lb.tubitv.com/opts/UhNYbphMLxugTA==/f832bd72-90bd-4160-85db-a0b99be83124/CMADEPwBOgUxLjEuNg=="
+        ],
+        "credit_cuepoints": {
+          "postlude": 6161,
+          "prologue": 0,
+          "intro_start": 0,
+          "intro_end": 0,
+          "recap_start": 0,
+          "recap_end": 0,
+          "earlycredits_start": 0,
+          "earlycredits_end": 0,
+          "prelogue": 0
+        },
+        "is_cdc": false,
+        "awards": {
+          "items": []
+        },
+        "series_id": "300004464",
+        "monetization": {
+          "cue_points": [
+            0,
+            313,
+            637,
+            1084,
+            1464,
+            1864,
+            2292,
+            2644,
+            2974,
+            3350,
+            3692,
+            4040,
+            4428,
+            4905,
+            5313
+          ]
+        },
+        "partner_id": "F138881-S01E02-ENG-NAT-OV-01",
+        "description": "DCI Jane Tennison continues her quest to trap murder suspect George Marlow.",
+        "has_trailer": false,
+        "year": 1991,
+        "version_id": "",
+        "video_metadata": [],
+        "player_type": "tubi",
+        "title": "S01:E02 - Price to Pay (Pt. 2)",
+        "episode_number": "2",
+        "imdb_fields": null,
+        "country": "United Kingdom",
+        "gn_fields": null,
+        "tags": [
+          "Drama",
+          "Crime"
+        ],
+        "needs_login": false,
+        "availability_starts": "2024-01-01T00:00:00.000Z",
+        "video_renditions": [],
+        "import_id": "filmrise",
+        "thumbnails": [
+          "//canvas-lb.tubitv.com/opts/1TPdzf7o-cposA==/f832bd72-90bd-4160-85db-a0b99be83124/CIAFEOgCOgUxLjEuNg=="
+        ],
+        "actors": [
+          "Helen Mirren",
+          "John Benfield",
+          "Richard Hawley",
+          "Ralph Fiennes",
+          "Tom Wilkinson"
+        ],
+        "backgrounds": [
+          "//canvas-lb.tubitv.com/opts/fz-yAhk0iTIX_A==/f832bd72-90bd-4160-85db-a0b99be83124/CIAPELgIOgUxLjEuNg=="
+        ],
+        "images": {
+          "hero_422": [
+            "https://canvas-lb.tubitv.com/opts/54-snNM1-qX-uA==/f832bd72-90bd-4160-85db-a0b99be83124/CKYDEOgCOgUxLjEuNg=="
+          ],
+          "hero_feature": [
+            "https://canvas-lb.tubitv.com/opts/n6L50Z2NUVk9hg==/f832bd72-90bd-4160-85db-a0b99be83124/CPMCEN8COgUxLjEuNg=="
+          ],
+          "posterarts": [
+            "https://canvas-lb.tubitv.com/opts/RFe222YbbB5sFw==/f832bd72-90bd-4160-85db-a0b99be83124/CJgDEMcEOgUxLjEuNg=="
+          ],
+          "title_art": []
+        },
+        "gracenote_id": "EP001510010068",
+        "login_reason": "",
+        "lang": "English",
+        "ratings": [
+          {
+            "code": "TV-14",
+            "system": "tvpg",
+            "value": "TV-14",
+            "descriptors": []
+          }
+        ],
+        "duration": 6283,
+        "version": 23,
+        "subtitles": [
+          {
+            "url": "http://s.adrise.tv/fe8ddaeb-d8ac-4643-85ba-b77e81fad96f.srt",
+            "lang": "English",
+            "lang_alpha3": "eng",
+            "lang_translation": "English"
+          }
+        ],
+        "hero_images": [
+          "//canvas-lb.tubitv.com/opts/svqE9xt8FtPnPg==/f832bd72-90bd-4160-85db-a0b99be83124/CIAPEKQFOgUxLjEuNg=="
+        ],
+        "directors": [
+          "Christopher Menaul"
+        ],
+        "has_subtitle": true,
+        "detailed_type": "episode",
+        "posterarts": [
+          "//canvas-lb.tubitv.com/opts/RFe222YbbB5sFw==/f832bd72-90bd-4160-85db-a0b99be83124/CJgDEMcEOgUxLjEuNg=="
+        ],
+        "air_datetime": null,
+        "video_previews": [],
+        "ad_languages": [],
+        "trailers": [],
+        "rt_fields": null,
+        "video_preview_url": "",
+        "type": "v",
+        "availability_ends": "2027-06-30T23:59:59.000Z",
+        "display_episode_number": "2",
+        "id": "200075949",
+        "updated_at": "2024-10-08T19:49:42.000Z",
+        "policy_match": true,
+        "ttl": 1739954249082
+      },
+      "0300004464": {
+        "imdb_id": "tt0098898",
+        "is_recurring": false,
+        "publisher_id": "",
+        "availability_duration": null,
+        "valid_duration": 7200,
+        "channel_name": "FilmRise",
+        "canonical_id": "",
+        "landscape_images": [
+          "//canvas-lb.tubitv.com/opts/Uj2G44s-0BKzqg==/80ab69f7-69a5-4c9d-9796-9a6d96028731/CMADEPwBOgUxLjEuNg=="
+        ],
+        "is_cdc": false,
+        "awards": {
+          "items": []
+        },
+        "partner_id": "F138881-S00-ENG-NAT-OV-01",
+        "description": "A decorated female detective investigating murders wages a battle for truth amid hostilities from colleagues in a male-dominated justice system.",
+        "has_trailer": false,
+        "year": 1991,
+        "version_id": "",
+        "player_type": "tubi",
+        "title": "Prime Suspect",
+        "imdb_fields": null,
+        "country": "United Kingdom",
+        "gn_fields": null,
+        "tags": [
+          "Drama",
+          "Crime"
+        ],
+        "needs_login": false,
+        "availability_starts": "2024-01-01T00:00:00.000Z",
+        "video_renditions": [],
+        "import_id": "filmrise",
+        "thumbnails": [
+          "//canvas-lb.tubitv.com/opts/OCnInLVEv7GP7g==/a303f267-58e3-4a0e-b0c2-85f101c2dd17/CIAFEOgCOgUxLjEuNg=="
+        ],
+        "actors": [
+          "Helen Mirren",
+          "John Benfield",
+          "Richard Hawley",
+          "Tom Bell",
+          "Jack Ellis",
+          "Ralph Fiennes",
+          "Tom Wilkinson"
+        ],
+        "channel_logo": "//cdn.adrise.tv/image/channels/filmriseclassictv/logo_long.png",
+        "backgrounds": [
+          "//canvas-lb.tubitv.com/opts/Ka-OiFtoUN7eIA==/a303f267-58e3-4a0e-b0c2-85f101c2dd17/CIAPELgIOgUxLjEuNg=="
+        ],
+        "images": {
+          "hero_422": [
+            "https://canvas-lb.tubitv.com/opts/nW_8cVQ-mIXVag==/195f45d9-0993-4af4-a14e-5046dc931bea/CKYDEOgCOgUxLjEuNg=="
+          ],
+          "hero_feature": [
+            "https://canvas-lb.tubitv.com/opts/NuFL4VvmF62W5w==/195f45d9-0993-4af4-a14e-5046dc931bea/CPMCEN8COgUxLjEuNg=="
+          ],
+          "posterarts": [
+            "https://canvas-lb.tubitv.com/opts/z7STHpcQqOaN7A==/903fbda1-80d2-4f3e-9dea-3ac0d38b509a/CJgDEMcEOgUxLjEuNg=="
+          ],
+          "title_art": [
+            "https://canvas-lb.tubitv.com/opts/zZXEYp3axy1yXw==/fe0028c8-2ac6-475f-b439-99e3182f5cd2/CJAIELQBOgUxLjEuNkAB"
+          ]
+        },
+        "gracenote_id": "SH001510010000",
+        "login_reason": "",
+        "lang": "English",
+        "ratings": [
+          {
+            "code": "TV-14",
+            "system": "tvpg",
+            "value": "TV-14",
+            "descriptors": []
+          }
+        ],
+        "version": 59,
+        "subtitles": [
+          {
+            "url": "",
+            "lang": "English",
+            "lang_alpha3": "eng",
+            "lang_translation": "English"
+          }
+        ],
+        "hero_images": [
+          "//canvas-lb.tubitv.com/opts/12sXnWrWuhz_tA==/3def3dbb-5007-4cac-bf6c-72c196ccb626/CIAPEKQFOgUxLjEuNg=="
+        ],
+        "directors": [
+          "Christopher Menaul"
+        ],
+        "has_subtitle": true,
+        "detailed_type": "series",
+        "posterarts": [
+          "//canvas-lb.tubitv.com/opts/z7STHpcQqOaN7A==/903fbda1-80d2-4f3e-9dea-3ac0d38b509a/CJgDEMcEOgUxLjEuNg=="
+        ],
+        "air_datetime": null,
+        "video_previews": [],
+        "ad_languages": [],
+        "trailers": [],
+        "rt_fields": null,
+        "video_preview_url": "",
+        "type": "s",
+        "availability_ends": "2027-06-30T23:59:59.000Z",
+        "id": "300004464",
+        "channel_id": "filmriseclassictv",
+        "updated_at": "2024-10-19T00:32:20.000Z",
+        "policy_match": true,
+        "seasons": [
+          {
+            "number": "1",
+            "episodes": [
+              {
+                "id": "200075948",
+                "num": 1
+              },
+              {
+                "id": "200075949",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "number": "2",
+            "episodes": [
+              {
+                "id": "200075951",
+                "num": 1
+              },
+              {
+                "id": "200075953",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "number": "3",
+            "episodes": [
+              {
+                "id": "200075955",
+                "num": 1
+              },
+              {
+                "id": "200075957",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "number": "4",
+            "episodes": [
+              {
+                "id": "200075958",
+                "num": 1
+              },
+              {
+                "id": "200075960",
+                "num": 2
+              },
+              {
+                "id": "200075962",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "number": "5",
+            "episodes": [
+              {
+                "id": "200075964",
+                "num": 1
+              },
+              {
+                "id": "200075966",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "number": "6",
+            "episodes": [
+              {
+                "id": "200075968",
+                "num": 1
+              },
+              {
+                "id": "200075970",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "number": "7",
+            "episodes": [
+              {
+                "id": "200075971",
+                "num": 1
+              },
+              {
+                "id": "200075973",
+                "num": 2
+              }
+            ]
+          }
+        ],
+        "isMetadataLoaded": true,
+        "ttl": 1739954249082
+      }
+    },
+    "adBreaksById": {
+      "200075948": [
+        0,
+        373,
+        767,
+        1047,
+        1292,
+        1613,
+        2035,
+        2324,
+        2563,
+        3393,
+        3701,
+        3982,
+        4429,
+        4728,
+        5353,
+        5847
+      ],
+      "200075949": [
+        0,
+        313,
+        637,
+        1084,
+        1464,
+        1864,
+        2292,
+        2644,
+        2974,
+        3350,
+        3692,
+        4040,
+        4428,
+        4905,
+        5313
+      ],
+      "0300004464": []
+    },
+    "fullContentById": {
+      "200075948": true,
+      "200075949": true,
+      "0300004464": true
+    },
+    "statusById": {
+      "0300004464": {
+        "isFetching": false,
+        "ttl": 1739954249082,
+        "error": null
+      }
+    },
+    "resumePositionById": {},
+    "relatedContentsById": {},
+    "autoPlayContentsById": {},
+    "thumbnailSpritesById": {}
+  },
+  "search": {
+    "loading": {},
+    "fromPath": "/",
+    "key": "",
+    "recommendedContainerIds": [],
+    "hash": {},
+    "activeIdx": null,
+    "keyboard": {
+      "rowIndex": 0,
+      "columnIndex": 0
+    },
+    "isVoiceSearch": false,
+    "activeSection": 0
+  },
+  "queue": {
+    "loaded": false,
+    "loading": false,
+    "inProgress": {},
+    "contentIdMap": {}
+  },
+  "history": {
+    "loaded": false,
+    "loading": false,
+    "inProgress": {},
+    "contentIdMap": {}
+  },
+  "ui": {
+    "isServiceUnavailable": false,
+    "notFound": false,
+    "scrolledToTop": true,
+    "topNavVisible": true,
+    "toggleTopNavOnScroll": true,
+    "containerMenuVisible": false,
+    "liveNewsMenuVisible": false,
+    "isMobile": false,
+    "viewportType": "desktop",
+    "isTouchDevice": false,
+    "accountCardVisible": false,
+    "userAgent": {
+      "ua": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4350.0 Iron Safari/537.36",
+      "browser": {
+        "name": "Chrome",
+        "version": "85.0.4350.0",
+        "major": "85",
+        "engine": "Blink",
+        "engineVersion": "85.0.4350.0"
+      },
+      "os": {
+        "name": "Windows",
+        "version": "7"
+      },
+      "device": {}
+    },
+    "showTrailer": false,
+    "trailerParentId": "",
+    "notifications": [],
+    "screensaverCounter": 5,
+    "userIdleCounter": 300,
+    "renderedContainersCount": {
+      "movie": 6,
+      "tv": 6,
+      "linear": 6,
+      "myStuff": 6,
+      "all": 6,
+      "latino": 6,
+      "browseWhileWatching": 6
+    },
+    "isSlowDevice": false,
+    "uiFidelity": 30,
+    "isRemoteDisabled": false,
+    "transitionCompleteCbs": [],
+    "settingsSubpanelId": "",
+    "isSettingsSubtitleActive": true,
+    "deeplinkBackOverrides": {},
+    "browseWhileWatchingBackOverrides": {},
+    "containerIndexMap": {},
+    "fullscreen": false,
+    "isKidsModeEnabled": false,
+    "isEspanolModeEnabled": false,
+    "userLanguageLocale": "en-US",
+    "twoDigitCountryCode": "US",
+    "ageGateModal": {
+      "isVisible": false,
+      "isFromExitKidsMode": false
+    },
+    "chromecastAutoplayVisible": false,
+    "waitingOnVoiceCommand": false,
+    "registrationPrompt": {
+      "isOpen": false,
+      "isSkipped": false
+    },
+    "renderControls": true,
+    "remindModal": {
+      "isOpen": false
+    },
+    "programDetailsModal": {
+      "isOpen": false,
+      "programKey": ""
+    },
+    "currentDate": "2025-02-19T06:37:28.878Z",
+    "activeTilePreviewCount": 0,
+    "showAppDownloadBanner": false,
+    "isTheater": false,
+    "showToastForMobileToOTTSignIn": false,
+    "showToastForContentNotFound": false
+  },
+  "experiments": {
+    "namespaces": {
+      "webott_linear_web_shared": {
+        "name": "webott_linear_web_shared",
+        "parameters": {
+          "allow_refresh_page": {
+            "name": "allow_refresh_page",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "vertical_fit": {
+            "name": "vertical_fit",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "spanish_captions": {
+            "name": "spanish_captions",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "linearsession_expired_limit": {
+            "name": "linearsession_expired_limit",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_analytics_anonymous_token": {
+        "name": "webott_web_analytics_anonymous_token",
+        "parameters": {
+          "enabled": {
+            "name": "enabled",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_force_failsafe": {
+        "name": "webott_force_failsafe",
+        "parameters": {
+          "force_failsafe": {
+            "name": "force_failsafe",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_ad_abnormal_error_constrain_view": {
+        "name": "webott_web_ad_abnormal_error_constrain_view",
+        "parameters": {
+          "enable_constrain_view_v0": {
+            "name": "enable_constrain_view_v0",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enable_constrain_view_v1": {
+            "name": "enable_constrain_view_v1",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_android_disable_playback_v2": {
+        "name": "webott_web_android_disable_playback_v2",
+        "parameters": {
+          "disable_web_android_playback": {
+            "name": "disable_web_android_playback",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_player_web_shared": {
+        "name": "webott_player_web_shared",
+        "parameters": {
+          "use_setup": {
+            "name": "use_setup",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "allow_refresh_page": {
+            "name": "allow_refresh_page",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "larger_caption": {
+            "name": "larger_caption",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "remove_back_button": {
+            "name": "remove_back_button",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "should_enable_mobile_safari_playback": {
+            "name": "should_enable_mobile_safari_playback",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "menu_position_trigger": {
+            "name": "menu_position_trigger",
+            "salt": "",
+            "experiment": "",
+            "value": "default",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enable_web_drm_check_parallel": {
+            "name": "enable_web_drm_check_parallel",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enable_start_position": {
+            "name": "enable_start_position",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "menu_position_trigger_v2": {
+            "name": "menu_position_trigger_v2",
+            "salt": "",
+            "experiment": "",
+            "value": "default",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "web_ios_variant": {
+            "name": "web_ios_variant",
+            "salt": "",
+            "experiment": "",
+            "value": 0,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "menu_position_trigger_v3": {
+            "name": "menu_position_trigger_v3",
+            "salt": "",
+            "experiment": "",
+            "value": "hover",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enable_web_adapter_resize_check": {
+            "name": "enable_web_adapter_resize_check",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enable_reposition_v0": {
+            "name": "enable_reposition_v0",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enable_new_stream_end": {
+            "name": "enable_new_stream_end",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "throttle_progressbar_mousemove": {
+            "name": "throttle_progressbar_mousemove",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "use_widevine_clearlead": {
+            "name": "use_widevine_clearlead",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enable_reposition_v4": {
+            "name": "enable_reposition_v4",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enable_reposition_v5": {
+            "name": "enable_reposition_v5",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enable_pause_qr_code": {
+            "name": "enable_pause_qr_code",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "theater_mode": {
+            "name": "theater_mode",
+            "salt": "",
+            "experiment": "",
+            "value": 0,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_casting_button_v3": {
+        "name": "webott_web_casting_button_v3",
+        "parameters": {
+          "show_casting_button": {
+            "name": "show_casting_button",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_registration_magic_link_v4": {
+        "name": "webott_web_registration_magic_link_v4",
+        "parameters": {
+          "magic_link_option": {
+            "name": "magic_link_option",
+            "salt": "",
+            "experiment": "",
+            "value": "on_invalid_password",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_vertical_ymal_v4": {
+        "name": "webott_web_vertical_ymal_v4",
+        "parameters": {
+          "enabled": {
+            "name": "enabled",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_new_featured_billboard_v2": {
+        "name": "webott_web_new_featured_billboard_v2",
+        "parameters": {
+          "featured_billboard": {
+            "name": "featured_billboard",
+            "salt": "",
+            "experiment": "",
+            "value": "featured_billboard_with_dots",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_video_preview_v5": {
+        "name": "webott_web_video_preview_v5",
+        "parameters": {
+          "type": {
+            "name": "type",
+            "salt": "",
+            "experiment": "",
+            "value": "control",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_cw_row_for_guest_users": {
+        "name": "webott_web_cw_row_for_guest_users",
+        "parameters": {
+          "show": {
+            "name": "show",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_player_pip": {
+        "name": "webott_web_player_pip",
+        "parameters": {
+          "pip_enabled": {
+            "name": "pip_enabled",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "vod_pip_enabled": {
+            "name": "vod_pip_enabled",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "linear_pip_enabled": {
+            "name": "linear_pip_enabled",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_all_categories_v4": {
+        "name": "webott_web_all_categories_v4",
+        "parameters": {
+          "enabled": {
+            "name": "enabled",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_hls_normalization_upgrade_1_5_7_v1": {
+        "name": "webott_web_hls_normalization_upgrade_1_5_7_v1",
+        "parameters": {
+          "use_next": {
+            "name": "use_next",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_featured_row": {
+        "name": "webott_web_featured_row",
+        "parameters": {
+          "use_container_row": {
+            "name": "use_container_row",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "titan_hlsv3_drm_fallback_web_2": {
+        "name": "titan_hlsv3_drm_fallback_web_2",
+        "parameters": {
+          "fallback_to": {
+            "name": "fallback_to",
+            "salt": "",
+            "experiment": "",
+            "value": "",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_personalization_prompt_v2": {
+        "name": "webott_web_personalization_prompt_v2",
+        "parameters": {
+          "enabled": {
+            "name": "enabled",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_celebrity_ymal_v2": {
+        "name": "webott_web_celebrity_ymal_v2",
+        "parameters": {
+          "enabled": {
+            "name": "enabled",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_remove_landing_v4": {
+        "name": "webott_web_remove_landing_v4",
+        "parameters": {
+          "landing_page": {
+            "name": "landing_page",
+            "salt": "",
+            "experiment": "",
+            "value": "landing_page",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_registration_player_gate": {
+        "name": "webott_web_registration_player_gate",
+        "parameters": {
+          "flow": {
+            "name": "flow",
+            "salt": "",
+            "experiment": "",
+            "value": "control",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enabled": {
+            "name": "enabled",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "remove_fb_login": {
+            "name": "remove_fb_login",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      }
+    },
+    "localOverrides": {},
+    "overrides": {},
+    "performanceTag": {}
+  },
+  "legalAsset": {
+    "privacy": {
+      "html": "",
+      "error": null
+    },
+    "terms": {
+      "html": "",
+      "error": null
+    },
+    "your-privacy-choices": {
+      "html": "",
+      "error": null
+    },
+    "b2b-privacy": {
+      "html": "",
+      "error": null
+    },
+    "cookies": {
+      "html": "",
+      "error": null
+    },
+    "dashpass": {
+      "html": "",
+      "error": null
+    }
+  },
+  "live": {
+    "activeContentId": "",
+    "loading": true,
+    "countdownForFullscreen": 0,
+    "videoPlayer": "BANNER",
+    "containerIndex": -1,
+    "containerId": "",
+    "contentIndex": 0,
+    "programIndex": 0,
+    "channelGuideLoaded": false,
+    "consoleVisible": true,
+    "playerReady": false,
+    "captions": []
+  },
+  "reminder": {
+    "loaded": false,
+    "loading": false,
+    "inProgress": {},
+    "contentIdMap": {},
+    "hasError": false
+  },
+  "linearReminder": {
+    "loaded": false,
+    "loading": false,
+    "inProgress": {},
+    "idMap": {},
+    "hasError": false
+  },
+  "epg": {
+    "containerIdsLoaded": {
+      "tubitv_us_linear": false,
+      "tubitv_epg_news": false,
+      "tubitv_epg_sports": false
+    },
+    "containerIdsLoading": {
+      "tubitv_us_linear": false,
+      "tubitv_epg_news": false,
+      "tubitv_epg_sports": false
+    },
+    "contentIdsByContainer": {
+      "tubitv_us_linear": [
+        {
+          "container_slug": "favorite_linear_channels",
+          "contents": [],
+          "name": "Favorites"
+        },
+        {
+          "container_slug": "recommended_linear_channels",
+          "contents": [],
+          "name": "Recommended"
+        }
+      ],
+      "tubitv_epg_news": [
+        {
+          "container_slug": "favorite_linear_channels",
+          "contents": [],
+          "name": "Favorites"
+        },
+        {
+          "container_slug": "recommended_linear_channels",
+          "contents": [],
+          "name": "Recommended"
+        }
+      ],
+      "tubitv_epg_sports": [
+        {
+          "container_slug": "favorite_linear_channels",
+          "contents": [],
+          "name": "Favorites"
+        },
+        {
+          "container_slug": "recommended_linear_channels",
+          "contents": [],
+          "name": "Recommended"
+        }
+      ]
+    },
+    "programsLoading": false,
+    "favoritedIdsLoaded": false,
+    "byId": {},
+    "fireTvLiveTabChannelIds": []
+  },
+  "consent": {
+    "updatingConsent": false,
+    "consentRequired": false,
+    "privacyDescription": "",
+    "consents": []
+  },
+  "remoteConfig": {
+    "blockedAnalyticsEvents": {},
+    "privacyPolicyQrCodeUrl": "https://cdn.adrise.tv/tubitv-assets/img/gdpr/privacy.png",
+    "privacyPolicyUrl": "https://tubitv.com/static/privacy",
+    "termsOfUseQrCodeUrl": "https://cdn.adrise.tv/tubitv-assets/img/gdpr/terms.png",
+    "termsOfUseUrl": "https://tubitv.com/static/terms",
+    "youbora": {
+      "vod": true,
+      "preview": false,
+      "linear": true,
+      "trailer": false
+    },
+    "sentryRate": {
+      "error": 0.2,
+      "transition": 0.007
+    },
+    "country": "US",
+    "isInBlockedCountry": false,
+    "isLiveAvailableInCountry": true,
+    "isRecommendedChannelsEnabledInCountry": true,
+    "intro_landscape_hibpr": "http://c12.adrise.tv/v2/sources/content-owners/adrise-no-ads/325254/v20169072053-1920x1080-2413k.mp4",
+    "intro_landscape_lowbpr": "http://c12.adrise.tv/v2/sources/content-owners/adrise-no-ads/325254/v20169072053-1920x1080-341k.mp4",
+    "intro_portrait_hibpr": "http://c12.adrise.tv/v2/sources/content-owners/adrise-no-ads/325255/v20169072050-1080x1920-2624k.mp4",
+    "intro_portrait_lowbpr": "http://c12.adrise.tv/v2/sources/content-owners/adrise-no-ads/325255/v20169072050-1080x1920-335k.mp4",
+    "intro_portrait_hibpr_largest": "http://c12.adrise.tv/v2/sources/content-owners/adrise-no-ads/337705/video-1-vertical-v03-a1.mp4",
+    "intro_portrait_hibpr_exclusive": "http://c12.adrise.tv/v2/sources/content-owners/adrise-no-ads/337707/video-1-vertical-v03-a2.mp4",
+    "intro_portrait_hibpr_all_devices": "http://c12.adrise.tv/v2/sources/content-owners/adrise-no-ads/337709/video-1-vertical-v03-a3.mp4",
+    "intro_action_video_ids": [
+      369857,
+      376177
+    ],
+    "intro_drama_video_ids": [
+      369854,
+      332927
+    ],
+    "intro_comedy_video_ids": [
+      289827,
+      273565
+    ],
+    "intro_horror_video_ids": [
+      307746,
+      348457
+    ],
+    "intro_romance_video_ids": [
+      348946,
+      303151
+    ],
+    "intro_kids_video_ids": [
+      334155,
+      305457
+    ],
+    "vpaid_url": "http://tubi-vpaid-player.tubitv.com/",
+    "rainmaker_enabled": 1,
+    "client_log_enabled": 1,
+    "player_analytics_event_enabled": 1,
+    "server_time": 1739947048948,
+    "vpaid_old_url": "http://tubitv.com/vpaid/",
+    "enable_kidsmode": true,
+    "ratings_limit": [],
+    "enable_tv_mode": true,
+    "enable_movie_mode": true,
+    "livetv": false,
+    "blocked_analytics_events": [
+      "navigate_within_page",
+      "mobile_screen_rotate",
+      "preview_play_progress"
+    ],
+    "enable_parental_control": true,
+    "disaster_mode_enabled": false,
+    "major_event_onboarding_start": "2025-02-04T23:30:00.000000Z",
+    "major_event_onboarding_end": "2025-02-10T05:00:00.000000Z",
+    "major_event_name": "Super Bowl LIX",
+    "major_event_start": "2025-02-09T15:30:00.000000Z",
+    "major_event_end": "2025-02-10T06:00:00.000000Z",
+    "major_event_failsafe_start": "2025-02-09T15:30:00.000000Z",
+    "major_event_failsafe_end": "2025-02-10T06:00:00.000000Z",
+    "major_event_intro_animation_start": "2025-01-27T05:00:00.000000Z",
+    "major_event_intro_animation_end": "2025-02-10T05:00:00.000000Z",
+    "major_event_intro_animation_supported_version": "9.3.0",
+    "bypass_registration_gate": false,
+    "auth_login_with_amazon_enabled": true,
+    "auth_google_onetap_enabled": true,
+    "auth_comcast_email_prefill_enabled": true,
+    "auth_vizio_email_prefill_enabled": true,
+    "auth_magic_link_enabled": true,
+    "activation_code_status_polling_interval": 5,
+    "major_event_failsafe_maintenance_header": "{feature} is taking a Super Bowl LIX break",
+    "major_event_failsafe_maintenance_subtext": "Don't worry! It'll be back after the game.",
+    "major_event_failsafe_maintenance_header_fr": "{feature} fait une pause à cause de Super Bowl LIX",
+    "major_event_failsafe_maintenance_subtext_fr": "Ne t'inquiète pas! Il reviendra après le match.",
+    "major_event_failsafe_maintenance_header_es": "{feature} está tomando un descanso por el Super Bowl LIX",
+    "major_event_failsafe_maintenance_subtext_es": "¡No te preocupes! Volverá después del partido."
+  },
+  "purpleCarpet": {
+    "status": "notAvailable",
+    "listing": [],
+    "hasResetIndex": false,
+    "listIsLoading": false
+  },
+  "skinsAd": {
+    "status": "notWatched",
+    "creatives": []
+  },
+  "captionSettings": {
+    "defaultCaptions": {
+      "language": "English",
+      "enabled": false
+    },
+    "isMobile": false,
+    "background": {
+      "toggle": {
+        "label": "On",
+        "active": true,
+        "value": "on"
+      },
+      "backgroundColor": {
+        "activeRGBValue": "16, 20, 31",
+        "isSemitransparent": true,
+        "opacity": 0.8
+      }
+    },
+    "font": {
+      "size": {
+        "label": "Medium",
+        "vw": "clamp(25px, 2.5vw, 65px)",
+        "value": "medium"
+      },
+      "family": {
+        "value": "block",
+        "type": "Helvetica Neue, Helvetica, Arial, sans-serif",
+        "label": "Block",
+        "optionStyle": {
+          "fontFamily": "\"Helvetica Neue\", Helvetica, Arial, sans-serif"
+        }
+      },
+      "fontColor": {
+        "activeRGBValue": "255, 255, 255",
+        "isSemitransparent": false
+      }
+    },
+    "styling": {
+      "stylingType": {
+        "value": "none",
+        "label": "None"
+      },
+      "stylingColor": {
+        "activeRGBValue": "0, 0, 0"
+      }
+    },
+    "window": {
+      "windowColor": {
+        "activeRGBValue": "",
+        "isSemitransparent": false
+      }
+    }
+  },
+  "fixedBanner": {
+    "bannerState": null
+  },
+  "pwdReset": {
+    "token": null,
+    "loaded": false,
+    "loading": false,
+    "isValid": false
+  },
+  "person": {
+    "id": "",
+    "nameWithQuotes": "",
+    "results": {}
+  },
+  "chromecast": {
+    "castApiAvailable": false,
+    "castReceiverState": "NO_DEVICES_AVAILABLE",
+    "castPlayerState": "IDLE",
+    "contentId": "",
+    "isAd": false,
+    "isMuted": false,
+    "captionsIndex": -1,
+    "volumeLevel": 1,
+    "deviceName": "",
+    "position": 0,
+    "castVideoLoading": false,
+    "castVideoLoaded": false,
+    "nextCastVideoArgs": null
+  },
+  "player": {
+    "playerState": "idle",
+    "contentType": "content_video",
+    "progress": {
+      "position": 0,
+      "duration": 0,
+      "bufferPosition": 0,
+      "isBuffering": false
+    },
+    "adProgress": {
+      "position": 0,
+      "duration": 0
+    },
+    "ad": {
+      "adCount": 1,
+      "adSequence": 1
+    },
+    "quality": {
+      "restrictedLevels": [],
+      "qualityList": [],
+      "qualityIndex": 0,
+      "isHD": false
+    },
+    "captions": {
+      "captionsList": [],
+      "captionsIndex": 0
+    },
+    "volume": {
+      "volume": 0,
+      "isMuted": false
+    },
+    "bitrate": -1,
+    "timeGapToLastBuffer": -1,
+    "drmKeySystem": null,
+    "canAutoplay": false,
+    "videoPreviewMuted": false
+  },
+  "support": {
+    "ticketFields": [],
+    "ticketFieldIdMap": {},
+    "dynamicContentLocaleMap": {},
+    "mobileMetadataHeaders": {},
+    "helpCategoryIdList": [],
+    "helpCategoryIdMap": {},
+    "helpCategorySectionsIdMap": {},
+    "helpSectionIdMap": {},
+    "helpSectionArticlesIdMap": {},
+    "helpArticleIdMap": {}
+  },
+  "watchSchedule": {
+    "title": "",
+    "titleParam": "",
+    "contentIds": [],
+    "now": "",
+    "dates": [],
+    "programmings": {},
+    "pending": {},
+    "isFeaturedEpgItemsLoading": false,
+    "isFeaturedEpgItemsLoaded": false,
+    "featuredEpgItems": [],
+    "loadMore": {
+      "isVisible": true,
+      "loading": {},
+      "isLoading": false
+    }
+  },
+  "webUI": {
+    "contentMode": {
+      "_active": "all",
+      "previous": "all"
+    },
+    "categoriesPage": {
+      "popularExpanded": false,
+      "genresExpanded": false,
+      "collectionsExpanded": false,
+      "channelsExpanded": false,
+      "channelsActiveContainerIndex": 0
+    },
+    "personalization": {
+      "dismissedPrompt": false,
+      "isValidUserForPersonalization": true
+    }
+  }
+}

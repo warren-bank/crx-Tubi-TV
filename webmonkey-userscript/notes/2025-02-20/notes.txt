@@ -1,0 +1,188 @@
+--------------------------------------------------------------------------------
+
+https://tubitv.com/series/300004464/prime-suspect/season-2
+
+data extracted from <script> in DOM:
+====================================
+const data = require('./data/01-extracted-from-script-in-dom.json')
+
+notes:
+======
+* Object.keys(data.video.statusById)
+    => ['0300004464']
+
+* !!data.video.byId['0300004464']
+    => true
+
+* !!data.video.byId['0300004464'].video_resources
+    => false
+
+* !!data.video.byId['0300004464'].seasons
+    => true
+
+* data.video.byId['0300004464']
+    => ./data/02-data-video-byId-0300004464.json
+
+* data.video.byId['0300004464'].seasons
+    => ./data/03-data-video-byId-0300004464-seasons.json
+
+* data.video.byId['0300004464'].seasons[0].episodes[0].id
+    => '200075948'  // S01E01
+
+* data.video.byId['0300004464'].seasons[1].episodes[0].id
+    => '200075951'  // S02E01
+
+* !!data.video.byId['200075948']
+    => true
+
+* !!data.video.byId['200075948'].video_resources
+    => true
+
+* !!data.video.byId['200075948'].seasons
+    => false
+
+* !!data.video.byId['200075951']
+    => false
+
+--------------------------------------------------------------------------------
+
+# new API:
+
+request:
+========
+
+curl 'https://content-cdn.production-public.tubi.io/api/v2/content?app_id=tubitv&platform=web&content_id=0300004464&device_id=7783d58a-3039-4716-bdd8-39ea85b8efe8&include_channels=true&video_resources%5B%5D=hlsv6_widevine_nonclearlead&video_resources%5B%5D=hlsv6_playready_psshv0&video_resources%5B%5D=hlsv6_fairplay&video_resources%5B%5D=hlsv6&limit_resolutions%5B%5D=h264_1080p&images%5Bposterarts%5D=w408h583_poster&images%5Bhero_422%5D=w422h360_hero&images%5Bhero_feature%5D=w375h355_hero&images%5Btitle_art%5D=w430h180_title&pagination%5Bseason%5D=2&pagination%5Bpage_in_season%5D=1&pagination%5Bpage_size_in_season%5D=20&pagination%5Bfields%5D=children%2Cid%2Ctype' \
+  -H 'authority: content-cdn.production-public.tubi.io' \
+  -H 'pragma: no-cache' \
+  -H 'cache-control: no-cache' \
+  -H 'authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImQ3ZmEwMmQzLTAwODYtNGYxYS1hM2I0LWM2NGQ3NTkzNTgxNiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJKb2tlbiIsImRldmljZV9pZCI6Ijc3ODNkNThhLTMwMzktNDcxNi1iZGQ4LTM5ZWE4NWI4ZWZlOCIsImV4cCI6MTc0MDAyOTM4OCwiZ2VuZXJhdGlvbiI6IjU5OGI4ZWJhLWQ5MDUtNGRmOC1hOTE2LWViN2M3YzNmZjRhOCIsImlhdCI6MTczOTk0Mjk4OCwiaXNzIjoiVHViaSBBY2NvdW50IFNlcnZpY2UiLCJqdGkiOiIzMGlvOXJnNmk3OHI1MjNncXVlNW5uMDYiLCJuYmYiOjE3Mzk5NDI5ODgsInBsYXRmb3JtIjoid2ViIiwidHlwZSI6NSwidXVpZCI6IjZjZDE3NDQ1LWMyMjYtNGEzNi1hNzVjLTdhNGI2NjUxYTRlNSJ9.Xtlab3fRZk0e5qOpE8R084f01-0p-PeLNYBydcRqlQimKh_Y7EZN_QAC_tp6Ti3wJqstfs0IlJ_Bxcu4wTfEQ11iZOBiozU693Txf3Dh65rC2F_wbI441qst64Dg69kfGI08S-dJYbqFcDmaoDSyzUKOGFUk3X_CiGB3HfoidUURvPBxmj2qZpc6LYu1mBBXljjbRs3JUrQqf806d8pFbQ8GEoUezkKSYCWw9yqB6t8YPojH3LUbpMNwc9-oyOlW87C3IBJA14UXzf7kUB2slBFn0ZPlgAWegKRWAE4O6RzHnekJjkHfDwEz9MSlwxSLnr9cYG3S2NIejiECcxrsfA' \
+  -H 'x-capability: {"content_types":["se"]}' \
+  -H 'x-tubi-mode: all' \
+  -H 'accept-version: ~5.0.0' \
+  -H 'accept-language: en-US' \
+  -H 'user-agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4350.0 Iron Safari/537.36' \
+  -H 'x-tubi-platform: web' \
+  -H 'accept: */*' \
+  -H 'origin: https://tubitv.com' \
+  -H 'sec-fetch-site: cross-site' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://tubitv.com/series/300004464/prime-suspect/season-2' \
+  --compressed
+
+response:
+=========
+* season 2
+    => ./data/04-api-response-season2-page1.json
+
+notes:
+======
+* decodeURIComponent('https://content-cdn.production-public.tubi.io/api/v2/content?app_id=tubitv&platform=web&content_id=0300004464&device_id=7783d58a-3039-4716-bdd8-39ea85b8efe8&include_channels=true&video_resources%5B%5D=hlsv6_widevine_nonclearlead&video_resources%5B%5D=hlsv6_playready_psshv0&video_resources%5B%5D=hlsv6_fairplay&video_resources%5B%5D=hlsv6&limit_resolutions%5B%5D=h264_1080p&images%5Bposterarts%5D=w408h583_poster&images%5Bhero_422%5D=w422h360_hero&images%5Bhero_feature%5D=w375h355_hero&images%5Btitle_art%5D=w430h180_title&pagination%5Bseason%5D=2&pagination%5Bpage_in_season%5D=1&pagination%5Bpage_size_in_season%5D=20&pagination%5Bfields%5D=children%2Cid%2Ctype')
+    => 'https://content-cdn.production-public.tubi.io/api/v2/content?app_id=tubitv&platform=web&content_id=0300004464&device_id=7783d58a-3039-4716-bdd8-39ea85b8efe8&include_channels=true&video_resources[]=hlsv6_widevine_nonclearlead&video_resources[]=hlsv6_playready_psshv0&video_resources[]=hlsv6_fairplay&video_resources[]=hlsv6&limit_resolutions[]=h264_1080p&images[posterarts]=w408h583_poster&images[hero_422]=w422h360_hero&images[hero_feature]=w375h355_hero&images[title_art]=w430h180_title&pagination[season]=2&pagination[page_in_season]=1&pagination[page_size_in_season]=20&pagination[fields]=children,id,type'
+
+* requires request header:
+    => 'Authorization: Bearer <token>'
+
+* response includes video and caption URLs
+
+--------------------------------------------------------------------------------
+
+# token generation: (work in progress)
+
+request 1:
+==========
+
+curl 'https://account.production-public.tubi.io/device/anonymous/signing_key' \
+  -H 'authority: account.production-public.tubi.io' \
+  -H 'pragma: no-cache' \
+  -H 'cache-control: no-cache' \
+  -H 'user-agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4350.0 Iron Safari/537.36' \
+  -H 'content-type: application/json' \
+  -H 'accept: */*' \
+  -H 'origin: https://tubitv.com' \
+  -H 'sec-fetch-site: cross-site' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://tubitv.com/series/300004464/prime-suspect/season-2' \
+  -H 'accept-language: en-US,en;q=0.9' \
+  --data-binary '{"challenge":"jDfR1UKft8fd5Nn6orZm8JO-aPKMiy-0oqW3frKsJn0=","version":"1.0.0","platform":"web","device_id":"8495f563-c724-485e-9057-2dbe7e78b140"}' \
+  --compressed
+
+response 1:
+===========
+
+{"id":"1db02c0d-5ce4-4a17-be71-577dfdc7bcb4","key":"ABOiz67h0bVFq2EEWYFFBwyTaQDxSHB0K4uQB54m3EI="}
+
+request 2:
+==========
+
+curl 'https://account.production-public.tubi.io/device/anonymous/token?X-Tubi-Algorithm=TUBI-HMAC-SHA256&X-Tubi-Date=20250219T094417Z&X-Tubi-Expires=30&X-Tubi-SignedHeaders=content-type&X-Tubi-Signature=fafaf994211cf348f0f07fcd5e82aac3ea4363f279c48a104ecc2817114222ef' \
+  -H 'authority: account.production-public.tubi.io' \
+  -H 'pragma: no-cache' \
+  -H 'cache-control: no-cache' \
+  -H 'user-agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4350.0 Iron Safari/537.36' \
+  -H 'content-type: application/json' \
+  -H 'accept: */*' \
+  -H 'origin: https://tubitv.com' \
+  -H 'sec-fetch-site: cross-site' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://tubitv.com/series/300004464/prime-suspect/season-2' \
+  -H 'accept-language: en-US,en;q=0.9' \
+  --data-binary '{"verifier":"399763f4cb7194c955e49047f5fd1e70","id":"1db02c0d-5ce4-4a17-be71-577dfdc7bcb4","platform":"web","device_id":"8495f563-c724-485e-9057-2dbe7e78b140"}' \
+  --compressed
+
+response 2:
+===========
+
+{"access_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6ImQ3ZmEwMmQzLTAwODYtNGYxYS1hM2I0LWM2NGQ3NTkzNTgxNiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJKb2tlbiIsImRldmljZV9pZCI6Ijg0OTVmNTYzLWM3MjQtNDg1ZS05MDU3LTJkYmU3ZTc4YjE0MCIsImV4cCI6MTc0MDA0NDY2MCwiZ2VuZXJhdGlvbiI6IjA1MWU5YzE4LWQxMWMtNDNjZS1hYmM0LTlmODg2ZGQ3NDg0MSIsImlhdCI6MTczOTk1ODI2MCwiaXNzIjoiVHViaSBBY2NvdW50IFNlcnZpY2UiLCJqdGkiOiIzMGlwNWtkdmhrb2E3cGlmdWM5NmZwMDgiLCJuYmYiOjE3Mzk5NTgyNjAsInBsYXRmb3JtIjoid2ViIiwidHlwZSI6NSwidXVpZCI6IjFkYjAyYzBkLTVjZTQtNGExNy1iZTcxLTU3N2RmZGM3YmNiNCJ9.Zb78PxOAtxKO23blZyzkMrh94-ND7lN3qZznlD2-ORB0sKWis24xPkqShXjxBPGt7IddvViMlkZFoitBQOZcEhZrCASJxpsDPj_BB_PivTbYP_pXPUMRFQjBSaTbicaJE0_q0O2MFP-Pm7lzw1iaAyp-9zrNunnt1lcj9KDiBBfh26HsW0cvGOJxcV0TkZiPBVoevPWXTizSQXJMSRzWU29RzsUdknr7L_mHVJRApUzQ2j7tw-hism0-yyIg2TPvvCwzBtIxvVY-YyndLKLsQNthtXBzRHkS1_SMyecAz6abUqcli21tYdn4nnufw9ednSzK9F0UoXg99TZwqs7nvw","expires_in":86400,"refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJKb2tlbiIsImRldmljZV9pZCI6Ijg0OTVmNTYzLWM3MjQtNDg1ZS05MDU3LTJkYmU3ZTc4YjE0MCIsImV4cCI6MTc0MTE2Nzg2MCwiZ2VuZXJhdGlvbiI6IjA1MWU5YzE4LWQxMWMtNDNjZS1hYmM0LTlmODg2ZGQ3NDg0MSIsImlhdCI6MTczOTk1ODI2MCwiaXNzIjoiVHViaSBBY2NvdW50IFNlcnZpY2UiLCJqdGkiOiIzMGlwNWtkdmtlNTlwcGlmdWM5NmZwZzgiLCJuYmYiOjE3Mzk5NTgyNjAsInBsYXRmb3JtIjoid2ViIiwidHlwZSI6NiwidXVpZCI6IjFkYjAyYzBkLTVjZTQtNGExNy1iZTcxLTU3N2RmZGM3YmNiNCJ9.nGeGTFBjbo4S5i5x22hhtzPsPZl0IX2zcEEchXopBd8"}
+
+unknown parameters:
+===================
+
+* request 1 parameters:
+  - challenge
+
+* request 2 parameters:
+  - X-Tubi-Signature
+  - verifier
+
+notes:
+======
+
+* response 1:
+  - includes a "key" that is (presumably) used to compute the unknown parameters
+
+--------------------------------------------------------------------------------
+
+# token generation: example
+
+// add CryptoJS:
+//   https://cryptojs.gitbook.io/docs#hmac
+{
+  const s = document.createElement('script')
+  s.setAttribute('src', 'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js')
+  document.body.appendChild(s)
+}
+
+// length of "X-Tubi-Signature" indicates: HmacSHA256
+{
+  const message = '???'
+  const secret  = 'ABOiz67h0bVFq2EEWYFFBwyTaQDxSHB0K4uQB54m3EI='
+
+  console.log(
+    CryptoJS.HmacSHA256(message, secret).toString(CryptoJS.enc.Hex)
+  )
+}
+
+// length of "verifier" indicates: HmacMD5
+{
+  const message = '???'
+  const secret  = 'ABOiz67h0bVFq2EEWYFFBwyTaQDxSHB0K4uQB54m3EI='
+
+  console.log(
+    CryptoJS.HmacMD5(message, secret).toString(CryptoJS.enc.Hex)
+  )
+}
+
+--------------------------------------------------------------------------------

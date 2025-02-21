@@ -1,10 +1,8 @@
 // ==UserScript==
 // @name         Tubi TV
 // @description  Watch videos in external player.
-// @version      2.0.8
-// @match        *://tubitv.com/*
+// @version      2.0.9
 // @match        *://*.tubitv.com/*
-// @match        *://tubi.tv/*
 // @match        *://*.tubi.tv/*
 // @icon         https://tubitv.com/favicon.ico
 // @run-at       document-end
@@ -53,7 +51,8 @@ var strings = {
 var constants = {
   "captions_preferred_language":   "english",
   "dom_classes": {
-    "div_webcast_icons":           "icons-container"
+    "div_webcast_icons":           "icons-container",
+    "anchor_episode_in_series":    "episode-in-series"
   },
   "img_urls": {
     "base_webcast_reloaded_icons": "https://github.com/warren-bank/crx-webcast-reloaded/raw/gh-pages/chrome_extension/2-release/popup/img/"
@@ -426,6 +425,48 @@ var make_video_listitem_element = function(video) {
   return li
 }
 
+// ----------------------------------------------------------------------------- DOM: dynamic elements - single episode in series without available video data
+
+var pad = function(num, min_length, pad_char, pad_right) {
+  num        = String(num)
+  min_length = min_length || 0
+  pad_char   = pad_char || '0'
+  pad_right  = !!pad_right
+  var count, padding
+
+  count = min_length - num.length
+  if (count > 0) {
+    padding = pad_char.repeat(count)
+
+    if (pad_right)
+      num += padding
+    else
+      num = padding + num
+  }
+  return num
+}
+
+var make_episode_link_listitem_element = function(episode_key, season_number, episode_number) {
+  var episode_url   = 'https://tubitv.com/tv-shows/' + episode_key
+  var episode_title = 'S' + pad(season_number, 2) + ':E' + pad(episode_number, 2)
+
+  var html = [
+    '<table>',
+      '<tr>',
+        '<td>',
+          strings.episode_labels.title,
+        '</td>',
+        '<td>',
+          '<a class="' + constants.dom_classes.anchor_episode_in_series + '" target="_blank" href="' + episode_url + '">' + episode_title + '</a>',
+        '</td>',
+      '</tr>',
+    '</table>'
+  ]
+
+  var li = make_element('li', html.join("\n"))
+  return li
+}
+
 // ----------------------------------------------------------------------------- DOM: static skeleton
 
 var reinitialize_dom = function(data) {
@@ -439,7 +480,7 @@ var reinitialize_dom = function(data) {
   if (!keys.length) return
 
   var key, video, html, div, ul, li
-  var season, episode_keys, episode_key, episode_video
+  var season, episode, episode_key, episode_video
   try {
     key   = keys[0]
     video = data.video.byId[key]
@@ -475,10 +516,9 @@ var reinitialize_dom = function(data) {
         season = video.seasons[i]
 
         if (season && ('object' === (typeof season)) && Array.isArray(season.episodes) && season.episodes.length) {
-          episode_keys = season.episodes.map(ep => ep.id)
-
-          for (var i2=0; i2 < episode_keys.length; i2++) {
-            episode_key   = episode_keys[i2]
+          for (var i2=0; i2 < season.episodes.length; i2++) {
+            episode       = season.episodes[i2]
+            episode_key   = episode.id
             episode_video = data.video.byId[episode_key]
 
             if (
@@ -487,6 +527,11 @@ var reinitialize_dom = function(data) {
               && (episode_video.url || (Array.isArray(episode_video.video_resources) && episode_video.video_resources.length))
             ){
               li = make_video_listitem_element(episode_video)
+              if (li)
+                ul.appendChild(li)
+            }
+            else {
+              li = make_episode_link_listitem_element(episode_key, season.number, episode.num)
               if (li)
                 ul.appendChild(li)
             }
@@ -864,6 +909,7 @@ var follow_anchor_elements = function() {
   unsafeWindow.document.addEventListener('click', function(event){
     var anchor = event.target
     var depth  = 5
+    var ignore = false
 
     while ((!(anchor instanceof HTMLAnchorElement)) && anchor.parentNode && (depth >= 0)) {
       depth--
@@ -871,7 +917,10 @@ var follow_anchor_elements = function() {
     }
 
     if (anchor instanceof HTMLAnchorElement) {
-      if (!anchor.parentNode || (anchor.parentNode.className !== constants.dom_classes.div_webcast_icons)) {
+      ignore = ignore || (anchor.parentNode && (anchor.parentNode.className === constants.dom_classes.div_webcast_icons))
+      ignore = ignore || (anchor.className === constants.dom_classes.anchor_episode_in_series)
+
+      if (!ignore) {
         redirect_to_url(
           anchor.getAttribute('href')
         )

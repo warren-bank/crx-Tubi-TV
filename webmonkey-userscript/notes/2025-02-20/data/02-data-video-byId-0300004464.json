@@ -1,0 +1,206 @@
+{
+  "imdb_id": "tt0098898",
+  "is_recurring": false,
+  "publisher_id": "",
+  "availability_duration": null,
+  "valid_duration": 7200,
+  "channel_name": "FilmRise",
+  "canonical_id": "",
+  "landscape_images": [
+    "//canvas-lb.tubitv.com/opts/Uj2G44s-0BKzqg==/80ab69f7-69a5-4c9d-9796-9a6d96028731/CMADEPwBOgUxLjEuNg=="
+  ],
+  "is_cdc": false,
+  "awards": {
+    "items": []
+  },
+  "partner_id": "F138881-S00-ENG-NAT-OV-01",
+  "description": "A decorated female detective investigating murders wages a battle for truth amid hostilities from colleagues in a male-dominated justice system.",
+  "has_trailer": false,
+  "year": 1991,
+  "version_id": "",
+  "player_type": "tubi",
+  "title": "Prime Suspect",
+  "imdb_fields": null,
+  "country": "United Kingdom",
+  "gn_fields": null,
+  "tags": [
+    "Drama",
+    "Crime"
+  ],
+  "needs_login": false,
+  "availability_starts": "2024-01-01T00:00:00.000Z",
+  "video_renditions": [],
+  "import_id": "filmrise",
+  "thumbnails": [
+    "//canvas-lb.tubitv.com/opts/OCnInLVEv7GP7g==/a303f267-58e3-4a0e-b0c2-85f101c2dd17/CIAFEOgCOgUxLjEuNg=="
+  ],
+  "actors": [
+    "Helen Mirren",
+    "John Benfield",
+    "Richard Hawley",
+    "Tom Bell",
+    "Jack Ellis",
+    "Ralph Fiennes",
+    "Tom Wilkinson"
+  ],
+  "channel_logo": "//cdn.adrise.tv/image/channels/filmriseclassictv/logo_long.png",
+  "backgrounds": [
+    "//canvas-lb.tubitv.com/opts/Ka-OiFtoUN7eIA==/a303f267-58e3-4a0e-b0c2-85f101c2dd17/CIAPELgIOgUxLjEuNg=="
+  ],
+  "images": {
+    "hero_422": [
+      "https://canvas-lb.tubitv.com/opts/nW_8cVQ-mIXVag==/195f45d9-0993-4af4-a14e-5046dc931bea/CKYDEOgCOgUxLjEuNg=="
+    ],
+    "hero_feature": [
+      "https://canvas-lb.tubitv.com/opts/NuFL4VvmF62W5w==/195f45d9-0993-4af4-a14e-5046dc931bea/CPMCEN8COgUxLjEuNg=="
+    ],
+    "posterarts": [
+      "https://canvas-lb.tubitv.com/opts/z7STHpcQqOaN7A==/903fbda1-80d2-4f3e-9dea-3ac0d38b509a/CJgDEMcEOgUxLjEuNg=="
+    ],
+    "title_art": [
+      "https://canvas-lb.tubitv.com/opts/zZXEYp3axy1yXw==/fe0028c8-2ac6-475f-b439-99e3182f5cd2/CJAIELQBOgUxLjEuNkAB"
+    ]
+  },
+  "gracenote_id": "SH001510010000",
+  "login_reason": "",
+  "lang": "English",
+  "ratings": [
+    {
+      "code": "TV-14",
+      "system": "tvpg",
+      "value": "TV-14",
+      "descriptors": []
+    }
+  ],
+  "version": 59,
+  "subtitles": [
+    {
+      "url": "",
+      "lang": "English",
+      "lang_alpha3": "eng",
+      "lang_translation": "English"
+    }
+  ],
+  "hero_images": [
+    "//canvas-lb.tubitv.com/opts/12sXnWrWuhz_tA==/3def3dbb-5007-4cac-bf6c-72c196ccb626/CIAPEKQFOgUxLjEuNg=="
+  ],
+  "directors": [
+    "Christopher Menaul"
+  ],
+  "has_subtitle": true,
+  "detailed_type": "series",
+  "posterarts": [
+    "//canvas-lb.tubitv.com/opts/z7STHpcQqOaN7A==/903fbda1-80d2-4f3e-9dea-3ac0d38b509a/CJgDEMcEOgUxLjEuNg=="
+  ],
+  "air_datetime": null,
+  "video_previews": [],
+  "ad_languages": [],
+  "trailers": [],
+  "rt_fields": null,
+  "video_preview_url": "",
+  "type": "s",
+  "availability_ends": "2027-06-30T23:59:59.000Z",
+  "id": "300004464",
+  "channel_id": "filmriseclassictv",
+  "updated_at": "2024-10-19T00:32:20.000Z",
+  "policy_match": true,
+  "seasons": [
+    {
+      "number": "1",
+      "episodes": [
+        {
+          "id": "200075948",
+          "num": 1
+        },
+        {
+          "id": "200075949",
+          "num": 2
+        }
+      ]
+    },
+    {
+      "number": "2",
+      "episodes": [
+        {
+          "id": "200075951",
+          "num": 1
+        },
+        {
+          "id": "200075953",
+          "num": 2
+        }
+      ]
+    },
+    {
+      "number": "3",
+      "episodes": [
+        {
+          "id": "200075955",
+          "num": 1
+        },
+        {
+          "id": "200075957",
+          "num": 2
+        }
+      ]
+    },
+    {
+      "number": "4",
+      "episodes": [
+        {
+          "id": "200075958",
+          "num": 1
+        },
+        {
+          "id": "200075960",
+          "num": 2
+        },
+        {
+          "id": "200075962",
+          "num": 3
+        }
+      ]
+    },
+    {
+      "number": "5",
+      "episodes": [
+        {
+          "id": "200075964",
+          "num": 1
+        },
+        {
+          "id": "200075966",
+          "num": 2
+        }
+      ]
+    },
+    {
+      "number": "6",
+      "episodes": [
+        {
+          "id": "200075968",
+          "num": 1
+        },
+        {
+          "id": "200075970",
+          "num": 2
+        }
+      ]
+    },
+    {
+      "number": "7",
+      "episodes": [
+        {
+          "id": "200075971",
+          "num": 1
+        },
+        {
+          "id": "200075973",
+          "num": 2
+        }
+      ]
+    }
+  ],
+  "isMetadataLoaded": true,
+  "ttl": 1739954249082
+}
