@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tubi TV
 // @description  Watch videos in external player.
-// @version      2.0.9
+// @version      2.0.10
 // @match        *://*.tubitv.com/*
 // @match        *://*.tubi.tv/*
 // @icon         https://tubitv.com/favicon.ico
@@ -845,7 +845,7 @@ var inspect_scripts = function() {
           text = text.substr(prefix.length)
 
           // fix JSON
-          text = text.replace(/(":)undefined([,}\]])/g, '$1null$2')
+          text = text.replace(/(":[\[]?)undefined([,}\]])/g, '$1null$2')
           text = text.replace(/new Date\([^\)]*\)/g, 'null')
 
           data = JSON.parse(text)
