@@ -1,0 +1,2010 @@
+{
+  "auth": {
+    "loaded": false,
+    "ottActivationCodePending": false,
+    "userCredentials": null,
+    "ottActivationTab": "ADULTS",
+    "isGuest": true,
+    "isKid": false,
+    "userIP": "75.223.98.176",
+    "deviceId": "9840b34a-5a39-4a11-b257-b3f42fb6090a",
+    "firstSeen": "2025-12-01T07:08:16.311Z",
+    "tubiId": "d9f2a2aa-2b8d-4b13-8a6c-149f9425e146"
+  },
+  "userReactions": {
+    "content": {}
+  },
+  "userSettings": {
+    "birthday": "",
+    "loaded": false,
+    "deleteSuccess": false,
+    "deleteError": null,
+    "loadError": null,
+    "facebookId": null,
+    "email": "",
+    "first_name": "",
+    "gender": null,
+    "profilePic": undefined,
+    "enabled": false,
+    "hasPassword": false,
+    "coppaState": "COMPLIANT",
+    "parentalRating": 3,
+    "notification_settings": {
+      "newsletter": false,
+      "content_leaving": false
+    },
+    "hasPIN": false,
+    "usPrivacyString": undefined
+  },
+  "container": {
+    "containersList": [],
+    "containerIdMap": {},
+    "containerLoadIdMap": {},
+    "containerChildrenIdMap": {},
+    "containerContext": "",
+    "isFetching": false,
+    "ttl": undefined,
+    "error": null,
+    "nextContainerIndexToLoad": 0,
+    "sponsorship": {
+      "pixelsFired": {}
+    },
+    "containerMenuList": [],
+    "isContainerMenuListLoaded": false,
+    "containerMenuRefetchState": {}
+  },
+  "contentMode": {
+    "movie": {
+      "containersList": [],
+      "nextContainerIndexToLoad": 0,
+      "containerIdMap": {},
+      "containerLoadIdMap": {},
+      "containerChildrenIdMap": {},
+      "containerContext": "",
+      "containerMenuList": [],
+      "isContainerMenuListLoaded": false,
+      "containerMenuRefetchState": {},
+      "sponsorship": {
+        "pixelsFired": {}
+      },
+      "isFetching": false,
+      "ttl": undefined,
+      "error": null
+    },
+    "tv": {
+      "containersList": [],
+      "nextContainerIndexToLoad": 0,
+      "containerIdMap": {},
+      "containerLoadIdMap": {},
+      "containerChildrenIdMap": {},
+      "containerContext": "",
+      "containerMenuList": [],
+      "isContainerMenuListLoaded": false,
+      "containerMenuRefetchState": {},
+      "sponsorship": {
+        "pixelsFired": {}
+      },
+      "isFetching": false,
+      "ttl": undefined,
+      "error": null
+    },
+    "myStuff": {
+      "containersList": [],
+      "nextContainerIndexToLoad": 0,
+      "containerIdMap": {},
+      "containerLoadIdMap": {},
+      "containerChildrenIdMap": {},
+      "containerContext": "",
+      "containerMenuList": [],
+      "isContainerMenuListLoaded": false,
+      "containerMenuRefetchState": {},
+      "sponsorship": {
+        "pixelsFired": {}
+      },
+      "isFetching": false,
+      "ttl": undefined,
+      "error": null
+    },
+    "linear": {
+      "containersList": [],
+      "nextContainerIndexToLoad": 0,
+      "containerIdMap": {},
+      "containerLoadIdMap": {},
+      "containerChildrenIdMap": {},
+      "containerContext": "",
+      "containerMenuList": [],
+      "isContainerMenuListLoaded": false,
+      "containerMenuRefetchState": {},
+      "sponsorship": {
+        "pixelsFired": {}
+      },
+      "isFetching": false,
+      "ttl": undefined,
+      "error": null
+    },
+    "latino": {
+      "containersList": [],
+      "nextContainerIndexToLoad": 0,
+      "containerIdMap": {},
+      "containerLoadIdMap": {},
+      "containerChildrenIdMap": {},
+      "containerContext": "",
+      "containerMenuList": [],
+      "isContainerMenuListLoaded": false,
+      "containerMenuRefetchState": {},
+      "sponsorship": {
+        "pixelsFired": {}
+      },
+      "isFetching": false,
+      "ttl": undefined,
+      "error": null
+    },
+    "search": {
+      "containersList": [],
+      "nextContainerIndexToLoad": 0,
+      "containerIdMap": {},
+      "containerLoadIdMap": {},
+      "containerChildrenIdMap": {},
+      "containerContext": "",
+      "containerMenuList": [],
+      "isContainerMenuListLoaded": false,
+      "containerMenuRefetchState": {},
+      "sponsorship": {
+        "pixelsFired": {}
+      },
+      "isFetching": false,
+      "ttl": undefined,
+      "error": null
+    }
+  },
+  "video": {
+    "byId": {
+      "100001038": {
+        "year": 1985,
+        "video_renditions": [],
+        "duration": 5475,
+        "country": "United States",
+        "rt_fields": null,
+        "type": "v",
+        "credit_cuepoints": {
+          "postlude": 5281,
+          "prologue": 0,
+          "intro_start": 0,
+          "intro_end": 0,
+          "recap_start": 0,
+          "recap_end": 0,
+          "earlycredits_start": 0,
+          "earlycredits_end": 0,
+          "prelogue": 0
+        },
+        "canonical_id": "",
+        "updated_at": "2025-09-25T03:30:45.000Z",
+        "availability_duration": 2665642,
+        "description": "A lonely teen gets divine intervention when a hip guardian angel trying to earn his wings comes down to teach the high schooler how to be cool.",
+        "ad_languages": [],
+        "imdb_fields": null,
+        "actors": ["Lewis Smith", "Jason Gedrick", "Jane Kaczmarek", "Richard Mulligan", "Beau Dremann"],
+        "id": "100001038",
+        "version": 60,
+        "tags": ["Comedy", "Fantasy", "Romance"],
+        "availability_ends": "2026-01-01T04:59:00.000Z",
+        "gn_fields": null,
+        "hero_images": ["\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FJPsxN58aBm0tTQ==\u002F8c0d3037-37bf-4eb8-ab69-f5d7725c1d5e\u002FCIAPEKQFOgUxLjEuOA=="],
+        "import_id": "mgm",
+        "air_datetime": null,
+        "video_previews": [{
+          "source": "ML_GENERATED",
+          "url": "https:\u002F\u002Fvideo-preview-lb.production-public.tubi.io\u002Fvideopreview\u002Fb4e659b8-b6b8-4ccd-a0f1-13bacae6887b-start90.257-end134.718.mp4",
+          "uuid": "049f971d-ffe5-46da-8cd8-ca2c6df708de"
+        }, {
+          "source": "ML_GENERATED",
+          "url": "https:\u002F\u002Fvideo-preview-lb.production-public.tubi.io\u002Fvideopreview\u002Fade90270-cff2-4b9b-953f-da4e0d08af60-start1716.089-end1754.378.mp4",
+          "uuid": "5a7f6749-df2e-4884-8fdb-0bcb704f6abd"
+        }, {
+          "source": "ML_GENERATED",
+          "url": "https:\u002F\u002Fvideo-preview-lb.production-public.tubi.io\u002Fvideopreview\u002Fa72e42c0-249c-4e2d-815f-8dc42a661c62-start808.683-end863.196.mp4",
+          "uuid": "a86c109f-dbfe-466b-b08d-121dfa149a44"
+        }, {
+          "source": "ML_GENERATED",
+          "url": "https:\u002F\u002Fvideo-preview-lb.production-public.tubi.io\u002Fvideopreview\u002F36affd62-9a64-4c9c-a6c5-b9046424a5a3-start1284.658-end1356.230.mp4",
+          "uuid": "bf408070-8620-43b0-aaf5-df3337e523f8"
+        }, {
+          "source": "ML_GENERATED",
+          "url": "https:\u002F\u002Fvideo-preview-lb.production-public.tubi.io\u002Fvideopreview\u002Fa260bea7-fe89-46ff-9c05-6c2ea54be94c-start611.903-end688.897.mp4",
+          "uuid": "d71930f9-d03f-4d9d-b0d0-db11ba1b46b2"
+        }],
+        "partner_id": null,
+        "player_type": "tubi",
+        "video_metadata": [{
+          "type": "hlsv6_fairplay",
+          "codec": "VIDEO_CODEC_H264",
+          "resolution": "VIDEO_RESOLUTION_720P"
+        }, {
+          "type": "hlsv6_fairplay",
+          "codec": "VIDEO_CODEC_H265",
+          "resolution": "VIDEO_RESOLUTION_720P"
+        }, {
+          "type": "hlsv6_widevine_nonclearlead",
+          "codec": "VIDEO_CODEC_H264",
+          "resolution": "VIDEO_RESOLUTION_720P"
+        }, {
+          "type": "hlsv6_widevine_nonclearlead",
+          "codec": "VIDEO_CODEC_H265",
+          "resolution": "VIDEO_RESOLUTION_720P"
+        }, {
+          "type": "hlsv6_playready_psshv0",
+          "codec": "VIDEO_CODEC_H264",
+          "resolution": "VIDEO_RESOLUTION_720P"
+        }, {
+          "type": "hlsv6_playready_psshv0",
+          "codec": "VIDEO_CODEC_H265",
+          "resolution": "VIDEO_RESOLUTION_720P"
+        }],
+        "ratings": [{
+          "code": "PG-13",
+          "system": "mpaa",
+          "value": "PG-13",
+          "descriptors": []
+        }],
+        "availability_starts": "2025-10-01T07:00:00.000Z",
+        "detailed_type": "movie",
+        "title": "The Heavenly Kid",
+        "posterarts": ["\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FhFbH2Rf7OBXk_Q==\u002Fd46b6072-84c6-4e8b-8f3f-64a767268ed8\u002FCJgDEMcEOgUxLjEuOA=="],
+        "awards": {
+          "items": []
+        },
+        "login_reason": "",
+        "monetization": {
+          "cue_points": [0, 487, 922, 1661, 2082, 2691, 3192, 3636, 4456, 4963]
+        },
+        "url": "https:\u002F\u002Fnc-fa2.tubi.video\u002Fe4be7b82-9f1d-450d-8b77-e282c9866bd3\u002F0nqtz64eoj.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZG5fcHJlZml4IjoiaHR0cHM6Ly9uYy1mYTIudHViaS52aWRlbyIsImV4cCI6MTc2NTE4MDgwMCwibWVkaWFfc2lnIjo3Njg5ODY4N30.aA4FTbcKy6yIZ9M9TY6MpIhAG-kdGBu9ArXrjcjqXag",
+        "thumbnails": ["\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FIajnRVQdQa3JMg==\u002F5d8300a9-7910-4578-b4e8-82a2d639500b\u002FCIAFEOgCOgUxLjEuOA=="],
+        "needs_login": false,
+        "publisher_id": "02fe45aea83ef685070efa1777d25aa2",
+        "directors": ["Cary Medoway"],
+        "version_id": "",
+        "has_subtitle": true,
+        "trailers": [],
+        "is_cdc": false,
+        "landscape_images": ["\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FHDz_VW8-q5i2Dg==\u002Ffe7bdf5b-4869-4f13-bdee-86fb52beca0a\u002FCNcHEKgEOgUxLjEuOA=="],
+        "gracenote_id": "MV000186960000",
+        "policy_match": true,
+        "video_resources": [{
+          "type": "hlsv6_fairplay",
+          "codec": "H265",
+          "audio_tracks": [{
+            "type": "MAIN",
+            "lang": "English",
+            "display_name": "English"
+          }],
+          "resolution": "720P",
+          "manifest": {
+            "url": "https:\u002F\u002Fnc-fa2.tubi.video\u002Fe4be7b82-9f1d-450d-8b77-e282c9866bd3\u002Fteh179bu49.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZG5fcHJlZml4IjoiaHR0cHM6Ly9uYy1mYTIudHViaS52aWRlbyIsImV4cCI6MTc2NTE4MDgwMCwibWVkaWFfc2lnIjo3Njg5ODY4N30.aA4FTbcKy6yIZ9M9TY6MpIhAG-kdGBu9ArXrjcjqXag",
+            "duration": 5475
+          },
+          "license_server": {
+            "url": "https:\u002F\u002Flicense.adrise.tv\u002Fchallenge?platform=web&type=fairplay&external_id=3445C5C172407C36AA455A1B7AE475BE&drm_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbmFsb2dfb3V0IjoiY2dtc19yZXF1aXJlZCIsImV4cCI6MTc2NTE4MDgwMCwiaGRjcCI6InYxIiwicHJfc2VjdXJpdHlfbGV2ZWwiOjIwMDAsInd2X3NlY3VyaXR5X2xldmVsIjoxfQ.L6VQuwJpPF5lMoo93kO_9daFuryBnndWg6_NvYLzczo",
+            "hdcp_version": "hdcp_v1",
+            "auth_header_key": "customData",
+            "auth_header_value": ""
+          },
+          "titan_version": "",
+          "ssai_version": "",
+          "generator_version": ""
+        }, {
+          "type": "hlsv6_widevine_nonclearlead",
+          "codec": "H265",
+          "audio_tracks": [{
+            "type": "MAIN",
+            "lang": "English",
+            "display_name": "English"
+          }],
+          "resolution": "720P",
+          "manifest": {
+            "url": "https:\u002F\u002Fnc-fa2.tubi.video\u002Fe4be7b82-9f1d-450d-8b77-e282c9866bd3\u002Fue3pn60ccs.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZG5fcHJlZml4IjoiaHR0cHM6Ly9uYy1mYTIudHViaS52aWRlbyIsImV4cCI6MTc2NTE4MDgwMCwibWVkaWFfc2lnIjo3Njg5ODY4N30.aA4FTbcKy6yIZ9M9TY6MpIhAG-kdGBu9ArXrjcjqXag",
+            "duration": 5475
+          },
+          "license_server": {
+            "url": "https:\u002F\u002Flicense.adrise.tv\u002Fchallenge?platform=web&type=widevine_nonclearlead&external_id=3445C5C172407C36AA455A1B7AE475BE&drm_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbmFsb2dfb3V0IjoiY2dtc19yZXF1aXJlZCIsImV4cCI6MTc2NTE4MDgwMCwiaGRjcCI6InYxIiwicHJfc2VjdXJpdHlfbGV2ZWwiOjIwMDAsInd2X3NlY3VyaXR5X2xldmVsIjoxfQ.L6VQuwJpPF5lMoo93kO_9daFuryBnndWg6_NvYLzczo",
+            "hdcp_version": "hdcp_v1",
+            "auth_header_key": "customData",
+            "auth_header_value": ""
+          },
+          "titan_version": "",
+          "ssai_version": "",
+          "generator_version": ""
+        }, {
+          "type": "hlsv6_playready_psshv0",
+          "codec": "H265",
+          "audio_tracks": [{
+            "type": "MAIN",
+            "lang": "English",
+            "display_name": "English"
+          }],
+          "resolution": "720P",
+          "manifest": {
+            "url": "https:\u002F\u002Fnc-fa2.tubi.video\u002Fe4be7b82-9f1d-450d-8b77-e282c9866bd3\u002Fdt5jvjzyfh.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZG5fcHJlZml4IjoiaHR0cHM6Ly9uYy1mYTIudHViaS52aWRlbyIsImV4cCI6MTc2NTE4MDgwMCwibWVkaWFfc2lnIjo3Njg5ODY4N30.aA4FTbcKy6yIZ9M9TY6MpIhAG-kdGBu9ArXrjcjqXag",
+            "duration": 5475
+          },
+          "license_server": {
+            "url": "https:\u002F\u002Flicense.adrise.tv\u002Fchallenge?platform=web&type=playready_psshv0&external_id=3445C5C172407C36AA455A1B7AE475BE&drm_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbmFsb2dfb3V0IjoiY2dtc19yZXF1aXJlZCIsImV4cCI6MTc2NTE4MDgwMCwiaGRjcCI6InYxIiwicHJfc2VjdXJpdHlfbGV2ZWwiOjIwMDAsInd2X3NlY3VyaXR5X2xldmVsIjoxfQ.L6VQuwJpPF5lMoo93kO_9daFuryBnndWg6_NvYLzczo",
+            "hdcp_version": "hdcp_v1",
+            "auth_header_key": "customData",
+            "auth_header_value": ""
+          },
+          "titan_version": "",
+          "ssai_version": "",
+          "generator_version": ""
+        }, {
+          "type": "hlsv6_fairplay",
+          "codec": "H264",
+          "audio_tracks": [{
+            "type": "MAIN",
+            "lang": "English",
+            "display_name": "English"
+          }],
+          "resolution": "720P",
+          "manifest": {
+            "url": "https:\u002F\u002Fnc-fa2.tubi.video\u002Fe4be7b82-9f1d-450d-8b77-e282c9866bd3\u002F7lgnprbcay.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZG5fcHJlZml4IjoiaHR0cHM6Ly9uYy1mYTIudHViaS52aWRlbyIsImV4cCI6MTc2NTE4MDgwMCwibWVkaWFfc2lnIjo3Njg5ODY4N30.aA4FTbcKy6yIZ9M9TY6MpIhAG-kdGBu9ArXrjcjqXag",
+            "duration": 5474
+          },
+          "license_server": {
+            "url": "https:\u002F\u002Flicense.adrise.tv\u002Fchallenge?platform=web&type=fairplay&external_id=3445C5C172407C36AA455A1B7AE475BE&drm_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbmFsb2dfb3V0IjoiY2dtc19yZXF1aXJlZCIsImV4cCI6MTc2NTE4MDgwMCwiaGRjcCI6InYxIiwicHJfc2VjdXJpdHlfbGV2ZWwiOjIwMDAsInd2X3NlY3VyaXR5X2xldmVsIjoxfQ.L6VQuwJpPF5lMoo93kO_9daFuryBnndWg6_NvYLzczo",
+            "hdcp_version": "hdcp_v1",
+            "auth_header_key": "customData",
+            "auth_header_value": ""
+          },
+          "titan_version": "",
+          "ssai_version": "",
+          "generator_version": ""
+        }, {
+          "type": "hlsv6_widevine_nonclearlead",
+          "codec": "H264",
+          "audio_tracks": [{
+            "type": "MAIN",
+            "lang": "English",
+            "display_name": "English"
+          }],
+          "resolution": "720P",
+          "manifest": {
+            "url": "https:\u002F\u002Fnc-fa2.tubi.video\u002Fe4be7b82-9f1d-450d-8b77-e282c9866bd3\u002Faomzkwaz99.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZG5fcHJlZml4IjoiaHR0cHM6Ly9uYy1mYTIudHViaS52aWRlbyIsImV4cCI6MTc2NTE4MDgwMCwibWVkaWFfc2lnIjo3Njg5ODY4N30.aA4FTbcKy6yIZ9M9TY6MpIhAG-kdGBu9ArXrjcjqXag",
+            "duration": 5474
+          },
+          "license_server": {
+            "url": "https:\u002F\u002Flicense.adrise.tv\u002Fchallenge?platform=web&type=widevine_nonclearlead&external_id=3445C5C172407C36AA455A1B7AE475BE&drm_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbmFsb2dfb3V0IjoiY2dtc19yZXF1aXJlZCIsImV4cCI6MTc2NTE4MDgwMCwiaGRjcCI6InYxIiwicHJfc2VjdXJpdHlfbGV2ZWwiOjIwMDAsInd2X3NlY3VyaXR5X2xldmVsIjoxfQ.L6VQuwJpPF5lMoo93kO_9daFuryBnndWg6_NvYLzczo",
+            "hdcp_version": "hdcp_v1",
+            "auth_header_key": "customData",
+            "auth_header_value": ""
+          },
+          "titan_version": "",
+          "ssai_version": "",
+          "generator_version": ""
+        }, {
+          "type": "hlsv6_playready_psshv0",
+          "codec": "H264",
+          "audio_tracks": [{
+            "type": "MAIN",
+            "lang": "English",
+            "display_name": "English"
+          }],
+          "resolution": "720P",
+          "manifest": {
+            "url": "https:\u002F\u002Fnc-fa2.tubi.video\u002Fe4be7b82-9f1d-450d-8b77-e282c9866bd3\u002Fdkniq09r43.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZG5fcHJlZml4IjoiaHR0cHM6Ly9uYy1mYTIudHViaS52aWRlbyIsImV4cCI6MTc2NTE4MDgwMCwibWVkaWFfc2lnIjo3Njg5ODY4N30.aA4FTbcKy6yIZ9M9TY6MpIhAG-kdGBu9ArXrjcjqXag",
+            "duration": 5474
+          },
+          "license_server": {
+            "url": "https:\u002F\u002Flicense.adrise.tv\u002Fchallenge?platform=web&type=playready_psshv0&external_id=3445C5C172407C36AA455A1B7AE475BE&drm_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbmFsb2dfb3V0IjoiY2dtc19yZXF1aXJlZCIsImV4cCI6MTc2NTE4MDgwMCwiaGRjcCI6InYxIiwicHJfc2VjdXJpdHlfbGV2ZWwiOjIwMDAsInd2X3NlY3VyaXR5X2xldmVsIjoxfQ.L6VQuwJpPF5lMoo93kO_9daFuryBnndWg6_NvYLzczo",
+            "hdcp_version": "hdcp_v1",
+            "auth_header_key": "customData",
+            "auth_header_value": ""
+          },
+          "titan_version": "",
+          "ssai_version": "",
+          "generator_version": ""
+        }, {
+          "type": "hlsv3",
+          "codec": "H264",
+          "audio_tracks": [],
+          "resolution": "480P",
+          "manifest": {
+            "url": "https:\u002F\u002Fnc-fa2.tubi.video\u002Fe4be7b82-9f1d-450d-8b77-e282c9866bd3\u002F0nqtz64eoj.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZG5fcHJlZml4IjoiaHR0cHM6Ly9uYy1mYTIudHViaS52aWRlbyIsImV4cCI6MTc2NTE4MDgwMCwibWVkaWFfc2lnIjo3Njg5ODY4N30.aA4FTbcKy6yIZ9M9TY6MpIhAG-kdGBu9ArXrjcjqXag",
+            "duration": 5475
+          },
+          "titan_version": "",
+          "ssai_version": "",
+          "generator_version": ""
+        }],
+        "images": {
+          "backgrounds": ["https:\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FdDeMopa8sydQLw==\u002Fd9c43346-dc5d-41e2-a6ca-6a98bfcc89fa\u002FCM4MEIoHOgUxLjEuOA=="],
+          "hero_422": ["https:\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002F1ktFJvuLD5o47Q==\u002F31f81740-af8e-442f-aa61-64f590de083f\u002FCKYDEOgCOgUxLjEuOA=="],
+          "hero_feature": ["https:\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FaofgDlscNdhWMw==\u002F31f81740-af8e-442f-aa61-64f590de083f\u002FCPMCEN8COgUxLjEuOA=="],
+          "hero_feature_desktop_tablet": ["https:\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FoDKe17qzuftILA==\u002F8c0d3037-37bf-4eb8-ab69-f5d7725c1d5e\u002FCIAPEIAGOgUxLjEuOA=="],
+          "hero_feature_large_mobile": ["https:\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002F2SJvvJXhRDB81A==\u002F8c0d3037-37bf-4eb8-ab69-f5d7725c1d5e\u002FCOAHEPADOgUxLjEuOA=="],
+          "hero_feature_small_mobile": ["https:\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FIdz9kR0thKHF4w==\u002F31f81740-af8e-442f-aa61-64f590de083f\u002FCJoEEMADOgUxLjEuOA=="],
+          "landscape_images": ["https:\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FHDz_VW8-q5i2Dg==\u002Ffe7bdf5b-4869-4f13-bdee-86fb52beca0a\u002FCNcHEKgEOgUxLjEuOA=="],
+          "linear_larger_poster": ["https:\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FHDz_VW8-q5i2Dg==\u002Ffe7bdf5b-4869-4f13-bdee-86fb52beca0a\u002FCNcHEKgEOgUxLjEuOA=="],
+          "posterarts": ["https:\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FhFbH2Rf7OBXk_Q==\u002Fd46b6072-84c6-4e8b-8f3f-64a767268ed8\u002FCJgDEMcEOgUxLjEuOA=="],
+          "title_art": []
+        },
+        "has_trailer": false,
+        "lang": "English",
+        "video_preview_url": "",
+        "imdb_id": "tt0089265",
+        "subtitles": [{
+          "url": "http:\u002F\u002Fs.adrise.tv\u002F4e02580a-1c9b-4549-ae78-d6110d3a079b.srt",
+          "lang": "English",
+          "lang_alpha3": "eng",
+          "lang_translation": "English"
+        }],
+        "backgrounds": ["\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FdDeMopa8sydQLw==\u002Fd9c43346-dc5d-41e2-a6ca-6a98bfcc89fa\u002FCM4MEIoHOgUxLjEuOA=="],
+        "ttl": 1764585099035
+      }
+    },
+    "adBreaksById": {
+      "100001038": [0, 487, 922, 1661, 2082, 2691, 3192, 3636, 4456, 4963]
+    },
+    "fullContentById": {
+      "100001038": true
+    },
+    "statusById": {},
+    "resumePositionById": {}
+  },
+  "search": {
+    "loading": {},
+    "fromPath": "\u002F",
+    "key": "",
+    "recommendedContainerIds": [],
+    "hash": {},
+    "activeIdx": null,
+    "keyboard": {
+      "rowIndex": 0,
+      "columnIndex": 0
+    },
+    "isVoiceSearch": false,
+    "activeSection": 0
+  },
+  "queue": {
+    "loaded": false,
+    "loading": false,
+    "inProgress": {},
+    "contentIdMap": {}
+  },
+  "history": {
+    "loaded": false,
+    "loading": false,
+    "inProgress": {},
+    "contentIdMap": {},
+    "lastPlayedContentIdInEpisodes": undefined
+  },
+  "ui": {
+    "preferredTheme": "defaultDark",
+    "isServiceUnavailable": false,
+    "notFound": false,
+    "scrolledToTop": true,
+    "topNavVisible": true,
+    "toggleTopNavOnScroll": true,
+    "containerMenuVisible": false,
+    "liveNewsMenuVisible": false,
+    "isMobile": false,
+    "viewportType": "desktop",
+    "isTouchDevice": false,
+    "accountCardVisible": false,
+    "userAgent": {
+      "ua": "Mozilla\u002F5.0 (Windows NT 6.1; Win64; x64; rv:109.0) Gecko\u002F20100101 Firefox\u002F115.0",
+      "browser": {
+        "name": "Firefox",
+        "version": "115.0",
+        "major": "115",
+        "engine": "Gecko",
+        "engineVersion": "109.0"
+      },
+      "os": {
+        "name": "Windows",
+        "version": "7"
+      },
+      "device": {
+        "deviceType": undefined,
+        "model": undefined,
+        "vendor": undefined
+      }
+    },
+    "showTrailer": false,
+    "trailerParentId": "",
+    "notifications": [],
+    "screensaverCounter": 5,
+    "userIdleCounter": 300,
+    "renderedContainersCount": {
+      "movie": 6,
+      "tv": 6,
+      "linear": 6,
+      "myStuff": 6,
+      "all": 6,
+      "latino": 6,
+      "search": 6
+    },
+    "isSlowDevice": false,
+    "uiFidelity": 30,
+    "isRemoteDisabled": false,
+    "transitionCompleteCbs": [],
+    "settingsSubpanelId": "",
+    "isSettingsSubtitleActive": true,
+    "deeplinkBackOverrides": {},
+    "browseWhileWatchingBackOverrides": {},
+    "containerIndexMap": {},
+    "containerBrandingMap": {},
+    "fullscreen": false,
+    "isKidsModeEnabled": false,
+    "isEspanolModeEnabled": false,
+    "userLanguageLocale": "en-US",
+    "twoDigitCountryCode": "US",
+    "preferredLocale": undefined,
+    "ageGateModal": {
+      "isVisible": false,
+      "isFromExitKidsMode": false
+    },
+    "chromecastAutoplayVisible": false,
+    "waitingOnVoiceCommand": false,
+    "registrationPrompt": {
+      "isOpen": false,
+      "onClose": undefined,
+      "isSkipped": false
+    },
+    "renderControls": true,
+    "loginModal": {
+      "isOpen": false
+    },
+    "programDetailsModal": {
+      "isOpen": false,
+      "programKey": ""
+    },
+    "activeTilePreviewCount": 0,
+    "showAppDownloadBanner": false,
+    "showToastForMobileToOTTSignIn": false,
+    "showToastForContentNotFound": false,
+    "showSignInToast": false,
+    "staticConfig": {},
+    "isAddAccountTooltipActive": false,
+    "isViewingCdcContent": false,
+    "userGeoData": {
+      "city": "Las Vegas",
+      "state": "NV",
+      "postalCode": "89110"
+    }
+  },
+  "experiments": {
+    "namespaces": {
+      "webott_linear_web_shared": {
+        "name": "webott_linear_web_shared",
+        "parameters": {
+          "allow_refresh_page": {
+            "name": "allow_refresh_page",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "vertical_fit": {
+            "name": "vertical_fit",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "spanish_captions": {
+            "name": "spanish_captions",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "linearsession_expired_limit": {
+            "name": "linearsession_expired_limit",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_simplify_registration_on_like_button": {
+        "name": "webott_web_simplify_registration_on_like_button",
+        "parameters": {
+          "simplified": {
+            "name": "simplified",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_registration_magic_link_v4": {
+        "name": "webott_web_registration_magic_link_v4",
+        "parameters": {
+          "magic_link_option": {
+            "name": "magic_link_option",
+            "salt": "",
+            "experiment": "",
+            "value": "on_invalid_password",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_force_failsafe": {
+        "name": "webott_force_failsafe",
+        "parameters": {
+          "force_failsafe": {
+            "name": "force_failsafe",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_skip_ad_with_healthscore_v1": {
+        "name": "webott_web_skip_ad_with_healthscore_v1",
+        "parameters": {
+          "skip_ad_factor": {
+            "name": "skip_ad_factor",
+            "salt": "",
+            "experiment": "",
+            "value": "only_error",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_vertical_ymal_v4": {
+        "name": "webott_web_vertical_ymal_v4",
+        "parameters": {
+          "enabled": {
+            "name": "enabled",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_player_firetv_shared": {
+        "name": "webott_player_firetv_shared",
+        "parameters": {
+          "enable_revert_segments_cache": {
+            "name": "enable_revert_segments_cache",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "should_stop": {
+            "name": "should_stop",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enable_revert_segments_cache_v3": {
+            "name": "enable_revert_segments_cache_v3",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "downgrade_no_drm": {
+            "name": "downgrade_no_drm",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "prevent_unsafe_pauses": {
+            "name": "prevent_unsafe_pauses",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "resource_storage_expiration": {
+            "name": "resource_storage_expiration",
+            "salt": "",
+            "experiment": "",
+            "value": 1,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "progressive_fetch": {
+            "name": "progressive_fetch",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "isInNewResumeMode": {
+            "name": "isInNewResumeMode",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "step_seek_optimization": {
+            "name": "step_seek_optimization",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "larger_caption": {
+            "name": "larger_caption",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "resumeMode": {
+            "name": "resumeMode",
+            "salt": "",
+            "experiment": "",
+            "value": 1,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "autoplay_on_canplay": {
+            "name": "autoplay_on_canplay",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "resource_storage_expiration_v1": {
+            "name": "resource_storage_expiration_v1",
+            "salt": "",
+            "experiment": "",
+            "value": 1,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enable_error_manager": {
+            "name": "enable_error_manager",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "progressive_fetch_v1": {
+            "name": "progressive_fetch_v1",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enable_start_position": {
+            "name": "enable_start_position",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "resource_storage_expiration_v2": {
+            "name": "resource_storage_expiration_v2",
+            "salt": "",
+            "experiment": "",
+            "value": 2,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "linear_show_loading_icon": {
+            "name": "linear_show_loading_icon",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "should_stop_v2": {
+            "name": "should_stop_v2",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "maxMaxBufferLength": {
+            "name": "maxMaxBufferLength",
+            "salt": "",
+            "experiment": "",
+            "value": 60,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enable_start_position_v2": {
+            "name": "enable_start_position_v2",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "fix_re_render": {
+            "name": "fix_re_render",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "cache_duration_v4": {
+            "name": "cache_duration_v4",
+            "salt": "",
+            "experiment": "",
+            "value": 0,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "use_refactored_trailer_player": {
+            "name": "use_refactored_trailer_player",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "resource_storage_expiration_v3": {
+            "name": "resource_storage_expiration_v3",
+            "salt": "",
+            "experiment": "",
+            "value": 2,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "progressive_append_v2": {
+            "name": "progressive_append_v2",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "progressive_enable_startup_seek_v2": {
+            "name": "progressive_enable_startup_seek_v2",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "progressive_enable_fast_speed_v2": {
+            "name": "progressive_enable_fast_speed_v2",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "progressive_mode_v3": {
+            "name": "progressive_mode_v3",
+            "salt": "",
+            "experiment": "",
+            "value": 0,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "start_from_beginning": {
+            "name": "start_from_beginning",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "recovery_method": {
+            "name": "recovery_method",
+            "salt": "",
+            "experiment": "",
+            "value": "control",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "avoid_ad_stall_mode_v0": {
+            "name": "avoid_ad_stall_mode_v0",
+            "salt": "",
+            "experiment": "",
+            "value": 2,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "reset_current_time": {
+            "name": "reset_current_time",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "prevention_method": {
+            "name": "prevention_method",
+            "salt": "",
+            "experiment": "",
+            "value": 0,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enable_reposition_v0": {
+            "name": "enable_reposition_v0",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enable_player_feedback": {
+            "name": "enable_player_feedback",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enable_detach_media_keys": {
+            "name": "enable_detach_media_keys",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "rule": {
+            "name": "rule",
+            "salt": "",
+            "experiment": "",
+            "value": 0,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "avoid_handle_abort_error": {
+            "name": "avoid_handle_abort_error",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "progressive_mode_v4": {
+            "name": "progressive_mode_v4",
+            "salt": "",
+            "experiment": "",
+            "value": 0,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "show_thumbnails": {
+            "name": "show_thumbnails",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "rule_v2": {
+            "name": "rule_v2",
+            "salt": "",
+            "experiment": "",
+            "value": 0,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enable_probe_improve": {
+            "name": "enable_probe_improve",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enable_reposition_v1": {
+            "name": "enable_reposition_v1",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enable_reposition_v2": {
+            "name": "enable_reposition_v2",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "prevention_method_v2": {
+            "name": "prevention_method_v2",
+            "salt": "",
+            "experiment": "",
+            "value": 0,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enable_high_sl": {
+            "name": "enable_high_sl",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "abrMaxWithRealBitrate": {
+            "name": "abrMaxWithRealBitrate",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "preload": {
+            "name": "preload",
+            "salt": "",
+            "experiment": "",
+            "value": "control",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "prevent_buffer_check": {
+            "name": "prevent_buffer_check",
+            "salt": "",
+            "experiment": "",
+            "value": "control",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "optimize_autoplay_variant": {
+            "name": "optimize_autoplay_variant",
+            "salt": "",
+            "experiment": "",
+            "value": 0,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "setStartLevel": {
+            "name": "setStartLevel",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "startLevel": {
+            "name": "startLevel",
+            "salt": "",
+            "experiment": "",
+            "value": "LOWEST",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enableBrowseWhileWatching": {
+            "name": "enableBrowseWhileWatching",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "gate_720p_resolution": {
+            "name": "gate_720p_resolution",
+            "salt": "",
+            "experiment": "",
+            "value": 0,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enable_forward_buffer_flush": {
+            "name": "enable_forward_buffer_flush",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "postpone_thumbnail_fetch": {
+            "name": "postpone_thumbnail_fetch",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "bww_variant": {
+            "name": "bww_variant",
+            "salt": "",
+            "experiment": "",
+            "value": 1,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enable_responsive_player": {
+            "name": "enable_responsive_player",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "impression_requirement": {
+            "name": "impression_requirement",
+            "salt": "",
+            "experiment": "",
+            "value": "none",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "ad_player_variant": {
+            "name": "ad_player_variant",
+            "salt": "",
+            "experiment": "",
+            "value": "default",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "autoplay_refresh": {
+            "name": "autoplay_refresh",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "ads_second_later": {
+            "name": "ads_second_later",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "autoplay_refresh_v2": {
+            "name": "autoplay_refresh_v2",
+            "salt": "",
+            "experiment": "",
+            "value": "default",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "ad_player_variant_v2": {
+            "name": "ad_player_variant_v2",
+            "salt": "",
+            "experiment": "",
+            "value": "single_ad_time",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "hide_player_controls_on_start": {
+            "name": "hide_player_controls_on_start",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "bww_series_variant": {
+            "name": "bww_series_variant",
+            "salt": "",
+            "experiment": "",
+            "value": 1,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "use_ad_progress": {
+            "name": "use_ad_progress",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "bww_source": {
+            "name": "bww_source",
+            "salt": "",
+            "experiment": "",
+            "value": "control",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "autoplay_refresh_v3": {
+            "name": "autoplay_refresh_v3",
+            "salt": "",
+            "experiment": "",
+            "value": "default",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "use_hls_ads": {
+            "name": "use_hls_ads",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "bww_peek_row_style": {
+            "name": "bww_peek_row_style",
+            "salt": "",
+            "experiment": "",
+            "value": 0,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "healthscore_r2": {
+            "name": "healthscore_r2",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "autoplay_refresh_v4": {
+            "name": "autoplay_refresh_v4",
+            "salt": "",
+            "experiment": "",
+            "value": "default",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enable_native_player_v0": {
+            "name": "enable_native_player_v0",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "stall_recovery_config": {
+            "name": "stall_recovery_config",
+            "salt": "",
+            "experiment": "",
+            "value": 0,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "player_design": {
+            "name": "player_design",
+            "salt": "",
+            "experiment": "",
+            "value": 0,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "autoplay_refresh_v5": {
+            "name": "autoplay_refresh_v5",
+            "salt": "",
+            "experiment": "",
+            "value": "default",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_cw_row_for_guest_users": {
+        "name": "webott_web_cw_row_for_guest_users",
+        "parameters": {
+          "show": {
+            "name": "show",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_video_preview_v5": {
+        "name": "webott_web_video_preview_v5",
+        "parameters": {
+          "type": {
+            "name": "type",
+            "salt": "",
+            "experiment": "",
+            "value": "control",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_direct_to_player": {
+        "name": "webott_web_direct_to_player",
+        "parameters": {
+          "enabled": {
+            "name": "enabled",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_featured_row": {
+        "name": "webott_web_featured_row",
+        "parameters": {
+          "use_container_row": {
+            "name": "use_container_row",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_registration_player_gate": {
+        "name": "webott_web_registration_player_gate",
+        "parameters": {
+          "flow": {
+            "name": "flow",
+            "salt": "",
+            "experiment": "",
+            "value": "control",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "enabled": {
+            "name": "enabled",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          },
+          "remove_fb_login": {
+            "name": "remove_fb_login",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_personalization_prompt_v2": {
+        "name": "webott_web_personalization_prompt_v2",
+        "parameters": {
+          "enabled": {
+            "name": "enabled",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_celebrity_ymal_v2": {
+        "name": "webott_web_celebrity_ymal_v2",
+        "parameters": {
+          "enabled": {
+            "name": "enabled",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_compact_signup_form": {
+        "name": "webott_web_compact_signup_form",
+        "parameters": {
+          "enabled": {
+            "name": "enabled",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_firetv_deeplink_perf_improve": {
+        "name": "webott_firetv_deeplink_perf_improve",
+        "parameters": {
+          "enabled": {
+            "name": "enabled",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_registration_personalized_google_button_v3": {
+        "name": "webott_web_registration_personalized_google_button_v3",
+        "parameters": {
+          "enabled": {
+            "name": "enabled",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_details_page_redesign_v2": {
+        "name": "webott_web_details_page_redesign_v2",
+        "parameters": {
+          "use_redesign_details_page": {
+            "name": "use_redesign_details_page",
+            "salt": "",
+            "experiment": "",
+            "value": false,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_remove_landing_v4": {
+        "name": "webott_web_remove_landing_v4",
+        "parameters": {
+          "landing_page": {
+            "name": "landing_page",
+            "salt": "",
+            "experiment": "",
+            "value": "landing_page",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_firetv_search_larger_poster": {
+        "name": "webott_firetv_search_larger_poster",
+        "parameters": {
+          "larger_poster": {
+            "name": "larger_poster",
+            "salt": "",
+            "experiment": "",
+            "value": true,
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      },
+      "webott_web_landscape_v2": {
+        "name": "webott_web_landscape_v2",
+        "parameters": {
+          "hover": {
+            "name": "hover",
+            "salt": "",
+            "experiment": "",
+            "value": "none",
+            "valueIsDefault": true,
+            "inHoldout": false,
+            "domain": ""
+          }
+        }
+      }
+    },
+    "localOverrides": {},
+    "overrides": {},
+    "performanceTag": {},
+    "redirectExperiment": {
+      "originalDeviceId": ""
+    }
+  },
+  "legalAsset": {
+    "privacy": {
+      "html": "",
+      "error": null
+    },
+    "terms": {
+      "html": "",
+      "error": null
+    },
+    "your-privacy-choices": {
+      "html": "",
+      "error": null
+    },
+    "b2b-privacy": {
+      "html": "",
+      "error": null
+    },
+    "cookies": {
+      "html": "",
+      "error": null
+    },
+    "dashpass": {
+      "html": "",
+      "error": null
+    },
+    "ca-ads-registry": {
+      "html": "",
+      "error": null
+    }
+  },
+  "live": {
+    "activeContentId": "",
+    "loading": true,
+    "countdownForFullscreen": 0,
+    "videoPlayer": "BANNER",
+    "containerIndex": -1,
+    "containerId": "",
+    "contentIndex": 0,
+    "programIndex": 0,
+    "channelGuideLoaded": false,
+    "consoleVisible": true,
+    "playerReady": false,
+    "captions": [],
+    "videoQualityToastVisible": false
+  },
+  "reminder": {
+    "loaded": false,
+    "loading": false,
+    "inProgress": {},
+    "contentIdMap": {},
+    "hasError": false
+  },
+  "linearReminder": {
+    "loaded": false,
+    "loading": false,
+    "inProgress": {},
+    "idMap": {},
+    "hasError": false
+  },
+  "epg": {
+    "containerIdsLoaded": {
+      "tubitv_us_linear": false,
+      "tubitv_epg_news": false,
+      "tubitv_epg_sports": false
+    },
+    "containerIdsLoading": {
+      "tubitv_us_linear": false,
+      "tubitv_epg_news": false,
+      "tubitv_epg_sports": false
+    },
+    "contentIdsByContainer": {
+      "tubitv_us_linear": [{
+        "container_slug": "favorite_linear_channels",
+        "contents": [],
+        "name": "Favorites"
+      }, {
+        "container_slug": "recommended_linear_channels",
+        "contents": [],
+        "name": "Recommended"
+      }],
+      "tubitv_epg_news": [{
+        "container_slug": "favorite_linear_channels",
+        "contents": [],
+        "name": "Favorites"
+      }, {
+        "container_slug": "recommended_linear_channels",
+        "contents": [],
+        "name": "Recommended"
+      }],
+      "tubitv_epg_sports": [{
+        "container_slug": "favorite_linear_channels",
+        "contents": [],
+        "name": "Favorites"
+      }, {
+        "container_slug": "recommended_linear_channels",
+        "contents": [],
+        "name": "Recommended"
+      }]
+    },
+    "programsLoading": false,
+    "favoritedIdsLoaded": false,
+    "byId": {},
+    "fireTvLiveTabChannelIds": []
+  },
+  "consent": {
+    "updatingConsent": false,
+    "consentRequired": false,
+    "privacyDescription": "",
+    "consents": []
+  },
+  "remoteConfig": {
+    "blockedAnalyticsEvents": {},
+    "blockedLocalData": undefined,
+    "privacyPolicyQrCodeUrl": "https:\u002F\u002Fcdn.adrise.tv\u002Ftubitv-assets\u002Fimg\u002Fgdpr\u002Fprivacy.png",
+    "privacyPolicyUrl": "https:\u002F\u002Ftubitv.com\u002Fstatic\u002Fprivacy",
+    "termsOfUseQrCodeUrl": "https:\u002F\u002Fcdn.adrise.tv\u002Ftubitv-assets\u002Fimg\u002Fgdpr\u002Fterms.png",
+    "termsOfUseUrl": "https:\u002F\u002Ftubitv.com\u002Fstatic\u002Fterms",
+    "youbora": {
+      "vod": false,
+      "preview": false,
+      "linear": false,
+      "trailer": false
+    },
+    "sentryRate": {
+      "error": 0.2,
+      "transition": 0.007
+    },
+    "country": "US",
+    "isInBlockedCountry": false,
+    "isLiveAvailableInCountry": true,
+    "isRecommendedChannelsEnabledInCountry": true,
+    "isWebFeaturedRowRotationEnabled": true,
+    "liveRetryLimit": {
+      "master": 3,
+      "variant": 3,
+      "frag": 3
+    },
+    "liveVideoQualityFeedback": {
+      "samplingRate": 1,
+      "interval": 604800
+    },
+    "special_event_onboarding_start_time": "2025-11-22T14:00:00.000000Z",
+    "special_event_onboarding_end_time": "2025-11-27T21:00:00.000000Z",
+    "special_event_onboarding_description": "Stream live and free Thursday, Nov 27.\nPregame 11:00 AM ET. Kick off 1:00 PM ET.",
+    "special_event_onboarding_title_art": "https:\u002F\u002Fmcdn.tubitv.com\u002Fimage\u002Fseatiger\u002Fott\u002Fonboarding_title_art.png",
+    "special_event_onboarding_background": "https:\u002F\u002Fmcdn.tubitv.com\u002Fimage\u002Fseatiger\u002Fott\u002Fonboarding_background.png",
+    "special_event_onboarding_logo": "https:\u002F\u002Fmcdn.tubitv.com\u002Fimage\u002Fseatiger\u002Fott\u002Fonboarding_logo.png",
+    "special_event_continue_watching_init_jitter": 180,
+    "special_event_continue_watching_post_interval": 180,
+    "special_event_redirect_homepage_jitter": 300,
+    "retryLimit": {
+      "master": 3,
+      "variant": 3,
+      "frag": 3
+    },
+    "intro_landscape_hibpr": "http:\u002F\u002Fc12.adrise.tv\u002Fv2\u002Fsources\u002Fcontent-owners\u002Fadrise-no-ads\u002F325254\u002Fv20169072053-1920x1080-2413k.mp4",
+    "intro_landscape_lowbpr": "http:\u002F\u002Fc12.adrise.tv\u002Fv2\u002Fsources\u002Fcontent-owners\u002Fadrise-no-ads\u002F325254\u002Fv20169072053-1920x1080-341k.mp4",
+    "intro_portrait_hibpr": "http:\u002F\u002Fc12.adrise.tv\u002Fv2\u002Fsources\u002Fcontent-owners\u002Fadrise-no-ads\u002F325255\u002Fv20169072050-1080x1920-2624k.mp4",
+    "intro_portrait_lowbpr": "http:\u002F\u002Fc12.adrise.tv\u002Fv2\u002Fsources\u002Fcontent-owners\u002Fadrise-no-ads\u002F325255\u002Fv20169072050-1080x1920-335k.mp4",
+    "intro_portrait_hibpr_largest": "http:\u002F\u002Fc12.adrise.tv\u002Fv2\u002Fsources\u002Fcontent-owners\u002Fadrise-no-ads\u002F337705\u002Fvideo-1-vertical-v03-a1.mp4",
+    "intro_portrait_hibpr_exclusive": "http:\u002F\u002Fc12.adrise.tv\u002Fv2\u002Fsources\u002Fcontent-owners\u002Fadrise-no-ads\u002F337707\u002Fvideo-1-vertical-v03-a2.mp4",
+    "intro_portrait_hibpr_all_devices": "http:\u002F\u002Fc12.adrise.tv\u002Fv2\u002Fsources\u002Fcontent-owners\u002Fadrise-no-ads\u002F337709\u002Fvideo-1-vertical-v03-a3.mp4",
+    "intro_action_video_ids": [369857, 376177],
+    "intro_drama_video_ids": [369854, 332927],
+    "intro_comedy_video_ids": [289827, 273565],
+    "intro_horror_video_ids": [307746, 348457],
+    "intro_romance_video_ids": [348946, 303151],
+    "intro_kids_video_ids": [334155, 305457],
+    "vpaid_url": "http:\u002F\u002Ftubi-vpaid-player.tubitv.com\u002F",
+    "ui_customization_enabled": true,
+    "rainmaker_enabled": 1,
+    "client_log_enabled": 1,
+    "realtime_log_enabled": 1,
+    "realtime_metric_enabled": 1,
+    "player_analytics_event_enabled": 1,
+    "fairplay_cert_url": "https:\u002F\u002Ffairplay.keyos.com\u002Fapi\u002Fv4\u002FgetCertificate?certHash=9c6bf173c89372a38ddee01d125ce8a5",
+    "locale": "en",
+    "server_time": 1764577898815,
+    "vpaid_old_url": "http:\u002F\u002Ftubitv.com\u002Fvpaid\u002F",
+    "enable_kidsmode": true,
+    "ratings_limit": [],
+    "enable_tv_mode": true,
+    "enable_movie_mode": true,
+    "enable_linear_mode": true,
+    "livetv": false,
+    "enable_cw_in_pmr": true,
+    "blocked_analytics_events": ["navigate_within_page", "mobile_screen_rotate", "preview_play_progress"],
+    "enable_parental_control": true,
+    "enabled_firetv_live_lab": true,
+    "tubi_playback_start": "2025-12-15T08:00:00.000000Z",
+    "tubi_playback_end": "2026-01-15T08:00:00.000000Z",
+    "disaster_mode_enabled": false,
+    "major_event_onboarding_start": "2025-02-04T23:30:00.000000Z",
+    "major_event_onboarding_end": "2025-02-10T05:00:00.000000Z",
+    "major_event_name": "Super Bowl LIX",
+    "major_event_start": "2025-02-09T15:30:00.000000Z",
+    "major_event_end": "2025-02-10T06:00:00.000000Z",
+    "major_event_failsafe_start": "2025-02-09T15:30:00.000000Z",
+    "major_event_failsafe_end": "2025-02-10T06:00:00.000000Z",
+    "major_event_intro_animation_start": "2025-01-27T05:00:00.000000Z",
+    "major_event_intro_animation_end": "2025-02-10T05:00:00.000000Z",
+    "major_event_intro_animation_supported_version": "9.3.0",
+    "bypass_registration_gate": false,
+    "auth_login_with_amazon_enabled": true,
+    "auth_google_onetap_enabled": true,
+    "auth_comcast_email_prefill_enabled": true,
+    "auth_vizio_email_prefill_enabled": true,
+    "auth_magic_link_enabled": true,
+    "activation_code_status_polling_interval": 5,
+    "event_minimum_unsupported_fox_player_msg": "Latest app version is required for this content.",
+    "major_event_failsafe_maintenance_header": "{feature} is taking a Super Bowl LIX break",
+    "major_event_failsafe_maintenance_subtext": "Don't worry! It'll be back after the game.",
+    "major_event_failsafe_maintenance_header_fr": "{feature} fait une pause à cause de Super Bowl LIX",
+    "major_event_failsafe_maintenance_subtext_fr": "Ne t'inquiète pas! Il reviendra après le match.",
+    "major_event_failsafe_maintenance_header_es": "{feature} está tomando un descanso por el Super Bowl LIX",
+    "major_event_failsafe_maintenance_subtext_es": "¡No te preocupes! Volverá después del partido."
+  },
+  "hdcAd": {
+    "isAdPlaying": false,
+    "isAdPlayFinished": false,
+    "isHdcFiredImpression": {},
+    "disableHomeLowerSectionTransition": false,
+    "hasWrapperVideoPlayed": false,
+    "isFromWrapperFullscreenPlayback": false,
+    "hdcRefetchState": {
+      "isFetching": false,
+      "ttl": undefined,
+      "error": null
+    },
+    "data": null,
+    "videoCreativeMap": null,
+    "nativeCreativeMap": null
+  },
+  "captionSettings": {
+    "defaultCaptions": {
+      "language": "English",
+      "enabled": false
+    },
+    "isMobile": false,
+    "background": {
+      "toggle": {
+        "label": "On",
+        "active": true,
+        "value": "on"
+      },
+      "backgroundColor": {
+        "activeRGBValue": "16, 20, 31",
+        "isSemitransparent": true,
+        "opacity": 0.8
+      }
+    },
+    "font": {
+      "size": {
+        "label": "Medium",
+        "vw": "clamp(25px, 2.5vw, 65px)",
+        "value": "medium"
+      },
+      "family": {
+        "value": "block",
+        "type": "Helvetica Neue, Helvetica, Arial, sans-serif",
+        "label": "Block",
+        "optionStyle": {
+          "fontFamily": "\"Helvetica Neue\", Helvetica, Arial, sans-serif"
+        }
+      },
+      "fontColor": {
+        "activeRGBValue": "255, 255, 255",
+        "isSemitransparent": false
+      }
+    },
+    "styling": {
+      "stylingType": {
+        "value": "none",
+        "label": "None"
+      },
+      "stylingColor": {
+        "activeRGBValue": "0, 0, 0"
+      }
+    },
+    "window": {
+      "windowColor": {
+        "activeRGBValue": "",
+        "isSemitransparent": false
+      }
+    }
+  },
+  "fixedBanner": {
+    "bannerState": null
+  },
+  "pwdReset": {
+    "token": null,
+    "loaded": false,
+    "loading": false,
+    "isValid": false
+  },
+  "person": {
+    "id": "",
+    "nameWithQuotes": "",
+    "results": {}
+  },
+  "chromecast": {
+    "castApiAvailable": false,
+    "castReceiverState": "NO_DEVICES_AVAILABLE",
+    "castPlayerState": "IDLE",
+    "contentId": "",
+    "isAd": false,
+    "isMuted": false,
+    "captionsIndex": -1,
+    "volumeLevel": 1,
+    "deviceName": "",
+    "position": 0,
+    "castVideoLoading": false,
+    "castVideoLoaded": false,
+    "castVideoLoadError": undefined,
+    "nextCastVideoArgs": null
+  },
+  "player": {
+    "playerState": "idle",
+    "contentType": "content_video",
+    "adProgress": {
+      "position": 0,
+      "duration": 0
+    },
+    "ad": {
+      "adCount": 1,
+      "adSequence": 1
+    },
+    "quality": {
+      "restrictedLevels": [],
+      "qualityList": [],
+      "qualityIndex": 0,
+      "isHD": false
+    },
+    "captions": {
+      "captionsList": [],
+      "captionsIndex": 0
+    },
+    "bitrate": -1,
+    "timeGapToLastBuffer": -1,
+    "drmKeySystem": null,
+    "canAutoplay": false,
+    "videoPreviewMuted": false
+  },
+  "support": {
+    "ticketFields": [],
+    "ticketFieldIdMap": {},
+    "dynamicContentLocaleMap": {},
+    "mobileMetadataHeaders": {},
+    "helpCategoryIdList": [],
+    "helpCategoryIdMap": {},
+    "helpCategorySectionsIdMap": {},
+    "helpSectionIdMap": {},
+    "helpSectionArticlesIdMap": {},
+    "helpArticleIdMap": {}
+  },
+  "watchSchedule": {
+    "title": "",
+    "titleParam": "",
+    "contentIds": [],
+    "now": "",
+    "dates": [],
+    "programmings": {},
+    "pending": {},
+    "isFeaturedEpgItemsLoading": false,
+    "isFeaturedEpgItemsLoaded": false,
+    "featuredEpgItems": [],
+    "loadMore": {
+      "isVisible": true,
+      "loading": {},
+      "isLoading": false
+    }
+  },
+  "webUI": {
+    "contentMode": {
+      "_active": "all",
+      "previous": "all"
+    },
+    "categoriesPage": {
+      "popularExpanded": false,
+      "genresExpanded": false,
+      "collectionsExpanded": false,
+      "channelsExpanded": false,
+      "sportsExpanded": false,
+      "channelsActiveContainerIndex": 0
+    },
+    "personalization": {
+      "dismissedPrompt": false,
+      "isValidUserForPersonalization": true
+    },
+    "contentDetailsModal": {
+      "isOpen": false,
+      "contentId": ""
+    }
+  }
+}

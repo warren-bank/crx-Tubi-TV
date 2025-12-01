@@ -1,0 +1,304 @@
+{
+  "mutations": [],
+  "queries": [{
+    "dehydratedAt": 1764589245145,
+    "state": {
+      "data": {
+        "pages": [{
+          "subtitles": [{
+            "url": "http:\u002F\u002Fs.adrise.tv\u002F4e02580a-1c9b-4549-ae78-d6110d3a079b.srt",
+            "lang": "English",
+            "lang_alpha3": "eng",
+            "lang_translation": "English"
+          }],
+          "detailed_type": "movie",
+          "type": "v",
+          "year": 1985,
+          "canonical_id": "",
+          "duration": 5475,
+          "ad_languages": [],
+          "import_id": "mgm",
+          "description": "A lonely teen gets divine intervention when a hip guardian angel trying to earn his wings comes down to teach the high schooler how to be cool.",
+          "rt_fields": null,
+          "id": "100001038",
+          "monetization": {
+            "cue_points": [0, 487, 922, 1661, 2082, 2691, 3192, 3636, 4456, 4963]
+          },
+          "images": {
+            "backgrounds": ["https:\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FdDeMopa8sydQLw==\u002Fd9c43346-dc5d-41e2-a6ca-6a98bfcc89fa\u002FCM4MEIoHOgUxLjEuOA=="],
+            "hero_422": ["https:\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002F1ktFJvuLD5o47Q==\u002F31f81740-af8e-442f-aa61-64f590de083f\u002FCKYDEOgCOgUxLjEuOA=="],
+            "hero_feature": ["https:\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FaofgDlscNdhWMw==\u002F31f81740-af8e-442f-aa61-64f590de083f\u002FCPMCEN8COgUxLjEuOA=="],
+            "hero_feature_desktop_tablet": ["https:\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FoDKe17qzuftILA==\u002F8c0d3037-37bf-4eb8-ab69-f5d7725c1d5e\u002FCIAPEIAGOgUxLjEuOA=="],
+            "hero_feature_large_mobile": ["https:\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002F2SJvvJXhRDB81A==\u002F8c0d3037-37bf-4eb8-ab69-f5d7725c1d5e\u002FCOAHEPADOgUxLjEuOA=="],
+            "hero_feature_small_mobile": ["https:\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FIdz9kR0thKHF4w==\u002F31f81740-af8e-442f-aa61-64f590de083f\u002FCJoEEMADOgUxLjEuOA=="],
+            "landscape_images": ["https:\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FHDz_VW8-q5i2Dg==\u002Ffe7bdf5b-4869-4f13-bdee-86fb52beca0a\u002FCNcHEKgEOgUxLjEuOA=="],
+            "linear_larger_poster": ["https:\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FHDz_VW8-q5i2Dg==\u002Ffe7bdf5b-4869-4f13-bdee-86fb52beca0a\u002FCNcHEKgEOgUxLjEuOA=="],
+            "posterarts": ["https:\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FhFbH2Rf7OBXk_Q==\u002Fd46b6072-84c6-4e8b-8f3f-64a767268ed8\u002FCJgDEMcEOgUxLjEuOA=="],
+            "title_art": []
+          },
+          "version_id": "",
+          "login_reason": "",
+          "availability_starts": "2025-10-01T07:00:00.000Z",
+          "video_metadata": [{
+            "type": "hlsv6_fairplay",
+            "codec": "VIDEO_CODEC_H264",
+            "resolution": "VIDEO_RESOLUTION_720P"
+          }, {
+            "type": "hlsv6_fairplay",
+            "codec": "VIDEO_CODEC_H265",
+            "resolution": "VIDEO_RESOLUTION_720P"
+          }, {
+            "type": "hlsv6_widevine_nonclearlead",
+            "codec": "VIDEO_CODEC_H264",
+            "resolution": "VIDEO_RESOLUTION_720P"
+          }, {
+            "type": "hlsv6_widevine_nonclearlead",
+            "codec": "VIDEO_CODEC_H265",
+            "resolution": "VIDEO_RESOLUTION_720P"
+          }, {
+            "type": "hlsv6_playready_psshv0",
+            "codec": "VIDEO_CODEC_H264",
+            "resolution": "VIDEO_RESOLUTION_720P"
+          }, {
+            "type": "hlsv6_playready_psshv0",
+            "codec": "VIDEO_CODEC_H265",
+            "resolution": "VIDEO_RESOLUTION_720P"
+          }],
+          "version": 60,
+          "tags": ["Comedy", "Fantasy", "Romance"],
+          "ratings": [{
+            "code": "PG-13",
+            "system": "mpaa",
+            "value": "PG-13",
+            "descriptors": []
+          }],
+          "hero_images": ["\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FJPsxN58aBm0tTQ==\u002F8c0d3037-37bf-4eb8-ab69-f5d7725c1d5e\u002FCIAPEKQFOgUxLjEuOA=="],
+          "imdb_fields": null,
+          "actors": ["Lewis Smith", "Jason Gedrick", "Jane Kaczmarek", "Richard Mulligan", "Beau Dremann"],
+          "url": "https:\u002F\u002Fnc-fa2.tubi.video\u002Fe4be7b82-9f1d-450d-8b77-e282c9866bd3\u002F0nqtz64eoj.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZG5fcHJlZml4IjoiaHR0cHM6Ly9uYy1mYTIudHViaS52aWRlbyIsImV4cCI6MTc2NTE4MDgwMCwibWVkaWFfc2lnIjo3Njg5ODY4N30.aA4FTbcKy6yIZ9M9TY6MpIhAG-kdGBu9ArXrjcjqXag",
+          "video_preview_url": "",
+          "awards": {
+            "items": []
+          },
+          "imdb_id": "tt0089265",
+          "player_type": "tubi",
+          "updated_at": "2025-09-25T03:30:45.000Z",
+          "video_resources": [{
+            "type": "hlsv6_fairplay",
+            "codec": "H265",
+            "audio_tracks": [{
+              "type": "MAIN",
+              "lang": "English",
+              "display_name": "English"
+            }],
+            "manifest": {
+              "url": "https:\u002F\u002Fnc-fa2.tubi.video\u002Fe4be7b82-9f1d-450d-8b77-e282c9866bd3\u002Fteh179bu49.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZG5fcHJlZml4IjoiaHR0cHM6Ly9uYy1mYTIudHViaS52aWRlbyIsImV4cCI6MTc2NTE4MDgwMCwibWVkaWFfc2lnIjo3Njg5ODY4N30.aA4FTbcKy6yIZ9M9TY6MpIhAG-kdGBu9ArXrjcjqXag",
+              "duration": 5475
+            },
+            "license_server": {
+              "url": "https:\u002F\u002Flicense.adrise.tv\u002Fchallenge?platform=web&type=fairplay&external_id=C2A998E1C28541D73EC2B0A1CAE5EE3E&drm_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbmFsb2dfb3V0IjoiY2dtc19yZXF1aXJlZCIsImV4cCI6MTc2NTE4MDgwMCwiaGRjcCI6InYxIiwicHJfc2VjdXJpdHlfbGV2ZWwiOjIwMDAsInd2X3NlY3VyaXR5X2xldmVsIjoxfQ.L6VQuwJpPF5lMoo93kO_9daFuryBnndWg6_NvYLzczo",
+              "hdcp_version": "hdcp_v1",
+              "auth_header_key": "customData",
+              "auth_header_value": ""
+            },
+            "titan_version": "",
+            "resolution": "720P",
+            "ssai_version": "",
+            "generator_version": ""
+          }, {
+            "type": "hlsv6_widevine_nonclearlead",
+            "codec": "H265",
+            "audio_tracks": [{
+              "type": "MAIN",
+              "lang": "English",
+              "display_name": "English"
+            }],
+            "manifest": {
+              "url": "https:\u002F\u002Fnc-fa2.tubi.video\u002Fe4be7b82-9f1d-450d-8b77-e282c9866bd3\u002Fue3pn60ccs.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZG5fcHJlZml4IjoiaHR0cHM6Ly9uYy1mYTIudHViaS52aWRlbyIsImV4cCI6MTc2NTE4MDgwMCwibWVkaWFfc2lnIjo3Njg5ODY4N30.aA4FTbcKy6yIZ9M9TY6MpIhAG-kdGBu9ArXrjcjqXag",
+              "duration": 5475
+            },
+            "license_server": {
+              "url": "https:\u002F\u002Flicense.adrise.tv\u002Fchallenge?platform=web&type=widevine_nonclearlead&external_id=C2A998E1C28541D73EC2B0A1CAE5EE3E&drm_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbmFsb2dfb3V0IjoiY2dtc19yZXF1aXJlZCIsImV4cCI6MTc2NTE4MDgwMCwiaGRjcCI6InYxIiwicHJfc2VjdXJpdHlfbGV2ZWwiOjIwMDAsInd2X3NlY3VyaXR5X2xldmVsIjoxfQ.L6VQuwJpPF5lMoo93kO_9daFuryBnndWg6_NvYLzczo",
+              "hdcp_version": "hdcp_v1",
+              "auth_header_key": "customData",
+              "auth_header_value": ""
+            },
+            "titan_version": "",
+            "resolution": "720P",
+            "ssai_version": "",
+            "generator_version": ""
+          }, {
+            "type": "hlsv6_playready_psshv0",
+            "codec": "H265",
+            "audio_tracks": [{
+              "type": "MAIN",
+              "lang": "English",
+              "display_name": "English"
+            }],
+            "manifest": {
+              "url": "https:\u002F\u002Fnc-fa2.tubi.video\u002Fe4be7b82-9f1d-450d-8b77-e282c9866bd3\u002Fdt5jvjzyfh.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZG5fcHJlZml4IjoiaHR0cHM6Ly9uYy1mYTIudHViaS52aWRlbyIsImV4cCI6MTc2NTE4MDgwMCwibWVkaWFfc2lnIjo3Njg5ODY4N30.aA4FTbcKy6yIZ9M9TY6MpIhAG-kdGBu9ArXrjcjqXag",
+              "duration": 5475
+            },
+            "license_server": {
+              "url": "https:\u002F\u002Flicense.adrise.tv\u002Fchallenge?platform=web&type=playready_psshv0&external_id=C2A998E1C28541D73EC2B0A1CAE5EE3E&drm_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbmFsb2dfb3V0IjoiY2dtc19yZXF1aXJlZCIsImV4cCI6MTc2NTE4MDgwMCwiaGRjcCI6InYxIiwicHJfc2VjdXJpdHlfbGV2ZWwiOjIwMDAsInd2X3NlY3VyaXR5X2xldmVsIjoxfQ.L6VQuwJpPF5lMoo93kO_9daFuryBnndWg6_NvYLzczo",
+              "hdcp_version": "hdcp_v1",
+              "auth_header_key": "customData",
+              "auth_header_value": ""
+            },
+            "titan_version": "",
+            "resolution": "720P",
+            "ssai_version": "",
+            "generator_version": ""
+          }, {
+            "type": "hlsv6_fairplay",
+            "codec": "H264",
+            "audio_tracks": [{
+              "type": "MAIN",
+              "lang": "English",
+              "display_name": "English"
+            }],
+            "manifest": {
+              "url": "https:\u002F\u002Fnc-fa2.tubi.video\u002Fe4be7b82-9f1d-450d-8b77-e282c9866bd3\u002F7lgnprbcay.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZG5fcHJlZml4IjoiaHR0cHM6Ly9uYy1mYTIudHViaS52aWRlbyIsImV4cCI6MTc2NTE4MDgwMCwibWVkaWFfc2lnIjo3Njg5ODY4N30.aA4FTbcKy6yIZ9M9TY6MpIhAG-kdGBu9ArXrjcjqXag",
+              "duration": 5474
+            },
+            "license_server": {
+              "url": "https:\u002F\u002Flicense.adrise.tv\u002Fchallenge?platform=web&type=fairplay&external_id=C2A998E1C28541D73EC2B0A1CAE5EE3E&drm_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbmFsb2dfb3V0IjoiY2dtc19yZXF1aXJlZCIsImV4cCI6MTc2NTE4MDgwMCwiaGRjcCI6InYxIiwicHJfc2VjdXJpdHlfbGV2ZWwiOjIwMDAsInd2X3NlY3VyaXR5X2xldmVsIjoxfQ.L6VQuwJpPF5lMoo93kO_9daFuryBnndWg6_NvYLzczo",
+              "hdcp_version": "hdcp_v1",
+              "auth_header_key": "customData",
+              "auth_header_value": ""
+            },
+            "titan_version": "",
+            "resolution": "720P",
+            "ssai_version": "",
+            "generator_version": ""
+          }, {
+            "type": "hlsv6_widevine_nonclearlead",
+            "codec": "H264",
+            "audio_tracks": [{
+              "type": "MAIN",
+              "lang": "English",
+              "display_name": "English"
+            }],
+            "manifest": {
+              "url": "https:\u002F\u002Fnc-fa2.tubi.video\u002Fe4be7b82-9f1d-450d-8b77-e282c9866bd3\u002Faomzkwaz99.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZG5fcHJlZml4IjoiaHR0cHM6Ly9uYy1mYTIudHViaS52aWRlbyIsImV4cCI6MTc2NTE4MDgwMCwibWVkaWFfc2lnIjo3Njg5ODY4N30.aA4FTbcKy6yIZ9M9TY6MpIhAG-kdGBu9ArXrjcjqXag",
+              "duration": 5474
+            },
+            "license_server": {
+              "url": "https:\u002F\u002Flicense.adrise.tv\u002Fchallenge?platform=web&type=widevine_nonclearlead&external_id=C2A998E1C28541D73EC2B0A1CAE5EE3E&drm_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbmFsb2dfb3V0IjoiY2dtc19yZXF1aXJlZCIsImV4cCI6MTc2NTE4MDgwMCwiaGRjcCI6InYxIiwicHJfc2VjdXJpdHlfbGV2ZWwiOjIwMDAsInd2X3NlY3VyaXR5X2xldmVsIjoxfQ.L6VQuwJpPF5lMoo93kO_9daFuryBnndWg6_NvYLzczo",
+              "hdcp_version": "hdcp_v1",
+              "auth_header_key": "customData",
+              "auth_header_value": ""
+            },
+            "titan_version": "",
+            "resolution": "720P",
+            "ssai_version": "",
+            "generator_version": ""
+          }, {
+            "type": "hlsv6_playready_psshv0",
+            "codec": "H264",
+            "audio_tracks": [{
+              "type": "MAIN",
+              "lang": "English",
+              "display_name": "English"
+            }],
+            "manifest": {
+              "url": "https:\u002F\u002Fnc-fa2.tubi.video\u002Fe4be7b82-9f1d-450d-8b77-e282c9866bd3\u002Fdkniq09r43.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZG5fcHJlZml4IjoiaHR0cHM6Ly9uYy1mYTIudHViaS52aWRlbyIsImV4cCI6MTc2NTE4MDgwMCwibWVkaWFfc2lnIjo3Njg5ODY4N30.aA4FTbcKy6yIZ9M9TY6MpIhAG-kdGBu9ArXrjcjqXag",
+              "duration": 5474
+            },
+            "license_server": {
+              "url": "https:\u002F\u002Flicense.adrise.tv\u002Fchallenge?platform=web&type=playready_psshv0&external_id=C2A998E1C28541D73EC2B0A1CAE5EE3E&drm_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbmFsb2dfb3V0IjoiY2dtc19yZXF1aXJlZCIsImV4cCI6MTc2NTE4MDgwMCwiaGRjcCI6InYxIiwicHJfc2VjdXJpdHlfbGV2ZWwiOjIwMDAsInd2X3NlY3VyaXR5X2xldmVsIjoxfQ.L6VQuwJpPF5lMoo93kO_9daFuryBnndWg6_NvYLzczo",
+              "hdcp_version": "hdcp_v1",
+              "auth_header_key": "customData",
+              "auth_header_value": ""
+            },
+            "titan_version": "",
+            "resolution": "720P",
+            "ssai_version": "",
+            "generator_version": ""
+          }, {
+            "type": "hlsv3",
+            "codec": "H264",
+            "audio_tracks": [],
+            "manifest": {
+              "url": "https:\u002F\u002Fnc-fa2.tubi.video\u002Fe4be7b82-9f1d-450d-8b77-e282c9866bd3\u002F0nqtz64eoj.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZG5fcHJlZml4IjoiaHR0cHM6Ly9uYy1mYTIudHViaS52aWRlbyIsImV4cCI6MTc2NTE4MDgwMCwibWVkaWFfc2lnIjo3Njg5ODY4N30.aA4FTbcKy6yIZ9M9TY6MpIhAG-kdGBu9ArXrjcjqXag",
+              "duration": 5475
+            },
+            "titan_version": "",
+            "resolution": "480P",
+            "ssai_version": "",
+            "generator_version": ""
+          }],
+          "credit_cuepoints": {
+            "postlude": 5281,
+            "prologue": 0,
+            "intro_start": 0,
+            "intro_end": 0,
+            "recap_start": 0,
+            "recap_end": 0,
+            "earlycredits_start": 0,
+            "earlycredits_end": 0,
+            "prelogue": 0
+          },
+          "publisher_id": "02fe45aea83ef685070efa1777d25aa2",
+          "backgrounds": ["\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FdDeMopa8sydQLw==\u002Fd9c43346-dc5d-41e2-a6ca-6a98bfcc89fa\u002FCM4MEIoHOgUxLjEuOA=="],
+          "is_cdc": false,
+          "gracenote_id": "MV000186960000",
+          "needs_login": false,
+          "directors": ["Cary Medoway"],
+          "partner_id": null,
+          "trailers": [],
+          "has_trailer": false,
+          "has_subtitle": true,
+          "landscape_images": ["\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FHDz_VW8-q5i2Dg==\u002Ffe7bdf5b-4869-4f13-bdee-86fb52beca0a\u002FCNcHEKgEOgUxLjEuOA=="],
+          "thumbnails": ["\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FIajnRVQdQa3JMg==\u002F5d8300a9-7910-4578-b4e8-82a2d639500b\u002FCIAFEOgCOgUxLjEuOA=="],
+          "policy_match": true,
+          "video_previews": [{
+            "source": "ML_GENERATED",
+            "url": "https:\u002F\u002Fvideo-preview-lb.production-public.tubi.io\u002Fvideopreview\u002Fb4e659b8-b6b8-4ccd-a0f1-13bacae6887b-start90.257-end134.718.mp4",
+            "uuid": "049f971d-ffe5-46da-8cd8-ca2c6df708de"
+          }, {
+            "source": "ML_GENERATED",
+            "url": "https:\u002F\u002Fvideo-preview-lb.production-public.tubi.io\u002Fvideopreview\u002Fade90270-cff2-4b9b-953f-da4e0d08af60-start1716.089-end1754.378.mp4",
+            "uuid": "5a7f6749-df2e-4884-8fdb-0bcb704f6abd"
+          }, {
+            "source": "ML_GENERATED",
+            "url": "https:\u002F\u002Fvideo-preview-lb.production-public.tubi.io\u002Fvideopreview\u002Fa72e42c0-249c-4e2d-815f-8dc42a661c62-start808.683-end863.196.mp4",
+            "uuid": "a86c109f-dbfe-466b-b08d-121dfa149a44"
+          }, {
+            "source": "ML_GENERATED",
+            "url": "https:\u002F\u002Fvideo-preview-lb.production-public.tubi.io\u002Fvideopreview\u002F36affd62-9a64-4c9c-a6c5-b9046424a5a3-start1284.658-end1356.230.mp4",
+            "uuid": "bf408070-8620-43b0-aaf5-df3337e523f8"
+          }, {
+            "source": "ML_GENERATED",
+            "url": "https:\u002F\u002Fvideo-preview-lb.production-public.tubi.io\u002Fvideopreview\u002Fa260bea7-fe89-46ff-9c05-6c2ea54be94c-start611.903-end688.897.mp4",
+            "uuid": "d71930f9-d03f-4d9d-b0d0-db11ba1b46b2"
+          }],
+          "availability_ends": "2026-01-01T04:59:00.000Z",
+          "country": "United States",
+          "gn_fields": null,
+          "video_renditions": [],
+          "availability_duration": 2654295,
+          "title": "The Heavenly Kid",
+          "air_datetime": null,
+          "posterarts": ["\u002F\u002Fcanvas-lb.tubitv.com\u002Fopts\u002FhFbH2Rf7OBXk_Q==\u002Fd46b6072-84c6-4e8b-8f3f-64a767268ed8\u002FCJgDEMcEOgUxLjEuOA=="],
+          "lang": "English",
+          "ttl": 1764596445144
+        }],
+        "pageParams": [undefined]
+      },
+      "dataUpdateCount": 1,
+      "dataUpdatedAt": 1764589245144,
+      "error": null,
+      "errorUpdateCount": 0,
+      "errorUpdatedAt": 0,
+      "fetchFailureCount": 0,
+      "fetchFailureReason": null,
+      "fetchMeta": null,
+      "isInvalidated": false,
+      "status": "success",
+      "fetchStatus": "idle"
+    },
+    "queryKey": ["content", "100001038", {}],
+    "queryHash": "[\"content\",\"100001038\",{}]"
+  }]
+}

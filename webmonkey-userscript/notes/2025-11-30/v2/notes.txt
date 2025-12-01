@@ -1,0 +1,54 @@
+-------------------------------------------------------------------------------- '02-series':
+
+https://tubitv.com/series/300013654/renegade
+
+<script>window.__REACT_QUERY_STATE__=
+  ./data/02-series/01-dom-series.data.json
+
+notes:
+  * DOM contains episode ID values for every episode in every season
+  * each episode ID is sufficient to generate a deep link to the page for the particular episode:
+      https://tubitv.com/tv-shows/<EPISODE-ID>
+
+--------------------------------------------------------------------------------
+
+https://tubitv.com/series/300013654/renegade/season-2
+
+<script>window.__REACT_QUERY_STATE__=
+  ./data/02-series/02-dom-season-2.data.json
+
+notes:
+  * DOM contains episode ID values for every episode in every season
+  * each episode ID is sufficient to generate a deep link to the page for the particular episode:
+      https://tubitv.com/tv-shows/<EPISODE-ID>
+
+--------------------------------------------------------------------------------
+
+https://tubitv.com/tv-shows/200146874
+
+<script>window.__REACT_QUERY_STATE__=
+  ./data/02-series/03-dom-episode-s02e01.data.json
+
+notes:
+  * DOM contains episode ID values for every episode in every season
+  * each episode ID is sufficient to generate a deep link to the page for the particular episode:
+      https://tubitv.com/tv-shows/<EPISODE-ID>
+
+--------------------------------------------------------------------------------
+
+conclusions and new strategy:
+=============================
+
+  * URLs that begin with:
+      /series/*
+    1. extract <VIDEO-ID> for every episode in every season from window.__REACT_QUERY_STATE__
+    2. rewrite DOM with list of deep links to each SxxEyy:
+      /tv-shows/<VIDEO-ID>
+
+  * URLs that begin with:
+      /tv-shows/<VIDEO-ID>/*
+      /movies/<VIDEO-ID>/*
+    1. extract <VIDEO-ID> from URL pathname
+    2. extract HLS video URL from window.__data.video.byId[videoId] when !!window.__data.video.fullContentById[videoId]
+
+--------------------------------------------------------------------------------

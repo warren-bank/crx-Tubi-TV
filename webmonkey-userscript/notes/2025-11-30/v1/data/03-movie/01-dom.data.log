@@ -1,0 +1,14 @@
+{
+  "currentVideoKey": []
+}
+{
+  "videos": [
+    {
+      "key": "100001038",
+      "title": "The Heavenly Kid",
+      "description": "A lonely teen gets divine intervention when a hip guardian angel trying to earn his wings comes down to teach the high schooler how to be cool.",
+      "video": "https://nc-fa2.tubi.video/e4be7b82-9f1d-450d-8b77-e282c9866bd3/0nqtz64eoj.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZG5fcHJlZml4IjoiaHR0cHM6Ly9uYy1mYTIudHViaS52aWRlbyIsImV4cCI6MTc2NTE4MDgwMCwibWVkaWFfc2lnIjo3Njg5ODY4N30.aA4FTbcKy6yIZ9M9TY6MpIhAG-kdGBu9ArXrjcjqXag",
+      "subtitles": "http://s.adrise.tv/4e02580a-1c9b-4549-ae78-d6110d3a079b.srt"
+    }
+  ]
+}

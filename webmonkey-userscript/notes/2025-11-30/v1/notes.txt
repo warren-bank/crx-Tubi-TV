@@ -1,0 +1,64 @@
+-------------------------------------------------------------------------------- '01-new_releases':
+
+https://tubitv.com/category/new_releases
+
+<script>window.__data=
+  ./data/01-new_releases/01-dom.data.json
+
+-------------------------------------------------------------------------------- '02-series':
+
+https://tubitv.com/series/300013654/renegade
+
+<script>window.__data=
+  ./data/02-series/01-dom-series.data.json
+
+notes:
+  * DOM only contains video info for season #1
+
+--------------------------------------------------------------------------------
+
+https://tubitv.com/series/300013654/renegade/season-2
+
+<script>window.__data=
+  ./data/02-series/02-dom-season-2.data.json
+
+notes:
+  * DOM only contains video info for season #1
+
+----------------------------------------
+
+XHR:
+====
+
+curl --silent 'https://content-cdn.production-public.tubi.io/api/v2/content?app_id=tubitv&platform=web&content_id=300013654&device_id=9840b34a-5a39-4a11-b257-b3f42fb6090a&include_channels=true&pagination%5Bseason%5D=2&pagination%5Bpage_in_season%5D=1&pagination%5Bpage_size_in_season%5D=20&limit_resolutions%5B%5D=h264_1080p&video_resources%5B%5D=hlsv6_widevine_nonclearlead&video_resources%5B%5D=hlsv6_playready_psshv0&video_resources%5B%5D=hlsv6_fairplay&video_resources%5B%5D=hlsv6&images%5Bposterarts%5D=w408h583_poster&images%5Bhero_422%5D=w422h360_hero&images%5Bhero_feature_desktop_tablet%5D=w1920h768_hero&images%5Bhero_feature_large_mobile%5D=w960h480_hero&images%5Bhero_feature_small_mobile%5D=w540h450_hero&images%5Bhero_feature%5D=w375h355_hero&images%5Blandscape_images%5D=w978h549_landscape&images%5Blinear_larger_poster%5D=w978h549_landscape&images%5Bbackgrounds%5D=w1614h906_background&images%5Btitle_art%5D=w430h180_title' \
+  -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImQ3ZmEwMmQzLTAwODYtNGYxYS1hM2I0LWM2NGQ3NTkzNTgxNiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJKb2tlbiIsImRldmljZV9pZCI6Ijk4NDBiMzRhLTVhMzktNGExMS1iMjU3LWIzZjQyZmI2MDkwYSIsImV4cCI6MTc2NDY1OTI5OCwiZ2VuZXJhdGlvbiI6ImFlMjczM2RlLTBjZTctNDg2Yi1hYmY0LWU0NjY5MmUxYjYxNiIsImlhdCI6MTc2NDU3Mjg5OCwiaXNfZ3Vlc3QiOnRydWUsImlzcyI6IlR1YmkgQWNjb3VudCBTZXJ2aWNlIiwianRpIjoiMzF1Z2JjdWx1MHRhZGY1NWJxNzlmMDA0IiwibmJmIjoxNzY0NTcyODk4LCJwbGF0Zm9ybSI6IndlYiIsInR1YmlfaWQiOiJkOWYyYTJhYS0yYjhkLTRiMTMtOGE2Yy0xNDlmOTQyNWUxNDYiLCJ0eXBlIjo1LCJ1dWlkIjoiOWY2ODBiMGItZjgyNC00YzRjLWFmN2UtY2Y4NDAyOGY4YjI3In0.sIuMwImmrikwDvnMgBQqe_ixEObSPsXpsbJ7OGL89kRiPf7chtppEhQaJULoYpnpwQDZzfspdiGf83z6mkr-peFKM3dphS0flwJ2Agp03iHwUHRIa2aixI9ApRXXj-d_TcaQfOp0UluJmD40-hUTl78LZCRc03-4SIHp3xSKy5mIlu58Z2T5brLshQh26nTcVQ6dGTwfP2ifLudQKDiFkViVXI5WqTo6HA9tIVu--5xrRGIB8rffqzfqW2uO6dDfYtcbcGaliRtOULJh8U8tDfRw1v1ZKw5TUwxUwrdcXkYeBctRGafThOOvA2rzFG0ggHaAZWL26KTGp1uoCqPrbQ' \
+  -o './data/02-series/03-xhr-season-2.data.json'
+
+--------------------------------------------------------------------------------
+
+https://tubitv.com/tv-shows/200146874/s02-e01-the-hound
+
+<script>window.__data=
+  ./data/02-series/04-dom-episode-s02e01.data.json
+
+notes:
+  * DOM contains video info for season #1 and S02E01
+
+--------------------------------------------------------------------------------
+
+https://tubitv.com/tv-shows/200146961/s05-e22-the-bad-seed
+
+<script>window.__data=
+  ./data/02-series/05-dom-episode-s05e22.data.json
+
+notes:
+  * DOM contains video info for season #1 and S05E22
+
+-------------------------------------------------------------------------------- '03-movie':
+
+https://tubitv.com/movies/100001038/the-heavenly-kid
+
+<script>window.__data=
+  ./data/03-movie/01-dom.data.json
+
+--------------------------------------------------------------------------------

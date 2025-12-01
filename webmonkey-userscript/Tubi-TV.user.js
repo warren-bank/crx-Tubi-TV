@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tubi TV
 // @description  Watch videos in external player.
-// @version      2.0.10
+// @version      3.0.0
 // @match        *://*.tubitv.com/*
 // @match        *://*.tubi.tv/*
 // @icon         https://tubitv.com/favicon.ico
@@ -20,7 +20,7 @@
 var user_options = {
   "common": {
     "disable_modal_age_dialog":      true,
-    "convert_carousel_to_grid":      false,
+    "convert_carousel_to_grid":      true,
     "rewrite_page_dom":              true
   },
   "webmonkey": {
@@ -469,78 +469,121 @@ var make_episode_link_listitem_element = function(episode_key, season_number, ep
 
 // ----------------------------------------------------------------------------- DOM: static skeleton
 
-var reinitialize_dom = function(data) {
-  if (
-    !data                  || (typeof data                  !== 'object') ||
-    !data.video            || (typeof data.video            !== 'object') ||
-    !data.video.statusById || (typeof data.video.statusById !== 'object')
-  ) return
-
-  var keys = Object.keys(data.video.statusById)
-  if (!keys.length) return
-
-  var key, video, html, div, ul, li
-  var season, episode, episode_key, episode_video
+var reinitialize_dom_with_episodes_in_series = function(episodes, series) {
+  var div, ul, li, a
   try {
-    key   = keys[0]
-    video = data.video.byId[key]
+    if (!Array.isArray(episodes) || !episodes.length) return
 
+    div = make_element('div')
+    ul  = make_element('ul')
+    div.appendChild(ul)
+
+    if (series && (series instanceof Object)) {
+      if (series.title) {
+        div.insertBefore(
+          make_element('h2', series.title),
+          ul
+        )
+      }
+
+      if (series.description) {
+        div.insertBefore(
+          make_element('div', series.description),
+          ul
+        )
+      }
+    }
+
+    for (var i=0; i < episodes.length; i++) {
+      li = make_element('li')
+      a  = make_element('a')
+      li.appendChild(a)
+      ul.appendChild(li)
+
+      a.setAttribute('href', 'https://tubitv.com/tv-shows/' + episodes[i].video_id)
+      a.textContent = episodes[i].name
+    }
+
+    unsafeWindow.document.body.innerHTML = ''
+    unsafeWindow.document.body.appendChild(div)
+
+    add_style_element(function(){
+      return [
+        // --------------------------------------------------- reset
+
+        'body {',
+        '  margin: 0;',
+        '  padding: 0;',
+        '  font-family: serif;',
+        '  font-size: 16px;',
+        '  background-color: #fff !important;',
+        '  overflow: auto !important;',
+        '}',
+
+        // --------------------------------------------------- series title
+
+        'body > div > h2 {',
+        '  display: block;',
+        '  margin: 0;',
+        '  padding: 0.5em;',
+        '  font-size: 22px;',
+        '  text-align: center;',
+        '  background-color: #ccc;',
+        '}',
+
+        // --------------------------------------------------- series description
+
+        'body > div > div {',
+        '  padding: 0.5em;',
+        '  font-size: 18px;',
+        '}',
+
+        // --------------------------------------------------- list of episodes
+
+        'body > div > ul > li {',
+        '  padding-left: 1em;',
+        '  line-height: 1.5em;',
+        '}'
+      ]
+    })
+  }
+  catch(e) {}
+}
+
+// -----------------------------------------------------------------------------
+
+var reinitialize_dom_with_video = function(video, series) {
+  var div, ul, li
+  try {
     if (!video || ('object' !== (typeof video))) return
 
     div = make_element('div')
     ul  = make_element('ul')
     div.appendChild(ul)
 
+    if (series && (series instanceof Object)) {
+      if (series.title) {
+        div.insertBefore(
+          make_element('h2', series.title),
+          ul
+        )
+      }
+
+      if (series.description) {
+        div.insertBefore(
+          make_element('div', series.description),
+          ul
+        )
+      }
+    }
+
     if (video.url || (Array.isArray(video.video_resources) && video.video_resources.length)) {
       li = make_video_listitem_element(video)
       if (li)
         ul.appendChild(li)
     }
-    else if (Array.isArray(video.seasons) && video.seasons.length) {
 
-      if (video.title) {
-        div.insertBefore(
-          make_element('h2', video.title),
-          ul
-        )
-      }
-
-      if (video.description) {
-        div.insertBefore(
-          make_element('div', video.description),
-          ul
-        )
-      }
-
-      for (var i=0; i < video.seasons.length; i++) {
-        season = video.seasons[i]
-
-        if (season && ('object' === (typeof season)) && Array.isArray(season.episodes) && season.episodes.length) {
-          for (var i2=0; i2 < season.episodes.length; i2++) {
-            episode       = season.episodes[i2]
-            episode_key   = episode.id
-            episode_video = data.video.byId[episode_key]
-
-            if (
-                 ('object' === (typeof episode_video))
-              && (null     !== episode_video)
-              && (episode_video.url || (Array.isArray(episode_video.video_resources) && episode_video.video_resources.length))
-            ){
-              li = make_video_listitem_element(episode_video)
-              if (li)
-                ul.appendChild(li)
-            }
-            else {
-              li = make_episode_link_listitem_element(episode_key, season.number, episode.num)
-              if (li)
-                ul.appendChild(li)
-            }
-          }
-        }
-      }
-    }
-
-    if ((div.childNodes.length === 1) && !ul.childNodes.length) return
+    if (!ul.childNodes.length) return
 
     unsafeWindow.document.body.innerHTML = ''
     unsafeWindow.document.body.appendChild(div)
@@ -714,7 +757,7 @@ var reinitialize_dom = function(data) {
   catch(e) {}
 }
 
-// ----------------------------------------------------------------------------- process video data
+// ----------------------------------------------------------------------------- normalize video data
 
 var extract_video_data = function(video, add_drm_data) {
   var video_url, video_type, vtt_url
@@ -790,77 +833,133 @@ var extract_video_data = function(video, add_drm_data) {
   return {video_url: video_url, video_type: video_type, vtt_url: vtt_url, drm_data: drm_data}
 }
 
-var process_data = function(data) {
-  if (
-    !data                  || (typeof data                  !== 'object') ||
-    !data.video            || (typeof data.video            !== 'object') ||
-    !data.video.statusById || (typeof data.video.statusById !== 'object')
-  ) return
+// ----------------------------------------------------------------------------- extract page data
 
-  var keys = Object.keys(data.video.statusById)
-  var key, video, video_data, found_video_url
+var extract_episodes_in_series_from_page_data = function(page_data) {
+  var episodes = []
+  var query, season, episode
 
-  for (var i=0; i < keys.length; i++) {
-    key = keys[i]
+  if (page_data && (page_data instanceof Object) && Array.isArray(page_data.queries)) {
+    for (var i=0; i < page_data.queries.length; i++) {
+      query = page_data.queries[i]
 
-    try {
-      video      = data.video.byId[key]
-      video_data = extract_video_data(video)
+      try {
+        if (Array.isArray(query.state.data.seasons)) {
+          for (var j=0; j < query.state.data.seasons.length; j++) {
+            season = query.state.data.seasons[j]
 
-      if (video_data.video_url) {
-        found_video_url = true
-        process_video_url(video_data.video_url, video_data.video_type, video_data.vtt_url)
-        break
+            if (season && (season instanceof Object) && season.number && Array.isArray(season.episodes)) {
+              for (var k=0; k < season.episodes.length; k++) {
+                episode = season.episodes[k]
+
+                if (episode && (episode instanceof Object) && episode.id && episode.num) {
+                  episodes.push({
+                    name: ('S' + pad(season.number, 2) + 'E' + pad(episode.num, 2)),
+                    video_id: episode.id
+                  })
+                }
+              }
+            }
+          }
+        }
       }
+      catch(e) {}
     }
-    catch(e) {}
   }
 
-  // Only apply WebMonkey redirect on pages that deep link to a single video.
-  // On pages for a series, after the DOM is rewritten to display a list of all available episodes.. don't redirect away.
-  if (!found_video_url)
-    user_options.webmonkey.post_intent_redirect_to_url = null
-
-  if (user_options.common.rewrite_page_dom || !unsafeWindow.document.querySelector('#content > #app'))
-    reinitialize_dom(data)
+  return episodes.length
+    ? episodes
+    : null
 }
 
-var inspect_scripts = function() {
-  var tags    = unsafeWindow.document.querySelectorAll('script:not([src])')
-  var prefix  = 'window.__data='
-  var postfix = /;$/
-  var tag, text, data
+var extract_series_from_page_data = function(page_data) {
+  var query, page
 
-  if (!tags || !tags.length)
-    return
+  if (page_data && (page_data instanceof Object) && Array.isArray(page_data.queries)) {
+    for (var i=0; i < page_data.queries.length; i++) {
+      query = page_data.queries[i]
 
-  for (var i=0; i < tags.length; i++) {
-    tag = tags[i]
+      try {
+        if (Array.isArray(query.state.data.pages)) {
+          for (var j=0; j < query.state.data.pages.length; j++) {
+            page = query.state.data.pages[j]
 
-    try {
-      text = tag.innerText.trim().replace(postfix, '')
-
-      if (text.indexOf(prefix) === 0) {
-        try {
-          text = text.substr(prefix.length)
-
-          // fix JSON
-          text = text.replace(/(":[\[]?)undefined([,}\]])/g, '$1null$2')
-          text = text.replace(/new Date\([^\)]*\)/g, 'null')
-
-          data = JSON.parse(text)
-          process_data(data)
+            if (page && (page instanceof Object) && (page.type === 's') && page.title) {
+              return {
+                title:       page.title,
+                description: page.description
+              }
+            }
+          }
         }
-        catch(e2) {
-          //console.log('JSON Parser Error:', e2.message, e2)
-          //console.log(text)
-        }
-        break
       }
+      catch(e) {}
     }
-    catch(e1) {}
+  }
+
+  return null
+}
+
+var extract_video_from_page_data = function(video_id, page_data) {
+  var query, page
+
+  if (video_id && page_data && (page_data instanceof Object) && Array.isArray(page_data.queries)) {
+    for (var i=0; i < page_data.queries.length; i++) {
+      query = page_data.queries[i]
+
+      try {
+        if (Array.isArray(query.state.data.pages)) {
+          for (var j=0; j < query.state.data.pages.length; j++) {
+            page = query.state.data.pages[j]
+
+            if (page && (page instanceof Object) && (page.type === 'v') && (page.id === video_id)) {
+              return page
+            }
+          }
+        }
+      }
+      catch(e) {}
+    }
+  }
+
+  return null
+}
+
+// ----------------------------------------------------------------------------- process page data
+
+var process_series = function(page_data) {
+  var episodes = extract_episodes_in_series_from_page_data(page_data)
+  var series   = extract_series_from_page_data(page_data)
+
+  if (episodes && user_options.common.rewrite_page_dom)
+    reinitialize_dom_with_episodes_in_series(episodes, series)
+}
+
+var process_episode = function(video_id, page_data) {
+  var video = extract_video_from_page_data(video_id, page_data)
+  var video_data, found_video_url, series
+
+  if (video) {
+    video_data = extract_video_data(video)
+
+    if (video_data.video_url) {
+      found_video_url = true
+      process_video_url(video_data.video_url, video_data.video_type, video_data.vtt_url)
+    }
+
+    // prevent WebMonkey redirect when video is started from reinitialized DOM
+    if (!found_video_url)
+      user_options.webmonkey.post_intent_redirect_to_url = null
+
+    if (user_options.common.rewrite_page_dom) {
+      series = extract_series_from_page_data(page_data)
+
+      reinitialize_dom_with_video(video, series)
+    }
   }
 }
+
+var process_movie = process_episode
 
 // ----------------------------------------------------------------------------- change CSS for modal dialog that requires entering DOB
 
@@ -884,14 +983,15 @@ var disable_modal_age_dialog = function() {
 var convert_carousel_to_grid = function() {
   add_style_element(function(){
     return [
-      '.Carousel__content,',
-      '.Carousel__content > .Row {',
-      '  display: block;',
-      '  height: auto;',
+      '.web-carousel__container,',
+      '.web-carousel__container > .web-grid-container {',
+      '  display: block !important;',
+      '  height: auto !important;',
+      '  white-space: normal !important;',
       '}',
 
-      '.Carousel__content > .Row > .Col {',
-      '  display: inline-block;',
+      '.web-carousel__container > .web-grid-container > .web-col {',
+      '  display: inline-block !important;',
       '}'
     ]
   })
@@ -964,6 +1064,43 @@ var history_state_onupdate = function(stateObj, unused, url) {
 
 // ----------------------------------------------------------------------------- bootstrap
 
+var inspect_scripts = function(callback) {
+  var tags    = unsafeWindow.document.querySelectorAll('script:not([src])')
+  var prefix  = 'window.__REACT_QUERY_STATE__='
+  var postfix = /;$/
+  var tag, text, data
+
+  if (!tags || !tags.length)
+    return
+
+  for (var i=0; i < tags.length; i++) {
+    tag = tags[i]
+
+    try {
+      text = tag.innerText.trim().replace(postfix, '')
+
+      if (text.indexOf(prefix) === 0) {
+        try {
+          text = text.substr(prefix.length)
+
+          // fix JSON
+          text = text.replace(/undefined/g, 'null')
+          text = text.replace(/new Date\([^\)]*\)/g, 'null')
+
+          data = JSON.parse(text)
+          callback(data)
+        }
+        catch(e2) {
+          //console.log('JSON Parser Error:', e2.message, e2)
+          //console.log(text)
+        }
+        break
+      }
+    }
+    catch(e1) {}
+  }
+}
+
 var init = function() {
   var gmUrl
   if ('function' === (typeof GM_getUrl)) {
@@ -976,11 +1113,6 @@ var init = function() {
 
   follow_all_links()
 
-  if (unsafeWindow.__data)
-    process_data(unsafeWindow.__data)
-  else
-    inspect_scripts()
-
   if (user_options.common.disable_modal_age_dialog) {
     disable_modal_age_dialog()
     unsafeWindow.setTimeout(disable_modal_age_dialog, 1000)
@@ -988,6 +1120,36 @@ var init = function() {
 
   if (user_options.common.convert_carousel_to_grid)
     convert_carousel_to_grid()
+
+  var path_name  = unsafeWindow.location.pathname
+  var path_regex = /^\/(series|tv-shows|movies)(?:\/([^\/]+))?.*$/
+  var path_match = path_regex.exec(path_name)
+  var callback, video_id
+
+  if (path_match) {
+    switch(path_match[1]) {
+      case 'series':
+        callback = process_series
+        break
+      case 'tv-shows':
+        video_id = path_match[2]
+        if (video_id)
+          callback = process_episode.bind(null, video_id)
+        break
+      case 'movies':
+        video_id = path_match[2]
+        if (video_id)
+          callback = process_movie.bind(null, video_id)
+        break
+    }
+
+    if (callback) {
+      if (unsafeWindow.__REACT_QUERY_STATE__)
+        callback(unsafeWindow.__REACT_QUERY_STATE__)
+      else
+        inspect_scripts(callback)
+    }
+  }
 }
 
 init()
